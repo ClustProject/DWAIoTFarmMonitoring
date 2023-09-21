@@ -1,0 +1,482 @@
+{
+  "ruleChain": {
+    "additionalInfo": {
+      "description": ""
+    },
+    "name": "Control Heater",
+    "type": "CORE",
+    "firstRuleNodeId": null,
+    "root": false,
+    "debugMode": false,
+    "configuration": null
+  },
+  "metadata": {
+    "firstNodeIndex": null,
+    "nodes": [
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 775,
+          "layoutY": 699
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "name": "Change To Controller",
+        "debugMode": false,
+        "configuration": {
+          "originatorSource": "NAME",
+          "relationsQuery": {
+            "direction": "FROM",
+            "maxLevel": 1,
+            "filters": [
+              {
+                "relationType": "Contains",
+                "entityTypes": []
+              }
+            ],
+            "fetchLastLevelOnly": false
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1051,
+          "layoutY": 700
+        },
+        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "name": "Check Condition",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "// 예측 보정 미적용\nif (metadata['ss_PredictControl'] != 'true') {\n  // ON\n  if (Number(metadata['tempAvg']) <= Number(metadata['ss_minTemp'])) {\n    return true;\n  }\n\n  // OFF\n  if (Number(metadata['tempAvg']) >= Number(metadata['ss_maxTemp'])) {\n    return false;\n  }\n}\n// 예측 보정 적용\nelse {\n  // 예측 Min 보정\n  if (Number(metadata['ss_PredictedTemperature']) <= Number(metadata['ss_predictedMinTemp'])) {\n    // ON\n    if (Number(metadata['tempAvg']) <= Number(metadata['ss_minTemp']) - Number(metadata['ss_minCoordinate'])) {\n      return true;\n    }\n\n    // OFF\n    if (Number(metadata['tempAvg']) >= Number(metadata['ss_maxTemp'])) {\n      return false;\n    }\n  }\n\n  // 예측 Max 보정\n  if (Number(metadata['ss_PredictedTemperature']) >= Number(metadata['ss_predictedMaxTemp'])) {\n    // ON\n    if (Number(metadata['tempAvg']) <= Number(metadata['ss_minTemp'])) {\n      return true;\n    }\n\n    // OFF\n    if (Number(metadata['tempAvg']) >= Number(metadata['ss_maxTemp']) + Number(metadata['ss_maxCoordinate'])) {\n      return false;\n    }\n  }\n\n  // 예측 보정 미적용\n  // ON\n  if (Number(metadata['tempAvg']) <= Number(metadata['ss_minTemp'])) {\n    return true;\n  }\n\n  // OFF\n  if (Number(metadata['tempAvg']) >= Number(metadata['ss_maxTemp'])) {\n    return false;\n  }\n}\n\nreturn false;\n"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1324,
+          "layoutY": 699
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Heater On",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "msg[\"Heater\"] = true;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1324,
+          "layoutY": 825
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Heater Off",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "msg[\"Heater\"] = false;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1601,
+          "layoutY": 700
+        },
+        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "name": "Save",
+        "debugMode": false,
+        "configuration": {
+          "scope": "SERVER_SCOPE",
+          "notifyDevice": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1599,
+          "layoutY": 826
+        },
+        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "name": "Save",
+        "debugMode": false,
+        "configuration": {
+          "scope": "SERVER_SCOPE",
+          "notifyDevice": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 473,
+          "layoutY": 701
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Parsing",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "metadata[\"tempAvg\"] = ((Number(metadata[\"temp1\"]) + Number(metadata[\"temp2\"]) + Number(metadata[\"temp3\"])) / 3).toFixed(1);\nmetadata[\"TP_targetName\"] = \"Controller\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1599,
+          "layoutY": 375
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Manipulate",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "metadata[\"temp1\"] = metadata[\"temperature\"];\n \nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1600,
+          "layoutY": 575
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Manipulate",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "metadata[\"temp3\"] = metadata[\"temperature\"];\n \nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1598,
+          "layoutY": 475
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Manipulate",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "metadata[\"temp2\"] = metadata[\"temperature\"];\n \nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1052,
+          "layoutY": 475
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "name": "Change To Other Device",
+        "debugMode": false,
+        "configuration": {
+          "originatorSource": "NAME",
+          "relationsQuery": {
+            "direction": "FROM",
+            "maxLevel": 1,
+            "filters": [
+              {
+                "relationType": "Contains",
+                "entityTypes": []
+              }
+            ],
+            "fetchLastLevelOnly": false
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1324,
+          "layoutY": 475
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "name": "Get Temperature",
+        "debugMode": false,
+        "configuration": {
+          "tellFailureIfAbsent": true,
+          "clientAttributeNames": [],
+          "sharedAttributeNames": [],
+          "serverAttributeNames": [],
+          "latestTsKeyNames": [
+            "temperature"
+          ],
+          "getLatestValueWithTs": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 773,
+          "layoutY": 475
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Change",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "metadata[\"TP_targetName\"] = \"24e124126b226762\";\n \nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1053,
+          "layoutY": 576
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "name": "Change To Other Device",
+        "debugMode": false,
+        "configuration": {
+          "originatorSource": "NAME",
+          "relationsQuery": {
+            "direction": "FROM",
+            "maxLevel": 1,
+            "filters": [
+              {
+                "relationType": "Contains",
+                "entityTypes": []
+              }
+            ],
+            "fetchLastLevelOnly": false
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1325,
+          "layoutY": 576
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "name": "Get Temperature",
+        "debugMode": false,
+        "configuration": {
+          "tellFailureIfAbsent": true,
+          "clientAttributeNames": [],
+          "sharedAttributeNames": [],
+          "serverAttributeNames": [],
+          "latestTsKeyNames": [
+            "temperature"
+          ],
+          "getLatestValueWithTs": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 774,
+          "layoutY": 574
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Change",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "metadata[\"TP_targetName\"] = \"24e124126b227823\";\n \nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 173,
+          "layoutY": 377
+        },
+        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "name": "Start",
+        "debugMode": false,
+        "configuration": {
+          "msgCount": 0,
+          "periodInSeconds": 60,
+          "useEndtime": false,
+          "endTime": "23:01:59",
+          "jsScript": "var msg = {  };\nvar metadata = {  };\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+          "originatorId": "dad48ef0-2a8e-11ee-8d0d-21e1d787e420",
+          "originatorType": "DEVICE"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 475,
+          "layoutY": 375
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "name": "Get Server Attributes",
+        "debugMode": false,
+        "configuration": {
+          "tellFailureIfAbsent": true,
+          "clientAttributeNames": [],
+          "sharedAttributeNames": [],
+          "serverAttributeNames": [
+            "EnvControl",
+            "minTemp",
+            "maxTemp",
+            "PredictControl",
+            "predictedMinTemp",
+            "predictedMaxTemp",
+            "minCoordinate",
+            "maxCoordinate",
+            "PredictedTemperature"
+          ],
+          "latestTsKeyNames": [],
+          "getLatestValueWithTs": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1055,
+          "layoutY": 374
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "name": "Change To Other Device",
+        "debugMode": false,
+        "configuration": {
+          "originatorSource": "NAME",
+          "relationsQuery": {
+            "direction": "FROM",
+            "maxLevel": 1,
+            "filters": [
+              {
+                "relationType": "Contains",
+                "entityTypes": []
+              }
+            ],
+            "fetchLastLevelOnly": false
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1327,
+          "layoutY": 374
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "name": "Get Temperature",
+        "debugMode": false,
+        "configuration": {
+          "tellFailureIfAbsent": true,
+          "clientAttributeNames": [],
+          "sharedAttributeNames": [],
+          "serverAttributeNames": [],
+          "latestTsKeyNames": [
+            "temperature"
+          ],
+          "getLatestValueWithTs": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 776,
+          "layoutY": 376
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Change",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "metadata[\"TP_targetName\"] = \"24e124126b226229\";\n \nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      }
+    ],
+    "connections": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "type": "True"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 3,
+        "type": "False"
+      },
+      {
+        "fromIndex": 2,
+        "toIndex": 4,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 3,
+        "toIndex": 5,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 6,
+        "toIndex": 0,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 7,
+        "toIndex": 12,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 8,
+        "toIndex": 6,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 9,
+        "toIndex": 15,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 10,
+        "toIndex": 11,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 11,
+        "toIndex": 9,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 12,
+        "toIndex": 10,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 13,
+        "toIndex": 14,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 14,
+        "toIndex": 8,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 15,
+        "toIndex": 13,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 16,
+        "toIndex": 17,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 17,
+        "toIndex": 20,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 18,
+        "toIndex": 19,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 19,
+        "toIndex": 7,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 20,
+        "toIndex": 18,
+        "type": "Success"
+      }
+    ],
+    "ruleChainConnections": null
+  }
+}

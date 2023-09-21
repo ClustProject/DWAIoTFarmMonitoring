@@ -1,0 +1,133 @@
+{
+  "ruleChain": {
+    "additionalInfo": {
+      "description": ""
+    },
+    "name": "Predict Temperature",
+    "type": "CORE",
+    "firstRuleNodeId": null,
+    "root": false,
+    "debugMode": false,
+    "configuration": null
+  },
+  "metadata": {
+    "firstNodeIndex": null,
+    "nodes": [
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1149,
+          "layoutY": 277
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "JSON Parse",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "var obj = JSON.parse(msg);\n\nvar newMsg = {};\nnewMsg[\"PredictedTemperature\"] = (obj['temperature'][0]).toFixed(1);\n\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 250,
+          "layoutY": 275
+        },
+        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "name": "Start",
+        "debugMode": false,
+        "configuration": {
+          "msgCount": 0,
+          "periodInSeconds": 3600,
+          "useEndtime": false,
+          "endTime": "23:01:59",
+          "jsScript": "var msg = {  };\nvar metadata = {  };\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+          "originatorId": "dad48ef0-2a8e-11ee-8d0d-21e1d787e420",
+          "originatorType": "DEVICE"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1425,
+          "layoutY": 275
+        },
+        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "name": "Save",
+        "debugMode": false,
+        "configuration": {
+          "scope": "SERVER_SCOPE",
+          "notifyDevice": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 851,
+          "layoutY": 276
+        },
+        "type": "org.thingsboard.rule.engine.rest.TbRestApiCallNode",
+        "name": "Get Predicted Temperature",
+        "debugMode": true,
+        "configuration": {
+          "restEndpointUrlPattern": "http://imrc-clust.keti.re.kr:20001/InferenceAPI/getInferenceAPIResult",
+          "requestMethod": "POST",
+          "useSimpleClientHttpFactory": false,
+          "enableProxy": false,
+          "useSystemProxyProperties": false,
+          "proxyScheme": null,
+          "proxyHost": null,
+          "proxyPort": 0,
+          "proxyUser": null,
+          "proxyPassword": null,
+          "readTimeoutMs": 0,
+          "maxParallelRequestsCount": 0,
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "useRedisQueueForMsgPersistence": false,
+          "trimQueue": false,
+          "maxQueueSize": 0,
+          "credentials": {
+            "type": "anonymous"
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 551,
+          "layoutY": 276
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Parse",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "var now = new Date()\nvar timeZoneOffset = now.getTimezoneOffset()\nvar time =\n    new Date(now.getTime() + (540 + timeZoneOffset) * 60 *\n        1000)\nvar index = time.getHours() * 6; // 0 ~ 23 * 6\n\n// 00시부터 23시까지 차례로 배열\nvar data = [\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n\n  [15.7, 16.1, 16.2],\n  [15.7, 16.1, 16.2],\n  [15.7, 16.1, 16.2],\n  [15.7, 16.1, 16.2],\n  [15.7, 16.1, 16.2],\n  [15.7, 16.1, 16.2],\n\n  [15.1, 15.4, 15.6],\n  [15.1, 15.4, 15.6],\n  [15.1, 15.4, 15.6],\n  [15.1, 15.4, 15.6],\n  [15.1, 15.4, 15.6],\n  [15.1, 15.4, 15.6],\n\n  [14.4, 14.8, 14.9],\n  [14.4, 14.8, 14.9],\n  [14.4, 14.8, 14.9],\n  [14.4, 14.8, 14.9],\n  [14.4, 14.8, 14.9],\n  [14.4, 14.8, 14.9],\n\n  [14.2, 14.2, 14.9],\n  [14.2, 14.2, 14.9],\n  [14.2, 14.2, 14.9],\n  [14.2, 14.2, 14.9],\n  [14.2, 14.2, 14.9],\n  [14.2, 14.2, 14.9],\n\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n  [13.8, 14.2, 14.3],\n\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n  [16.3, 16.7, 16.8],\n\n  [22.1, 23.8, 22.8],\n  [22.1, 23.8, 22.8],\n  [22.1, 23.8, 22.8],\n  [22.1, 23.8, 22.8],\n  [22.1, 23.8, 22.8],\n  [22.1, 23.8, 22.8],\n\n  [26.5, 28.3, 30.8],\n  [26.5, 28.3, 30.8],\n  [26.5, 28.3, 30.8],\n  [26.5, 28.3, 30.8],\n  [26.5, 28.3, 30.8],\n  [26.5, 28.3, 30.8],\n\n  [27.8, 33, 31.9],\n  [27.8, 33, 31.9],\n  [27.8, 33, 31.9],\n  [27.8, 33, 31.9],\n  [27.8, 33, 31.9],\n  [27.8, 33, 31.9],\n\n  [32.2, 37.1, 33.4],\n  [32.2, 37.1, 33.4],\n  [32.2, 37.1, 33.4],\n  [32.2, 37.1, 33.4],\n  [32.2, 37.1, 33.4],\n  [32.2, 37.1, 33.4],\n\n  [34.3, 35.1, 32.1],\n  [34.3, 35.1, 32.1],\n  [34.3, 35.1, 32.1],\n  [34.3, 35.1, 32.1],\n  [34.3, 35.1, 32.1],\n  [34.3, 35.1, 32.1],\n\n  [35.4, 32.7, 35.3],\n  [35.4, 32.7, 35.3],\n  [35.4, 32.7, 35.3],\n  [35.4, 32.7, 35.3],\n  [35.4, 32.7, 35.3],\n  [35.4, 32.7, 35.3],\n\n  [36.1, 31.9, 35.9],\n  [36.1, 31.9, 35.9],\n  [36.1, 31.9, 35.9],\n  [36.1, 31.9, 35.9],\n  [36.1, 31.9, 35.9],\n  [36.1, 31.9, 35.9],\n\n  [33.7, 31.3, 34.6],\n  [33.7, 31.3, 34.6],\n  [33.7, 31.3, 34.6],\n  [33.7, 31.3, 34.6],\n  [33.7, 31.3, 34.6],\n  [33.7, 31.3, 34.6],\n\n  [31, 30, 30.7],\n  [31, 30, 30.7],\n  [31, 30, 30.7],\n  [31, 30, 30.7],\n  [31, 30, 30.7],\n  [31, 30, 30.7],\n\n  [29.1, 28.1, 28.3],\n  [29.1, 28.1, 28.3],\n  [29.1, 28.1, 28.3],\n  [29.1, 28.1, 28.3],\n  [29.1, 28.1, 28.3],\n  [29.1, 28.1, 28.3],\n\n  [26.5, 26.3, 26.4],\n  [26.5, 26.3, 26.4],\n  [26.5, 26.3, 26.4],\n  [26.5, 26.3, 26.4],\n  [26.5, 26.3, 26.4],\n  [26.5, 26.3, 26.4],\n\n  [25.9, 25.7, 25.6],\n  [25.9, 25.7, 25.6],\n  [25.9, 25.7, 25.6],\n  [25.9, 25.7, 25.6],\n  [25.9, 25.7, 25.6],\n  [25.9, 25.7, 25.6],\n\n  [22.1, 22.5, 22.5],\n  [22.1, 22.5, 22.5],\n  [22.1, 22.5, 22.5],\n  [22.1, 22.5, 22.5],\n  [22.1, 22.5, 22.5],\n  [22.1, 22.5, 22.5],\n\n  [20.8, 20.6, 21.3],\n  [20.8, 20.6, 21.3],\n  [20.8, 20.6, 21.3],\n  [20.8, 20.6, 21.3],\n  [20.8, 20.6, 21.3],\n  [20.8, 20.6, 21.3],\n\n  [19.5, 19.9, 20],\n  [19.5, 19.9, 20],\n  [19.5, 19.9, 20],\n  [19.5, 19.9, 20],\n  [19.5, 19.9, 20],\n  [19.5, 19.9, 20],\n\n  [18.9, 19.3, 19.4],\n  [18.9, 19.3, 19.4],\n  [18.9, 19.3, 19.4],\n  [18.9, 19.3, 19.4],\n  [18.9, 19.3, 19.4],\n  [18.9, 19.3, 19.4],\n];\n\n\nmsg['data'] = [];\n\nfor(var i = index; i < data.length; i++){\n    msg['data'].push(data[i]);\n}\n\nfor(var i = 0; i < index; i++){\n    msg['data'].push(data[i]);\n}\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};"
+        }
+      }
+    ],
+    "connections": [
+      {
+        "fromIndex": 0,
+        "toIndex": 2,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 4,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 3,
+        "toIndex": 0,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 4,
+        "toIndex": 3,
+        "type": "Success"
+      }
+    ],
+    "ruleChainConnections": null
+  }
+}
