@@ -1,0 +1,1065 @@
+{
+  "title": "환경 정보 (CLUST)",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "58746375-477c-c55f-56ed-0945122f1816": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card4",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 15,
+        "sizeY": 1,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d",
+              "filterId": null,
+              "dataKeys": []
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1570
+            }
+          },
+          "title": "환경 정보",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "58746375-477c-c55f-56ed-0945122f1816"
+      },
+      "9530d41b-c451-fbb2-9f9c-763926299f22": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card4",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 15,
+        "sizeY": 1,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d",
+              "filterId": null,
+              "dataKeys": []
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1110
+            }
+          },
+          "title": "온실 환경",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "9530d41b-c451-fbb2-9f9c-763926299f22"
+      },
+      "58a42966-fb1f-b6f4-7e3f-adac9c72f54e": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "bed_table2",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 6.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "8834821b-e82a-4277-e7a5-eb1a80b15785",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#2196f3",
+                  "settings": {
+                    "style": false,
+                    "styleFunction": "",
+                    "transform": false,
+                    "transformFunction": ""
+                  },
+                  "_hash": 0.027671704200641578
+                },
+                {
+                  "name": "ec",
+                  "type": "timeseries",
+                  "label": "ec",
+                  "color": "#4caf50",
+                  "settings": {
+                    "style": false,
+                    "styleFunction": "",
+                    "transform": false,
+                    "transformFunction": ""
+                  },
+                  "_hash": 0.9321447184878295
+                },
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "humidity",
+                  "color": "#f44336",
+                  "settings": {
+                    "style": false,
+                    "styleFunction": "",
+                    "transform": false,
+                    "transformFunction": ""
+                  },
+                  "_hash": 0.9964381561777718
+                },
+                {
+                  "name": "name",
+                  "type": "entityField",
+                  "label": "이름",
+                  "color": "#ffc107",
+                  "settings": {
+                    "style": false,
+                    "styleFunction": "",
+                    "transform": false,
+                    "transformFunction": ""
+                  },
+                  "_hash": 0.6079805540267569
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "widgetSize": "1110",
+              "actionIcon": false
+            },
+            "table": {
+              "sortColumn": "name",
+              "columnOrder": "name,temperature,moisture,ec",
+              "columnLabel": "구분,토양 온도,토양 수분,토양 EC"
+            }
+          },
+          "title": "New Environment Table",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "titleStyle": {
+            "fontSize": "18px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "58a42966-fb1f-b6f4-7e3f-adac9c72f54e"
+      },
+      "5759ec8d-4b63-7576-3412-c20f81ace4b8": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "multi_card_list2",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8.5,
+        "sizeY": 10,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "968454d7-50a1-24e4-bcb1-b4b7b021051a",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "co2",
+                  "type": "timeseries",
+                  "label": "co2",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.9508008285138416
+                },
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "humidity",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.8539518715087147
+                },
+                {
+                  "name": "pressure",
+                  "type": "timeseries",
+                  "label": "pressure",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.9391830980700933
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.725642153617406
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b3951489-169f-b769-cd04-925a3063abda",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "illumination",
+                  "type": "timeseries",
+                  "label": "illumination",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.05455258691460241
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "5622e315-1639-358c-1053-233dd4d1b2fd",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature 2",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.020742141400708736
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "85d8d61d-ec52-92f1-f068-3819c1a32220",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "CH1",
+                  "type": "timeseries",
+                  "label": "CH1",
+                  "color": "#03a9f4",
+                  "settings": {},
+                  "_hash": 0.9538300650966143
+                },
+                {
+                  "name": "CH2",
+                  "type": "timeseries",
+                  "label": "CH2",
+                  "color": "#ff9800",
+                  "settings": {},
+                  "_hash": 0.37415756182176163
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "3d7ab6fc-cdf8-3aa6-37aa-4f4e8827bb62",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "f1_kwh_imp",
+                  "type": "timeseries",
+                  "label": "f1_kwh_imp",
+                  "color": "#e91e63",
+                  "settings": {},
+                  "_hash": 0.5168320792924559
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 580
+            }
+          },
+          "title": "온실 현황",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "titleStyle": {
+            "fontSize": "18px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5759ec8d-4b63-7576-3412-c20f81ace4b8"
+      },
+      "8760a081-6791-1596-53ff-7455decbcb03": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "custom_tileset22",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 12,
+        "sizeY": 5.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "968454d7-50a1-24e4-bcb1-b4b7b021051a",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "co2",
+                  "type": "timeseries",
+                  "label": "co2",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.04612273271851475
+                },
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "습도",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.5932758598022589,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "pressure",
+                  "type": "timeseries",
+                  "label": "기압",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.3012902518081235,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "온도",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.2914190964578067,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#673ab7",
+                  "settings": {},
+                  "_hash": 0.20055166322137463
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#cddc39",
+                  "settings": {},
+                  "_hash": 0.9252934310603356
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b3951489-169f-b769-cd04-925a3063abda",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "illumination",
+                  "type": "timeseries",
+                  "label": "조도",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.7134335865716548,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#009688",
+                  "settings": {},
+                  "_hash": 0.7697876815945826,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#795548",
+                  "settings": {},
+                  "_hash": 0.07970026023373045,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "5622e315-1639-358c-1053-233dd4d1b2fd",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "온도",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.6227361426321685,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#00bcd4",
+                  "settings": {},
+                  "_hash": 0.5938165529874366,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#ff5722",
+                  "settings": {},
+                  "_hash": 0.38827072783637906,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "8834821b-e82a-4277-e7a5-eb1a80b15785",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "ec",
+                  "type": "timeseries",
+                  "label": "토양 EC",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.06520905786903386,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "토양 수분",
+                  "color": "#3f51b5",
+                  "settings": {},
+                  "_hash": 0.9989562557929597,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "토양 온도",
+                  "color": "#ffeb3b",
+                  "settings": {},
+                  "_hash": 0.6250344380991495,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#9e9e9e",
+                  "settings": {},
+                  "_hash": 0.917130359289521,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#2962ff",
+                  "settings": {},
+                  "_hash": 0.13509865627779227,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "85d8d61d-ec52-92f1-f068-3819c1a32220",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "CH1",
+                  "type": "timeseries",
+                  "label": "일사량",
+                  "color": "#03a9f4",
+                  "settings": {},
+                  "_hash": 0.8699239205049643,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "CH2",
+                  "type": "timeseries",
+                  "label": "퀀텀(PAR)",
+                  "color": "#ff9800",
+                  "settings": {},
+                  "_hash": 0.29184582272002935,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#00c853",
+                  "settings": {},
+                  "_hash": 0.4361172504611097,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#d50000",
+                  "settings": {},
+                  "_hash": 0.4898096548072244,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "e643e4c9-ec71-c662-4da3-dd54268ad7d9",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "Heater",
+                  "type": "attribute",
+                  "label": "Heater",
+                  "color": "#ffab00",
+                  "settings": {},
+                  "_hash": 0.2890993378245226
+                },
+                {
+                  "name": "Irrigator",
+                  "type": "attribute",
+                  "label": "Irrigator",
+                  "color": "#455a64",
+                  "settings": {},
+                  "_hash": 0.5382299126048282
+                },
+                {
+                  "name": "PredictedTemperature",
+                  "type": "attribute",
+                  "label": "PredictedTemperature",
+                  "color": "#aa00ff",
+                  "settings": {},
+                  "_hash": 0.7380871173084151
+                },
+                {
+                  "name": "Ventilator",
+                  "type": "attribute",
+                  "label": "Ventilator",
+                  "color": "#64dd17",
+                  "settings": {},
+                  "_hash": 0.9773238669364894
+                },
+                {
+                  "name": "Predictor",
+                  "type": "attribute",
+                  "label": "Predictor",
+                  "color": "#64dd17",
+                  "settings": {},
+                  "_hash": 0.33640471194060195
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "title": {
+              "widgetSize": "1110"
+            },
+            "heatmap": {}
+          },
+          "title": "New Environment Tileset Set",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "titleStyle": {
+            "fontSize": "18px",
+            "fontWeight": 600
+          },
+          "showLegend": false,
+          "noDataDisplayMessage": "",
+          "actions": {
+            "headerButton": [],
+            "controlDevice": [
+              {
+                "name": "Control Device",
+                "icon": "import_export",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "customPretty",
+                "customHtml": "<div class=\"dialog-top-bar\"></div>\n<form #deleteEntityForm=\"ngForm\" [formGroup]=\"deleteEntityFormGroup\" (ngSubmit)=\"save()\" class=\"delete-entity-form\">\n  <div class=\"dialog-header\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <div class=\"title-box\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n      <div class=\"dialog-title\">{{title}}</div>\n    </div>\n    <i class=\"material-icons cancel-icon\" (click)=\"cancel()\">close</i>\n  </div>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\"> </mat-progress-bar>\n  <div style=\"height: 0.4em\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content fxLayout=\"column\">\n    <div class=\"row\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n      <span class=\"row-text\">{{content}}</span>\n    </div>\n  </div>\n  <div mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">\n    <button\n      class=\"button close-button\"\n      [disabled]=\"(isLoading$ | async)\"\n      type=\"button\"\n      (click)=\"cancel()\"\n      cdkFocusInitial\n    >\n      닫기\n    </button>\n    <button class=\"button save-button\" type=\"submit\" [disabled]=\"(isLoading$ | async) || deleteEntityForm.invalid\">\n      {{controlBtn}}\n    </button>\n  </div>\n</form>\n",
+                "customCss": "/*\n    FHD 1920px 기준\n    1vw = 1920px * 0.01 * 19.2px\n    모바일 기준: 599px\n    태블릿 / 데스크탑 기준 max-width: 80vw\n\n    min-width = 600px * 0.8 = 480px\n    font-size = 10px / 19.2px = 0.521vw\n*/\n\n.delete-entity-form {\n  background-color: #ffffff;\n  box-shadow: 0 0.1em 0.4em 0 rgba(21, 34, 50, 0.08);\n  font-size: 0.521vw;\n  min-width: 480px !important;\n  max-width: 80vw;\n  width: 36em;\n}\n\n.delete-entity-form .dialog-header {\n  padding: 2.2em 2.4em;\n  border-bottom: 1px solid #dee0e5;\n}\n\n.delete-entity-form .dialog-title {\n  color: #1f2229;\n  font-size: 1.6em;\n  font-weight: 600;\n}\n\n.delete-entity-form .cancel-icon {\n  color: #1f2229;\n  font-size: 2em;\n  cursor: pointer;\n}\n\n.delete-entity-form .mat-dialog-content {\n  padding: 2.4em !important;\n  -ms-overflow-style: none; /* IE and Edge */\n  scrollbar-width: none; /* Firefox */\n}\n\n.delete-entity-form .mat-dialog-content::-webkit-scrollbar {\n  display: none;\n}\n\n.delete-entity-form .row {\n  margin: 0em;\n}\n\n.delete-entity-form .row-text {\n  font-size: 1.4em;\n  color: #5a616f;\n}\n\n.delete-entity-form .mat-dialog-actions {\n  padding: 2.4em !important;\n  padding-top: 0.8em o !important;\n}\n\n.delete-entity-form .button {\n  all: unset;\n  margin-left: calc(0.8em / 1.4);\n  padding: calc(0.8em / 1.4) calc(1.6em / 1.4);\n  font-size: 1.4em;\n  cursor: pointer;\n}\n.delete-entity-form .save-button {\n  background-color: #1d6ef0;\n  color: #ffffff;\n}\n.delete-entity-form .close-button {\n  background-color: #ffffff;\n  color: #5a616f;\n  border: solid 1px #dee0e5;\n}\n.delete-entity-form .close-button:hover {\n  background-color: #f5f6fa;\n}\n",
+                "customFunction": "// customer, device, asset, user service\n\nlet $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet customerService = $injector.get(widgetContext.servicesMap.get('customerService'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenDeleteEntityDialog();\n\nfunction openDeleteEntityDialog() {\n  customDialog.customDialog(htmlTemplate, DeleteEntityDialogController).subscribe();\n}\n\nfunction DeleteEntityDialogController(instance) {\n  let vm = instance;\n\n  let key = additionalParams.key;\n  let active = additionalParams.active;\n  let label = additionalParams.label;\n\n  if (active == 'true') {\n    vm.title = '장비 정지';\n    vm.content = \"'\" + label + \"' \" + '장비를 정지하시겠습니까?';\n    vm.controlBtn = '정지';\n  } else {\n    vm.title = '장비 가동';\n    vm.content = \"'\" + label + \"' \" + '장비를 가동하시겠습니까?';\n    vm.controlBtn = '가동';\n  }\n\n  console.log(entityId);\n\n  vm.deleteEntityFormGroup = vm.fb.group({});\n\n  vm.cancel = function () {\n    vm.dialogRef.close(null);\n  };\n\n  vm.save = function () {\n    saveAttributes().subscribe(() => {\n      widgetContext.updateAliases();\n      vm.dialogRef.close(null);\n    });\n  };\n}\n\nfunction saveAttributes() {\n  let attributesArray = [{ key: additionalParams.key, value: additionalParams.active == 'true' ? 'false' : 'true' }];\n\n  if (attributesArray.length > 0) {\n    return attributeService.saveEntityAttributes(entityId, 'SERVER_SCOPE', attributesArray);\n  } else {\n    return widgetContext.rxjs.of([]);\n  }\n}\n\nfunction t(key, data) {\n  let defaultKey = key;\n  if (typeof key === 'string') {\n    let keyArr = key.split('.');\n    defaultKey = keyArr[keyArr.length - 1];\n  }\n  let result = widgetContext.translate.instant(key, data);\n  if (result == key) {\n    return defaultKey;\n  }\n  return result;\n}\n",
+                "customResources": [],
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "0a416816-54b8-a18f-6c59-1b254aeeb533"
+              }
+            ],
+            "controlPredictor": [
+              {
+                "name": "Control Predictor",
+                "icon": "visibility",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "customPretty",
+                "customHtml": "<div class=\"dialog-top-bar\"></div>\n<form #deleteEntityForm=\"ngForm\" [formGroup]=\"deleteEntityFormGroup\" (ngSubmit)=\"save()\" class=\"delete-entity-form\">\n  <div class=\"dialog-header\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <div class=\"title-box\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n      <div class=\"dialog-title\">{{title}}</div>\n    </div>\n    <i class=\"material-icons cancel-icon\" (click)=\"cancel()\">close</i>\n  </div>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\"> </mat-progress-bar>\n  <div style=\"height: 0.4em\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content fxLayout=\"column\">\n    <div class=\"row\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n      <span class=\"row-text\">{{content}}</span>\n    </div>\n  </div>\n  <div mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">\n    <button\n      class=\"button close-button\"\n      [disabled]=\"(isLoading$ | async)\"\n      type=\"button\"\n      (click)=\"cancel()\"\n      cdkFocusInitial\n    >\n      닫기\n    </button>\n    <button class=\"button save-button\" type=\"submit\" [disabled]=\"(isLoading$ | async) || deleteEntityForm.invalid\">\n      {{controlBtn}}\n    </button>\n  </div>\n</form>\n",
+                "customCss": "/*\n    FHD 1920px 기준\n    1vw = 1920px * 0.01 * 19.2px\n    모바일 기준: 599px\n    태블릿 / 데스크탑 기준 max-width: 80vw\n\n    min-width = 600px * 0.8 = 480px\n    font-size = 10px / 19.2px = 0.521vw\n*/\n\n.delete-entity-form {\n  background-color: #ffffff;\n  box-shadow: 0 0.1em 0.4em 0 rgba(21, 34, 50, 0.08);\n  font-size: 0.521vw;\n  min-width: 480px !important;\n  max-width: 80vw;\n  width: 36em;\n}\n\n.delete-entity-form .dialog-header {\n  padding: 2.2em 2.4em;\n  border-bottom: 1px solid #dee0e5;\n}\n\n.delete-entity-form .dialog-title {\n  color: #1f2229;\n  font-size: 1.6em;\n  font-weight: 600;\n}\n\n.delete-entity-form .cancel-icon {\n  color: #1f2229;\n  font-size: 2em;\n  cursor: pointer;\n}\n\n.delete-entity-form .mat-dialog-content {\n  padding: 2.4em !important;\n  -ms-overflow-style: none; /* IE and Edge */\n  scrollbar-width: none; /* Firefox */\n}\n\n.delete-entity-form .mat-dialog-content::-webkit-scrollbar {\n  display: none;\n}\n\n.delete-entity-form .row {\n  margin: 0em;\n}\n\n.delete-entity-form .row-text {\n  font-size: 1.4em;\n  color: #5a616f;\n}\n\n.delete-entity-form .mat-dialog-actions {\n  padding: 2.4em !important;\n  padding-top: 0.8em o !important;\n}\n\n.delete-entity-form .button {\n  all: unset;\n  margin-left: calc(0.8em / 1.4);\n  padding: calc(0.8em / 1.4) calc(1.6em / 1.4);\n  font-size: 1.4em;\n  cursor: pointer;\n}\n.delete-entity-form .save-button {\n  background-color: #1d6ef0;\n  color: #ffffff;\n}\n.delete-entity-form .close-button {\n  background-color: #ffffff;\n  color: #5a616f;\n  border: solid 1px #dee0e5;\n}\n.delete-entity-form .close-button:hover {\n  background-color: #f5f6fa;\n}\n",
+                "customFunction": "// customer, device, asset, user service\n\nlet $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet customerService = $injector.get(widgetContext.servicesMap.get('customerService'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenDeleteEntityDialog();\n\nfunction openDeleteEntityDialog() {\n  customDialog.customDialog(htmlTemplate, DeleteEntityDialogController).subscribe();\n}\n\nfunction DeleteEntityDialogController(instance) {\n  let vm = instance;\n\n  let key = additionalParams.key;\n  let active = additionalParams.active;\n  let label = additionalParams.label;\n\n  if (active == 'true') {\n    vm.title = '환경 예측 정지';\n    vm.content = \"'\" + label + \"' \" + '을 정지하시겠습니까?';\n    vm.controlBtn = '정지';\n  } else {\n    vm.title = '환경 예측 가동';\n    vm.content = \"'\" + label + \"' \" + '을 가동하시겠습니까?';\n    vm.controlBtn = '가동';\n  }\n\n  vm.deleteEntityFormGroup = vm.fb.group({});\n\n  vm.cancel = function () {\n    vm.dialogRef.close(null);\n  };\n\n  vm.save = function () {\n    saveAttributes().subscribe(() => {\n      widgetContext.updateAliases();\n      vm.dialogRef.close(null);\n    });\n  };\n}\n\nfunction saveAttributes() {\n  let attributesArray = [{ key: additionalParams.key, value: additionalParams.active == 'true' ? 'false' : 'true' }];\n\n  if (attributesArray.length > 0) {\n    return attributeService.saveEntityAttributes(entityId, 'SERVER_SCOPE', attributesArray);\n  } else {\n    return widgetContext.rxjs.of([]);\n  }\n}\n\nfunction t(key, data) {\n  let defaultKey = key;\n  if (typeof key === 'string') {\n    let keyArr = key.split('.');\n    defaultKey = keyArr[keyArr.length - 1];\n  }\n  let result = widgetContext.translate.instant(key, data);\n  if (result == key) {\n    return defaultKey;\n  }\n  return result;\n}\n",
+                "customResources": [],
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "65920daa-649c-1b4c-d071-c272fef69bfd"
+              }
+            ]
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "8760a081-6791-1596-53ff-7455decbcb03"
+      },
+      "c2e49455-7840-62fb-2732-284e52435be2": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card422",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 15,
+        "sizeY": 10,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d",
+              "filterId": null,
+              "dataKeys": []
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1630
+            }
+          },
+          "title": "New Control Table",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "c2e49455-7840-62fb-2732-284e52435be2"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "전체 현황",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "58746375-477c-c55f-56ed-0945122f1816": {
+                "sizeX": 83,
+                "sizeY": 3,
+                "row": 0,
+                "col": 0
+              },
+              "9530d41b-c451-fbb2-9f9c-763926299f22": {
+                "sizeX": 55,
+                "sizeY": 3,
+                "row": 3,
+                "col": 0
+              },
+              "58a42966-fb1f-b6f4-7e3f-adac9c72f54e": {
+                "sizeX": 55,
+                "sizeY": 13,
+                "row": 31,
+                "col": 0
+              },
+              "5759ec8d-4b63-7576-3412-c20f81ace4b8": {
+                "sizeX": 28,
+                "sizeY": 41,
+                "row": 3,
+                "col": 55
+              },
+              "8760a081-6791-1596-53ff-7455decbcb03": {
+                "sizeX": 55,
+                "sizeY": 25,
+                "row": 6,
+                "col": 0
+              },
+              "c2e49455-7840-62fb-2732-284e52435be2": {
+                "sizeX": 83,
+                "sizeY": 37,
+                "row": 44,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#edeff3",
+              "columns": 83,
+              "margin": 0,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d": {
+        "id": "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d",
+        "alias": "Current User Owner",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "CURRENT_USER_OWNER",
+            "id": "13814000-1dd2-11b2-8080-808080808080"
+          }
+        }
+      },
+      "968454d7-50a1-24e4-bcb1-b4b7b021051a": {
+        "id": "968454d7-50a1-24e4-bcb1-b4b7b021051a",
+        "alias": "EM500-CO2 Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-CO2",
+          "deviceNameFilter": ""
+        }
+      },
+      "b3951489-169f-b769-cd04-925a3063abda": {
+        "id": "b3951489-169f-b769-cd04-925a3063abda",
+        "alias": "EM500-LGT Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-LGT",
+          "deviceNameFilter": ""
+        }
+      },
+      "5622e315-1639-358c-1053-233dd4d1b2fd": {
+        "id": "5622e315-1639-358c-1053-233dd4d1b2fd",
+        "alias": "EM500-PT100 Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-PT100",
+          "deviceNameFilter": ""
+        }
+      },
+      "8834821b-e82a-4277-e7a5-eb1a80b15785": {
+        "id": "8834821b-e82a-4277-e7a5-eb1a80b15785",
+        "alias": "EM500-SMT Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-SMT",
+          "deviceNameFilter": ""
+        }
+      },
+      "85d8d61d-ec52-92f1-f068-3819c1a32220": {
+        "id": "85d8d61d-ec52-92f1-f068-3819c1a32220",
+        "alias": "UC502 Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "UC502",
+          "deviceNameFilter": ""
+        }
+      },
+      "3d7ab6fc-cdf8-3aa6-37aa-4f4e8827bb62": {
+        "id": "3d7ab6fc-cdf8-3aa6-37aa-4f4e8827bb62",
+        "alias": "Gems3500",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "1b4ba020-66dd-11ed-8d0d-21e1d787e420"
+          }
+        }
+      },
+      "e643e4c9-ec71-c662-4da3-dd54268ad7d9": {
+        "id": "e643e4c9-ec71-c662-4da3-dd54268ad7d9",
+        "alias": "Controller",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "dad48ef0-2a8e-11ee-8d0d-21e1d787e420"
+          }
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1679791634787,
+          "endTimeMs": 1679878034787
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": false,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": true,
+      "showFilters": false,
+      "showUpdateDashboardImage": false
+    }
+  },
+  "name": "환경 정보 (CLUST)"
+}

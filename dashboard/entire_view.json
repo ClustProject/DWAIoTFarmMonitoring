@@ -1,0 +1,977 @@
+{
+  "title": "전체 현황 (CLUST)",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "a6bc0282-0388-6c62-8390-845e273d8acb": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 13.5,
+        "sizeY": 4.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "04080305-8cf6-0091-c814-018b120fa5c8",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "class0",
+                  "type": "timeseries",
+                  "label": "class0",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5869736237015315
+                },
+                {
+                  "name": "class1",
+                  "type": "timeseries",
+                  "label": "class1",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.9638645804168846
+                },
+                {
+                  "name": "class2",
+                  "type": "timeseries",
+                  "label": "class2",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.26357819304006824
+                },
+                {
+                  "name": "class3",
+                  "type": "timeseries",
+                  "label": "class3",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.45954784768900536
+                },
+                {
+                  "name": "class4",
+                  "type": "timeseries",
+                  "label": "class4",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.03282132685820316
+                },
+                {
+                  "name": "class5",
+                  "type": "timeseries",
+                  "label": "class5",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.36471356480609063
+                },
+                {
+                  "name": "class6",
+                  "type": "timeseries",
+                  "label": "class6",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.9454688612335216
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1670
+            }
+          },
+          "title": "전체 현황",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "actions": {
+            "headerButton": []
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "a6bc0282-0388-6c62-8390-845e273d8acb"
+      },
+      "667bd838-e6b3-b39e-83a7-fbdf8194a3c3": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "default_template2",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "559492da-5489-db9f-e1c1-1a377fd63583",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "illumination",
+                  "type": "timeseries",
+                  "label": "illumination",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.8396381237229273
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "f62ca865-04ad-5dc8-6e04-a7a3421f927d",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "co2",
+                  "type": "timeseries",
+                  "label": "co2",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.11395390441066233
+                },
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "humidity",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.5004739708766972
+                },
+                {
+                  "name": "pressure",
+                  "type": "timeseries",
+                  "label": "pressure",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.9929140075633485
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.21426049289842264,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "fe043aae-a720-2ae3-c0c5-d6ec7b581167",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "ec",
+                  "type": "timeseries",
+                  "label": "soilEC",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.7364376133501962,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "moisture",
+                  "type": "timeseries",
+                  "label": "soilHumidity",
+                  "color": "#3f51b5",
+                  "settings": {},
+                  "_hash": 0.9529662987624437,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "soilTemperature",
+                  "color": "#e91e63",
+                  "settings": {},
+                  "_hash": 0.6325370868526323,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1100
+            }
+          },
+          "title": "온실 환경",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "headerButton": []
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "667bd838-e6b3-b39e-83a7-fbdf8194a3c3"
+      },
+      "17694a90-76b1-a855-2941-aecf0eebefd4": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "custom_tileset2",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 5.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "f62ca865-04ad-5dc8-6e04-a7a3421f927d",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "co2",
+                  "type": "timeseries",
+                  "label": "CO₂",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.5179510660705122,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "pressure",
+                  "type": "timeseries",
+                  "label": "기압",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.42079424917408015,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "온도",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.9123360901766435,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "습도",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.06317824410797024,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.6960624808342779
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.03870268722937387
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "559492da-5489-db9f-e1c1-1a377fd63583",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "illumination",
+                  "type": "timeseries",
+                  "label": "조도",
+                  "color": "#3f51b5",
+                  "settings": {},
+                  "_hash": 0.98250480629658,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#e91e63",
+                  "settings": {},
+                  "_hash": 0.2407989195394198,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#ffeb3b",
+                  "settings": {},
+                  "_hash": 0.7208012932235146,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b39cf947-e384-3093-f72e-da44fa446614",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "온도",
+                  "color": "#03a9f4",
+                  "settings": {},
+                  "_hash": 0.5420714690842567,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#ff9800",
+                  "settings": {},
+                  "_hash": 0.6369537791690814,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#673ab7",
+                  "settings": {},
+                  "_hash": 0.2671825204385183,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "fe043aae-a720-2ae3-c0c5-d6ec7b581167",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "ec",
+                  "type": "timeseries",
+                  "label": "토양 EC",
+                  "color": "#cddc39",
+                  "settings": {},
+                  "_hash": 0.608568368774546,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "토양 수분",
+                  "color": "#009688",
+                  "settings": {},
+                  "_hash": 0.587298904524511,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "토양 온도",
+                  "color": "#00bcd4",
+                  "settings": {},
+                  "_hash": 0.045612505885068044,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#ff5722",
+                  "settings": {},
+                  "_hash": 0.08441983782846707,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#9e9e9e",
+                  "settings": {},
+                  "_hash": 0.03875614323288934,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "9b35b34a-7ee8-5737-4cea-8ac2acaa24fb",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "CH1",
+                  "type": "timeseries",
+                  "label": "일사량",
+                  "color": "#9e9e9e",
+                  "settings": {},
+                  "_hash": 0.3451203218677694,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "CH2",
+                  "type": "timeseries",
+                  "label": "퀀텀(PAR)",
+                  "color": "#2962ff",
+                  "settings": {},
+                  "_hash": 0.47139009779387586,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "x",
+                  "type": "attribute",
+                  "label": "x",
+                  "color": "#00c853",
+                  "settings": {},
+                  "_hash": 0.2791619782873622,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "y",
+                  "type": "attribute",
+                  "label": "y",
+                  "color": "#d50000",
+                  "settings": {},
+                  "_hash": 0.8831080038970636,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "98c905fb-6a04-d8c3-80c0-bcd127917454",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "Heater",
+                  "type": "attribute",
+                  "label": "Heater",
+                  "color": "#d50000",
+                  "settings": {},
+                  "_hash": 0.5387725653889648
+                },
+                {
+                  "name": "Irrigator",
+                  "type": "attribute",
+                  "label": "Irrigator",
+                  "color": "#ffab00",
+                  "settings": {},
+                  "_hash": 0.8517962879111767
+                },
+                {
+                  "name": "PredictedTemperature",
+                  "type": "attribute",
+                  "label": "PredictedTemperature",
+                  "color": "#455a64",
+                  "settings": {},
+                  "_hash": 0.35341525525092377
+                },
+                {
+                  "name": "Ventilator",
+                  "type": "attribute",
+                  "label": "Ventilator",
+                  "color": "#aa00ff",
+                  "settings": {},
+                  "_hash": 0.49577365373895277
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "title": {
+              "widgetSize": "1110"
+            },
+            "heatmap": {}
+          },
+          "title": "New Environment Tileset",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "titleStyle": {
+            "fontSize": "18px",
+            "fontWeight": 600
+          },
+          "showLegend": false,
+          "noDataDisplayMessage": "",
+          "actions": {
+            "headerButton": []
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "17694a90-76b1-a855-2941-aecf0eebefd4"
+      },
+      "18d3cc85-e74f-1e0d-11a2-ee26f1ec4d43": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card2",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 15,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "f62ca865-04ad-5dc8-6e04-a7a3421f927d",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "humidity",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.35203378427406107
+                },
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.08976033015389717
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 563
+            }
+          },
+          "title": "온도 · 습도 현황",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "actions": {
+            "headerButton": []
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "18d3cc85-e74f-1e0d-11a2-ee26f1ec4d43"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "전체 현황",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "a6bc0282-0388-6c62-8390-845e273d8acb": {
+                "sizeX": 83,
+                "sizeY": 13,
+                "row": 0,
+                "col": 0
+              },
+              "667bd838-e6b3-b39e-83a7-fbdf8194a3c3": {
+                "sizeX": 55,
+                "sizeY": 9,
+                "row": 13,
+                "col": 0
+              },
+              "17694a90-76b1-a855-2941-aecf0eebefd4": {
+                "sizeX": 55,
+                "sizeY": 25,
+                "row": 22,
+                "col": 0
+              },
+              "18d3cc85-e74f-1e0d-11a2-ee26f1ec4d43": {
+                "sizeX": 28,
+                "sizeY": 34,
+                "row": 13,
+                "col": 55
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#edeff3",
+              "columns": 83,
+              "margin": 0,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "e8a889ca-e380-b60a-c621-e2003b4df0e8": {
+        "id": "e8a889ca-e380-b60a-c621-e2003b4df0e8",
+        "alias": "Entity from dashboard state",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": {
+            "entityType": "TENANT",
+            "id": "c47fd2c0-f4c8-11eb-a91f-b7b3258587a1"
+          }
+        }
+      },
+      "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d": {
+        "id": "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d",
+        "alias": "Current User Owner",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "CURRENT_USER_OWNER",
+            "id": "13814000-1dd2-11b2-8080-808080808080"
+          }
+        }
+      },
+      "89f6cf6e-517e-8626-6e83-8b0a8e0f3baf": {
+        "id": "89f6cf6e-517e-8626-6e83-8b0a8e0f3baf",
+        "alias": "Customer List",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "TENANT",
+            "id": "c47fd2c0-f4c8-11eb-a91f-b7b3258587a1"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": [
+                "CUSTOMER"
+              ]
+            }
+          ]
+        }
+      },
+      "f62ca865-04ad-5dc8-6e04-a7a3421f927d": {
+        "id": "f62ca865-04ad-5dc8-6e04-a7a3421f927d",
+        "alias": "EM500-CO2 Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-CO2",
+          "deviceNameFilter": ""
+        }
+      },
+      "559492da-5489-db9f-e1c1-1a377fd63583": {
+        "id": "559492da-5489-db9f-e1c1-1a377fd63583",
+        "alias": "EM500-LGT Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-LGT",
+          "deviceNameFilter": ""
+        }
+      },
+      "b39cf947-e384-3093-f72e-da44fa446614": {
+        "id": "b39cf947-e384-3093-f72e-da44fa446614",
+        "alias": "EM500-PT100 Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-PT100",
+          "deviceNameFilter": ""
+        }
+      },
+      "fe043aae-a720-2ae3-c0c5-d6ec7b581167": {
+        "id": "fe043aae-a720-2ae3-c0c5-d6ec7b581167",
+        "alias": "EM500-SMT Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-SMT",
+          "deviceNameFilter": ""
+        }
+      },
+      "9b35b34a-7ee8-5737-4cea-8ac2acaa24fb": {
+        "id": "9b35b34a-7ee8-5737-4cea-8ac2acaa24fb",
+        "alias": "UC502 Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "UC502",
+          "deviceNameFilter": ""
+        }
+      },
+      "04080305-8cf6-0091-c814-018b120fa5c8": {
+        "id": "04080305-8cf6-0091-c814-018b120fa5c8",
+        "alias": "CLUST Device List",
+        "filter": {
+          "type": "deviceSearchQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "CURRENT_CUSTOMER",
+            "id": "e7b62b10-29bc-11ee-8d0d-21e1d787e420"
+          },
+          "direction": "FROM",
+          "maxLevel": 2,
+          "fetchLastLevelOnly": false,
+          "relationType": "Contains",
+          "deviceTypes": [
+            "CLUST"
+          ]
+        }
+      },
+      "98c905fb-6a04-d8c3-80c0-bcd127917454": {
+        "id": "98c905fb-6a04-d8c3-80c0-bcd127917454",
+        "alias": "Controller",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "dad48ef0-2a8e-11ee-8d0d-21e1d787e420"
+          }
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1679791634787,
+          "endTimeMs": 1679878034787
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": false,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": true,
+      "showFilters": false,
+      "showUpdateDashboardImage": false
+    }
+  },
+  "name": "전체 현황 (CLUST)"
+}

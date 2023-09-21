@@ -1,0 +1,408 @@
+{
+  "title": "생육 현황 (CLUST)",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "75bafa88-5be4-5cdd-fc65-4c3a8115433a": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card3",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 15,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b892c7bc-916e-dd1a-7624-940283b892bd",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "class0",
+                  "type": "timeseries",
+                  "label": "class0",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.7907830306604982
+                },
+                {
+                  "name": "class1",
+                  "type": "timeseries",
+                  "label": "class1",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.3826461104764618
+                },
+                {
+                  "name": "class2",
+                  "type": "timeseries",
+                  "label": "class2",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.7737262759317272
+                },
+                {
+                  "name": "class3",
+                  "type": "timeseries",
+                  "label": "class3",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.5671015040901963
+                },
+                {
+                  "name": "class4",
+                  "type": "timeseries",
+                  "label": "class4",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.6163817397107791
+                },
+                {
+                  "name": "class5",
+                  "type": "timeseries",
+                  "label": "class5",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.5281750614828746
+                },
+                {
+                  "name": "class6",
+                  "type": "timeseries",
+                  "label": "class6",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.9387668271924812
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1670
+            }
+          },
+          "title": "생육 현황",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "75bafa88-5be4-5cdd-fc65-4c3a8115433a"
+      },
+      "09600bb0-a57a-072f-c085-f7bb666bfeec": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card22",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 6,
+        "sizeY": 6.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b892c7bc-916e-dd1a-7624-940283b892bd",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "class0",
+                  "type": "timeseries",
+                  "label": "class0",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.6453319479878723
+                },
+                {
+                  "name": "class1",
+                  "type": "timeseries",
+                  "label": "class1",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.29253229828164695
+                },
+                {
+                  "name": "class2",
+                  "type": "timeseries",
+                  "label": "class2",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.8552531251456612
+                },
+                {
+                  "name": "class3",
+                  "type": "timeseries",
+                  "label": "class3",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.05288798995186195
+                },
+                {
+                  "name": "class4",
+                  "type": "timeseries",
+                  "label": "class4",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.53734652649324
+                },
+                {
+                  "name": "class5",
+                  "type": "timeseries",
+                  "label": "class5",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.4354523324801991
+                },
+                {
+                  "name": "class6",
+                  "type": "timeseries",
+                  "label": "class6",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.3348191619161398
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1670
+            }
+          },
+          "title": "베드 모니터링",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "actions": {
+            "headerButton": [],
+            "detailView": [
+              {
+                "name": "생육 이미지 보기",
+                "icon": "visibility",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "customPretty",
+                "customHtml": "<form #addEntityForm=\"ngForm\" [formGroup]=\"addEntityFormGroup\" class=\"add-entity-form\">\n  <div class=\"dialog-header\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <div class=\"title-box\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n      <div class=\"dialog-title\">생육 이미지</div>\n    </div>\n    <i class=\"material-icons cancel-icon\" (click)=\"cancel()\">close</i>\n  </div>\n  <div class=\"dialog-content\" fxLayout=\"column\">\n    <div class=\"select-section\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n      <div class=\"input-box\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <span class=\"label\">Bed선택:</span>\n        <mat-select formControlName=\"selectedCustomer\">\n          <mat-option *ngFor=\"let customer of customerList\" [value]=\"customer.key\"> {{customer.name }} </mat-option>\n        </mat-select>\n        <span class=\"label\">Position선택:</span>\n        <mat-select formControlName=\"selectedDevice\" (selectionChange)=\"changeDevice($event)\">\n          <mat-option *ngFor=\"let device of deviceList\" [value]=\"device.key\"> {{device.name }} </mat-option>\n        </mat-select>\n      </div>\n      <div class=\"download-button-all\" fxLayout=\"row\" fxLayoutAlign=\"start center\" (click)=\"downloadAll()\">\n        <div class=\"material-icons\">download</div>\n        <div class=\"text\">사진 모두 저장</div>\n      </div>\n    </div>\n    <div class=\"table-head-section\" fxLayout=\"row\">\n      <div class=\"head-label\" fxFlex>단위 (개수)</div>\n      <div class=\"head-label\" fxFlex>합계</div>\n      <div class=\"head-box\" fxFlex fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <hr class=\"line-hr\" style=\"border-color: #ff3838\" />\n        <div class=\"head-label\">0단계</div>\n      </div>\n      <div class=\"head-box\" fxFlex fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <hr class=\"line-hr\" style=\"border-color: #ff3838\" />\n        <div class=\"head-label\">1단계</div>\n      </div>\n      <div class=\"head-box\" fxFlex fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <hr class=\"line-hr\" style=\"border-color: #ff701f\" />\n        <div class=\"head-label\">2단계</div>\n      </div>\n      <div class=\"head-box\" fxFlex fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <hr class=\"line-hr\" style=\"border-color: #ffb21d\" />\n        <div class=\"head-label\">3단계</div>\n      </div>\n      <div class=\"head-box\" fxFlex fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <hr class=\"line-hr\" style=\"border-color: #cfd231\" />\n        <div class=\"head-label\">4단계</div>\n      </div>\n      <div class=\"head-box\" fxFlex fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <hr class=\"line-hr\" style=\"border-color: #48f90a\" />\n        <div class=\"head-label\">5단계</div>\n      </div>\n      <div class=\"head-box\" fxFlex fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <hr class=\"line-hr\" style=\"border-color: #92cc17\" />\n        <div class=\"head-label\">6단계</div>\n      </div>\n    </div>\n    <div class=\"table-body-section\" fxLayout=\"row\">\n      <div class=\"body-label\" fxFlex>딸기 열매 수</div>\n      <div class=\"value\" fxFlex>{{fruitSum}}</div>\n      <div class=\"value\" fxFlex>{{level0Sum}}</div>\n      <div class=\"value\" fxFlex>{{level1Sum}}</div>\n      <div class=\"value\" fxFlex>{{level2Sum}}</div>\n      <div class=\"value\" fxFlex>{{level3Sum}}</div>\n      <div class=\"value\" fxFlex>{{level4Sum}}</div>\n      <div class=\"value\" fxFlex>{{level5Sum}}</div>\n      <div class=\"value\" fxFlex>{{level6Sum}}</div>\n    </div>\n\n    <div class=\"photo-list-section\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n      <div class=\"left-section\" fxFlex fxLayout=\"row\">\n        <div class=\"list-box {{active3}}\" fxLayout=\"row\" fxLayoutAlign=\"start center\" (click)=\"photoSelect(3)\">\n          <div class=\"material-icons\">image</div>\n          <div class=\"list-text\">{{photoName3}}</div>\n        </div>\n        <div class=\"list-box {{active2}}\" fxLayout=\"row\" fxLayoutAlign=\"start center\" (click)=\"photoSelect(2)\">\n          <div class=\"material-icons\">image</div>\n          <div class=\"list-text\">{{photoName2}}</div>\n        </div>\n        <div class=\"list-box {{active1}}\" fxLayout=\"row\" fxLayoutAlign=\"start center\" (click)=\"photoSelect(1)\">\n          <div class=\"material-icons\">image</div>\n          <div class=\"list-text\">{{photoName1}}</div>\n        </div>\n        <div class=\"list-box {{active0}}\" fxLayout=\"row\" fxLayoutAlign=\"start center\" (click)=\"photoSelect(0)\">\n          <div class=\"material-icons\">image</div>\n          <div class=\"list-text\">{{photoName0}}</div>\n        </div>\n      </div>\n      <div class=\"right-section\" fxLayout=\"row\">\n        <div class=\"list-button\" fxLayout=\"row\" fxLayoutAlign=\"center center\" (click)=\"photoNext()\">\n          <div class=\"material-icons\">chevron_left</div>\n        </div>\n        <div class=\"list-button\" fxLayout=\"row\" fxLayoutAlign=\"center center\" (click)=\"photoPrev()\">\n          <div class=\"material-icons\">chevron_right</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"photo-title-section\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n      <div class=\"left-section\" fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <div class=\"material-icons\">image</div>\n        <div class=\"photo-title\">{{photoDate}} 촬영</div>\n      </div>\n      <div class=\"right-section\">\n        <div class=\"list-button\" fxLayout=\"row\" fxLayoutAlign=\"center center\" (click)=\"download()\">\n          <div class=\"material-icons\">download</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"photo-section\">\n      <img src=\"{{photoURL}}\" />\n    </div>\n  </div>\n</form>\n",
+                "customCss": "/*\n    FHD 1920px 기준\n    1vw = 1920px * 0.01 * 19.2px\n    모바일 기준: 599px\n    태블릿 / 데스크탑 기준 max-width: 80vw\n\n    min-width = 600px * 0.8 = 480px\n    font-size = 10px / 19.2px = 0.521vw\n*/\n\n.mat-dialog-container {\n  border-radius: 0;\n}\n\n.add-entity-form {\n  background-color: #ffffff;\n  font-size: 0.521vw;\n  /* min-width: 480px !important;\n  max-width: 80vw; */\n  width: 80em;\n\n  font-family: 'Pretendard';\n}\n\n.add-entity-form .dialog-header {\n  padding: 2.1em;\n  border-bottom: 1px solid #dee0e5;\n}\n\n.add-entity-form .dialog-title {\n  color: #1f2229;\n  font-size: 1.8em;\n  font-weight: 600;\n}\n\n.add-entity-form .cancel-icon {\n  color: #1f2229;\n  font-size: 1.7em;\n  width: 1em;\n  height: 1em;\n  cursor: pointer;\n}\n\n.add-entity-form .dialog-content {\n}\n\n.add-entity-form .dialog-content .select-section {\n  padding-left: 3.2em;\n  padding-right: 2.4em;\n  padding-top: 0.8em;\n  padding-bottom: 0.8em;\n\n  border-bottom: 1px solid #dee0e5;\n}\n\n.add-entity-form .select-section .input-box .label {\n  font-size: 1.2em;\n  color: #5a616f;\n}\n\n.add-entity-form .select-section .input-box .mat-select {\n  width: 7em;\n  height: 3.2em;\n  margin-left: 0.4em;\n  margin-right: 1.6em;\n}\n\n.add-entity-form .select-section .input-box .mat-select .mat-select-trigger {\n  height: 100%;\n}\n\n.add-entity-form .select-section .input-box .mat-select .mat-select-value {\n  color: #1f2229;\n  vertical-align: middle;\n}\n\n.add-entity-form .select-section .input-box .mat-select .mat-select-value .mat-select-min-line {\n  font-size: 1.4em;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  font-weight: 500;\n}\n\n.add-entity-form .select-section .input-box .mat-select .mat-select-arrow {\n  border-left-width: 0.4em;\n  border-right-width: 0.4em;\n  border-top-width: 0.4em;\n  color: #1d6ef0;\n  margin-right: 1.6em;\n}\n\n.add-entity-form .select-section .download-button-all {\n  border: solid 1px #dee0e5;\n  background-color: #fafbfc;\n  border-radius: 0.4em;\n  padding: 0.8em 0.9em;\n\n  cursor: pointer;\n}\n.add-entity-form .select-section .download-button-all .material-icons {\n  color: #6ba3ff;\n  width: 1em;\n  height: 1em;\n  font-size: 1.6em;\n}\n.add-entity-form .select-section .download-button-all .text {\n  color: #5a616f;\n  font-size: 1.2em;\n  margin-left: calc(0.8em / 1.2);\n}\n\n.add-entity-form .table-head-section {\n  padding: 0.8em 2.4em;\n  border-bottom: 1px solid #dee0e5;\n}\n\n.add-entity-form .table-head-section .head-box .line-hr {\n  border: 2px solid black;\n  width: 10px;\n  height: 0;\n  margin: 0;\n}\n\n.add-entity-form .table-head-section .head-label {\n  color: #5a616f;\n  font-size: 1.2em;\n}\n\n.add-entity-form .table-head-section .head-box .head-label {\n  margin-left: calc(0.8em / 1.2);\n}\n\n.add-entity-form .table-body-section {\n  padding: 2em 2.4em;\n  border-bottom: 1px solid #dee0e5;\n}\n\n.add-entity-form .table-body-section .body-label {\n  color: #5a616f;\n  font-size: 1.2em;\n}\n\n.add-entity-form .table-body-section .value {\n  color: #1f2229;\n  font-size: 1.6em;\n  font-weight: bold;\n}\n\n.add-entity-form .photo-list-section {\n  padding: 1.6em 2.4em;\n  border-bottom: solid 1px #dee0e5;\n}\n\n.add-entity-form .photo-list-section .left-section {\n  gap: 0.8em;\n  overflow-x: scroll;\n}\n\n.add-entity-form .photo-list-section .left-section .list-box {\n  padding: 0.8em;\n  border: solid 1px #dee0e5;\n  border-radius: 0.4em;\n  background-color: #fafbfc;\n  cursor: pointer;\n}\n\n.add-entity-form .photo-list-section .left-section .list-box .material-icons {\n  color: #b9bdc4;\n\n  width: 1em;\n  height: 1em;\n  font-size: 1.6em;\n}\n\n.add-entity-form .photo-list-section .left-section .list-box .list-text {\n  font-size: 1.2em;\n  color: #5a616f;\n  margin-left: calc(0.8em / 1.2);\n}\n\n.add-entity-form .photo-list-section .left-section .list-box.active {\n  border: 1px solid #94bdff;\n}\n\n.add-entity-form .photo-list-section .left-section .list-box.active .material-icons {\n  color: #6ba3ff;\n}\n\n.add-entity-form .photo-list-section .left-section .list-box.active .list-text {\n  color: #1d6ef0;\n}\n\n.add-entity-form .photo-list-section .right-section {\n  margin-left: 1.6em;\n}\n\n.add-entity-form .photo-list-section .right-section .list-button {\n  border-radius: 0.4em;\n  border: 1px solid #dee0e5;\n  width: 3.2em;\n  height: 3.2em;\n  background-color: #fafbfc;\n\n  cursor: pointer;\n  user-select: none;\n}\n\n.add-entity-form .photo-list-section .right-section .list-button .material-icons {\n  color: #999ea9;\n  width: 1em;\n  height: 1em;\n  font-size: 1.6em;\n}\n\n.add-entity-form .photo-title-section {\n  padding: 1.6em 2.4em;\n}\n\n.add-entity-form .photo-title-section .left-section .material-icons {\n  color: #b9bdc4;\n\n  width: 1em;\n  height: 1em;\n  font-size: 1.8em;\n}\n\n.add-entity-form .photo-title-section .left-section .photo-title {\n  color: #1f2229;\n  font-size: 1.4em;\n  font-weight: 500;\n  margin-left: calc(0.8em / 1.4);\n}\n\n.add-entity-form .photo-title-section .right-section .list-button {\n  border-radius: 0.4em;\n  background-color: #fafbfc;\n  border: 1px solid #dee0e5;\n  width: 3.2em;\n  height: 3.2em;\n  margin-left: 0.8em;\n\n  cursor: pointer;\n}\n\n.add-entity-form .photo-title-section .right-section .list-button .material-icons {\n  color: #6ba3ff;\n  width: 1em;\n  height: 1em;\n  font-size: 1.6em;\n}\n\n.add-entity-form .photo-section {\n  padding-left: 2.4em;\n  padding-right: 2.4em;\n  padding-bottom: 2.4em;\n  width: 100%;\n}\n\n.add-entity-form .photo-section img {\n  width: 100%;\n  height: auto;\n}\n",
+                "customFunction": "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\n\nopenAddEntityDialog();\n\nfunction openAddEntityDialog() {\n  customDialog.customDialog(htmlTemplate, AddEntityDialogController).subscribe();\n}\n\nfunction AddEntityDialogController(instance) {\n  let vm = instance;\n\n  let bed = additionalParams.bed;\n  let position = additionalParams.position;\n\n  vm.customerList = [\n    { name: 'Bed1', key: 'B1' },\n    { name: 'Bed2', key: 'B2' },\n    { name: 'Bed3', key: 'B3' },\n    { name: 'Bed4', key: 'B4' },\n  ];\n  vm.deviceList = [\n    { name: 'P-1', key: 'P1' },\n    { name: 'P-2', key: 'P2' },\n    { name: 'P-3', key: 'P3' },\n    { name: 'P-4', key: 'P4' },\n    { name: 'P-5', key: 'P5' },\n    { name: 'P-6', key: 'P6' },\n    { name: 'P-7', key: 'P7' },\n    { name: 'P-8', key: 'P8' },\n    { name: 'P-9', key: 'P9' },\n    { name: 'P-10', key: 'P10' },\n    { name: 'P-11', key: 'P11' },\n    { name: 'P-12', key: 'P12' },\n    { name: 'P-13', key: 'P13' },\n    { name: 'P-14', key: 'P14' },\n    { name: 'P-15', key: 'P15' },\n    { name: 'P-16', key: 'P16' },\n    { name: 'P-17', key: 'P17' },\n    { name: 'P-18', key: 'P18' },\n    { name: 'P-19', key: 'P19' },\n    { name: 'P-20', key: 'P20' },\n    { name: 'P-21', key: 'P21' },\n    { name: 'P-22', key: 'P22' },\n    { name: 'P-23', key: 'P23' },\n    { name: 'P-24', key: 'P24' },\n    { name: 'P-25', key: 'P25' },\n    { name: 'P-26', key: 'P26' },\n    { name: 'P-27', key: 'P27' },\n    { name: 'P-28', key: 'P28' },\n    { name: 'P-29', key: 'P29' },\n    { name: 'P-30', key: 'P30' },\n  ];\n\n  vm.addEntityFormGroup = vm.fb.group({\n    selectedCustomer: [bed],\n    selectedDevice: [position],\n  });\n\n  insertData(bed, position);\n\n  var albumBucketName = 'thingplus.clust';\n\n  AWS.config.region = 'ap-northeast-2'; // Region\n  AWS.config.credentials = new AWS.CognitoIdentityCredentials({\n    IdentityPoolId: 'ap-northeast-2:77fc3659-1e55-479f-8f9c-3f55cf2516ee',\n  });\n\n  // Create a new service object\n  var s3 = new AWS.S3({\n    apiVersion: '2006-03-01',\n    params: {\n      Bucket: albumBucketName,\n    },\n  });\n\n  let albumName = bed + '/' + position + '/';\n\n  viewAlbum(albumName);\n\n  // changeDeviceList();\n\n  vm.changeDevice = function ($event) {\n    let selectedCustomer = vm.addEntityFormGroup.get('selectedCustomer').value;\n    let selectedDevice = vm.addEntityFormGroup.get('selectedDevice').value;\n\n    viewAlbum(selectedCustomer + '/' + selectedDevice + '/');\n    insertData(selectedCustomer, selectedDevice);\n  };\n\n  vm.photoPrev = function () {\n    if (vm.photoIdx == 0) return;\n\n    vm.photoSelect(vm.photoIdx - 1);\n  };\n\n  vm.photoNext = function () {\n    if (vm.photoIdx == 3) return;\n\n    vm.photoSelect(vm.photoIdx + 1);\n  };\n\n  vm.photoSelect = function (idx) {\n    vm.originPhotoList;\n\n    let photoURL = vm.bucketUrl + encodeURIComponent(vm.originPhotoList[idx].key);\n    let photoKey = vm.originPhotoList[idx].name;\n\n    let photoDateList = photoKey.split('_');\n    let ymd = photoDateList[0];\n    let hms = photoDateList[1];\n\n    let photoDate =\n      '20' +\n      ymd.substring(0, 2) +\n      '년 ' +\n      ymd.substring(2, 4) +\n      '월 ' +\n      ymd.substring(4) +\n      '일 ' +\n      hms.substring(0, 2) +\n      ':' +\n      hms.substring(2, 4) +\n      ':' +\n      hms.substring(4);\n\n    vm.photoDate = photoDate;\n    vm.photoURL = photoURL;\n\n    vm['active3'] = '';\n    vm['active2'] = '';\n    vm['active1'] = '';\n    vm['active0'] = '';\n\n    vm['active' + idx] = 'active';\n    vm.photoIdx = idx;\n  };\n\n  vm.downloadAll = async function () {\n    for (let i in vm.originPhotoList) {\n      const url = s3.getSignedUrl('getObject', {\n        Key: vm.originPhotoList[i].key,\n        Expires: 60 * 2, // 몇초동안 유효한지 명시\n      });\n\n      const response = await fetch(url);\n      const blobImage = await response.blob();\n      const href = URL.createObjectURL(blobImage);\n      const anchorElement = document.createElement('a');\n      anchorElement.href = href;\n      anchorElement.download = vm.originPhotoList[i].name;\n      document.body.appendChild(anchorElement);\n      anchorElement.click();\n      document.body.removeChild(anchorElement);\n      window.URL.revokeObjectURL(href);\n    }\n  };\n\n  vm.download = async function () {\n    const url = s3.getSignedUrl('getObject', {\n      Key: vm.originPhotoKey,\n      Expires: 60 * 2, // 몇초동안 유효한지 명시\n    });\n\n    const response = await fetch(url);\n    const blobImage = await response.blob();\n    const href = URL.createObjectURL(blobImage);\n    const anchorElement = document.createElement('a');\n    anchorElement.href = href;\n    anchorElement.download = vm.photoKey;\n    document.body.appendChild(anchorElement);\n    anchorElement.click();\n    document.body.removeChild(anchorElement);\n    window.URL.revokeObjectURL(href);\n  };\n\n  vm.cancel = function () {\n    vm.dialogRef.close(null);\n  };\n\n  function insertData(bed, position) {\n    let custom = widgetContext.custom;\n\n    let fruitSum = 0;\n    for (let key in custom.fruitDataObj.sum) {\n      fruitSum += custom.fruitDataObj.sum[key];\n    }\n\n    let targetPosition = custom.positionObj[bed][position.slice(1)];\n\n    vm.fruitSum = 0;\n    for (let i in targetPosition) {\n      vm.fruitSum += targetPosition[i];\n    }\n\n    vm.level0Sum = targetPosition[0];\n    vm.level1Sum = targetPosition[1];\n    vm.level2Sum = targetPosition[2];\n    vm.level3Sum = targetPosition[3];\n    vm.level4Sum = targetPosition[4];\n    vm.level5Sum = targetPosition[5];\n    vm.level6Sum = targetPosition[6];\n  }\n\n  // Show the photos that exist in an album.\n  function viewAlbum(albumName) {\n    // var albumPhotosKey = encodeURIComponent(albumName) + '/';\n    // var albumPhotosKey = encodeURIComponent(albumName);\n\n    s3.listObjects(\n      {\n        Prefix: albumName,\n      },\n      function (err, data) {\n        if (err) {\n          return alert('There was an error viewing your album: ' + err.message);\n        }\n\n        // 'this' references the AWS.Request instance that represents the response\n        let href = this.request.httpRequest.endpoint.href;\n        let bucketUrl = href + albumBucketName + '/';\n        vm.bucketUrl = bucketUrl;\n\n        let photoURL;\n        let photoDate;\n        let photoKey;\n        vm.originPhotoKey;\n        vm.originPhotoList = [];\n        let photos = data.Contents.filter(content => content.Key.includes('png')).map(function (photo, idx) {\n          let obj = {};\n\n          photoKey = photo.Key;\n          vm.originPhotoKey = photo.Key;\n          photoURL = bucketUrl + encodeURIComponent(photoKey);\n\n          photoKey = photoKey.replace(albumName, '');\n          vm['photoName' + idx] = photoKey;\n\n          let photoDateList = photoKey.split('_');\n          let ymd = photoDateList[0];\n          let hms = photoDateList[1];\n\n          photoDate =\n            '20' +\n            ymd.substring(0, 2) +\n            '년 ' +\n            ymd.substring(2, 4) +\n            '월 ' +\n            ymd.substring(4) +\n            '일 ' +\n            hms.substring(0, 2) +\n            ':' +\n            hms.substring(2, 4) +\n            ':' +\n            hms.substring(4);\n\n          obj.key = photo.Key;\n          obj.name = photoKey;\n\n          vm.originPhotoList.push(obj);\n\n          vm['active3'] = '';\n          vm['active2'] = '';\n          vm['active1'] = '';\n          vm['active0'] = '';\n\n          vm['active' + idx] = 'active';\n          vm.photoIdx = idx;\n        });\n\n        vm.photoKey = photoKey;\n        vm.photoDate = photoDate;\n        vm.photoURL = photoURL;\n      }\n    );\n  }\n\n  function getHtml(template) {\n    return template.join('\\n');\n  }\n}\n\nfunction t(key, data) {\n  let defaultKey = key;\n  if (typeof key === 'string') {\n    let keyArr = key.split('.');\n    defaultKey = keyArr[keyArr.length - 1];\n  }\n  let result = widgetContext.translate.instant(key, data);\n  if (result == key) {\n    return defaultKey;\n  }\n  return result;\n}\n",
+                "customResources": [
+                  {
+                    "url": "https://sdk.amazonaws.com/js/aws-sdk-2.1402.0.min.js"
+                  }
+                ],
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "59ee4149-bb5e-d022-ae8d-0c3f4633854b"
+              }
+            ]
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "09600bb0-a57a-072f-c085-f7bb666bfeec"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "전체 현황",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "75bafa88-5be4-5cdd-fc65-4c3a8115433a": {
+                "sizeX": 83,
+                "sizeY": 10,
+                "row": 0,
+                "col": 0
+              },
+              "09600bb0-a57a-072f-c085-f7bb666bfeec": {
+                "sizeX": 83,
+                "sizeY": 35,
+                "row": 10,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#edeff3",
+              "columns": 83,
+              "margin": 0,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "e8a889ca-e380-b60a-c621-e2003b4df0e8": {
+        "id": "e8a889ca-e380-b60a-c621-e2003b4df0e8",
+        "alias": "Entity from dashboard state",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": {
+            "entityType": "TENANT",
+            "id": "c47fd2c0-f4c8-11eb-a91f-b7b3258587a1"
+          }
+        }
+      },
+      "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d": {
+        "id": "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d",
+        "alias": "Current User Owner",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "CURRENT_USER_OWNER",
+            "id": "13814000-1dd2-11b2-8080-808080808080"
+          }
+        }
+      },
+      "89f6cf6e-517e-8626-6e83-8b0a8e0f3baf": {
+        "id": "89f6cf6e-517e-8626-6e83-8b0a8e0f3baf",
+        "alias": "Customer List",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "TENANT",
+            "id": "c47fd2c0-f4c8-11eb-a91f-b7b3258587a1"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": [
+                "CUSTOMER"
+              ]
+            }
+          ]
+        }
+      },
+      "b892c7bc-916e-dd1a-7624-940283b892bd": {
+        "id": "b892c7bc-916e-dd1a-7624-940283b892bd",
+        "alias": "CLUST Device List",
+        "filter": {
+          "type": "deviceSearchQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "CURRENT_CUSTOMER",
+            "id": "e7b62b10-29bc-11ee-8d0d-21e1d787e420"
+          },
+          "direction": "FROM",
+          "maxLevel": 2,
+          "fetchLastLevelOnly": false,
+          "relationType": "Contains",
+          "deviceTypes": [
+            "CLUST"
+          ]
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1679791634787,
+          "endTimeMs": 1679878034787
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": false,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": true,
+      "showFilters": false,
+      "showUpdateDashboardImage": false
+    }
+  },
+  "name": "생육 현황 (CLUST)"
+}

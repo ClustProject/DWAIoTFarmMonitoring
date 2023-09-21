@@ -1,0 +1,299 @@
+{
+  "title": "생육 트렌드 (CLUST)",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "0a0d5c64-a498-9ac7-102a-fb11bd1cac32": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "customer_selector242",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 11.5,
+        "sizeY": 1,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "6769f1e3-8e92-e262-28c3-ce13c3632601",
+              "filterId": null,
+              "dataKeys": []
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1670
+            },
+            "selector": {
+              "deviceDefault": "all"
+            }
+          },
+          "title": "New Customer Device and Date Selector",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "headerButton": []
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0a0d5c64-a498-9ac7-102a-fb11bd1cac32"
+      },
+      "5683fd77-7af6-8f8b-22b7-08789c3f8866": {
+        "isSystemType": false,
+        "bundleAlias": "greenhouse_widgets",
+        "typeAlias": "growing_card232",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 9,
+        "sizeY": 6.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "6769f1e3-8e92-e262-28c3-ce13c3632601",
+              "filterId": null,
+              "dataKeys": []
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "6dd2dd85-e846-404f-1279-b50e748fe59a",
+              "filterId": null,
+              "dataKeys": null
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "1b1a7c39-01d5-51d6-8c10-791597962029",
+              "filterId": null,
+              "dataKeys": null
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "widget": {
+              "originWidth": 1670
+            }
+          },
+          "title": "New Tab Chart Table",
+          "showTitleIcon": false,
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "cursor": "default"
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "titleTooltip": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "actions": {
+            "headerButton": []
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5683fd77-7af6-8f8b-22b7-08789c3f8866"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "전체 현황",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "0a0d5c64-a498-9ac7-102a-fb11bd1cac32": {
+                "sizeX": 83,
+                "sizeY": 4,
+                "row": 0,
+                "col": 0
+              },
+              "5683fd77-7af6-8f8b-22b7-08789c3f8866": {
+                "sizeX": 83,
+                "sizeY": 41,
+                "row": 4,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#edeff3",
+              "columns": 83,
+              "margin": 0,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "e8a889ca-e380-b60a-c621-e2003b4df0e8": {
+        "id": "e8a889ca-e380-b60a-c621-e2003b4df0e8",
+        "alias": "Entity from dashboard state",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": {
+            "entityType": "TENANT",
+            "id": "c47fd2c0-f4c8-11eb-a91f-b7b3258587a1"
+          }
+        }
+      },
+      "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d": {
+        "id": "ef39b9e6-7835-61f8-c8e2-a49eb97ab42d",
+        "alias": "Current User Owner",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "CURRENT_USER_OWNER",
+            "id": "13814000-1dd2-11b2-8080-808080808080"
+          }
+        }
+      },
+      "89f6cf6e-517e-8626-6e83-8b0a8e0f3baf": {
+        "id": "89f6cf6e-517e-8626-6e83-8b0a8e0f3baf",
+        "alias": "Customer List",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "TENANT",
+            "id": "c47fd2c0-f4c8-11eb-a91f-b7b3258587a1"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": [
+                "CUSTOMER"
+              ]
+            }
+          ]
+        }
+      },
+      "6769f1e3-8e92-e262-28c3-ce13c3632601": {
+        "id": "6769f1e3-8e92-e262-28c3-ce13c3632601",
+        "alias": "Current Customer",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "CURRENT_CUSTOMER",
+            "id": "e7b62b10-29bc-11ee-8d0d-21e1d787e420"
+          }
+        }
+      },
+      "6dd2dd85-e846-404f-1279-b50e748fe59a": {
+        "id": "6dd2dd85-e846-404f-1279-b50e748fe59a",
+        "alias": "EM500-CO2 Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-CO2",
+          "deviceNameFilter": ""
+        }
+      },
+      "1b1a7c39-01d5-51d6-8c10-791597962029": {
+        "id": "1b1a7c39-01d5-51d6-8c10-791597962029",
+        "alias": "EM500-SMT Device List",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "EM500-SMT",
+          "deviceNameFilter": ""
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1679791634787,
+          "endTimeMs": 1679878034787
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": false,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": true,
+      "showFilters": false,
+      "showUpdateDashboardImage": false
+    }
+  },
+  "name": "생육 트렌드 (CLUST)"
+}
