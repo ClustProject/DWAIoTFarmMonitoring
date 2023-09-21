@@ -1,0 +1,25 @@
+<div id="widget" fxLayout="column">
+  <div class="gap"></div>
+  <header class="widget-header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="text">제어 이력</div>
+  </header>
+  <main class="widget-content" fxLayout="column" fxFlex>
+    <div class="tab-container" fxLayout="column" fxFlex>
+      <div class="table-container">
+        <table>
+          <thead class="thead"></thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+      <div class="pagination" fxLayout="row" fxLayoutAlign="end center">
+        <div class="arrow-btn normal-arrow" (click)="prev()" fxLayout="row" fxLayoutAlign="center center">
+          <span class="material-icons" style="transform: rotate(180deg)"> chevron_right </span>
+        </div>
+        <div class="pageList" fxLayout="row" fxLayoutAlign="center center"></div>
+        <div class="arrow-btn normal-arrow" (click)="next()" fxLayout="row" fxLayoutAlign="center center">
+          <span class="material-icons"> chevron_right </span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

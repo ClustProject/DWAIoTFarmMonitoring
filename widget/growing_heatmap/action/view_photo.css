@@ -1,0 +1,262 @@
+/*
+    FHD 1920px 기준
+    1vw = 1920px * 0.01 * 19.2px
+    모바일 기준: 599px
+    태블릿 / 데스크탑 기준 max-width: 80vw
+
+    min-width = 600px * 0.8 = 480px
+    font-size = 10px / 19.2px = 0.521vw
+*/
+
+.mat-dialog-container {
+  border-radius: 0;
+}
+
+.add-entity-form {
+  background-color: #ffffff;
+  font-size: 0.521vw;
+  /* min-width: 480px !important;
+  max-width: 80vw; */
+  width: 80em;
+
+  font-family: 'Pretendard';
+}
+
+.add-entity-form .dialog-header {
+  padding: 2.1em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+.add-entity-form .dialog-title {
+  color: #1f2229;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.add-entity-form .cancel-icon {
+  color: #1f2229;
+  font-size: 1.7em;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+.add-entity-form .dialog-content {
+}
+
+.add-entity-form .dialog-content .select-section {
+  padding-left: 3.2em;
+  padding-right: 2.4em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+
+  border-bottom: 1px solid #dee0e5;
+}
+
+.add-entity-form .select-section .input-box .label {
+  font-size: 1.2em;
+  color: #5a616f;
+}
+
+.add-entity-form .select-section .input-box .mat-select {
+  width: 7em;
+  height: 3.2em;
+  margin-left: 0.4em;
+  margin-right: 1.6em;
+}
+
+.add-entity-form .select-section .input-box .mat-select .mat-select-trigger {
+  height: 100%;
+}
+
+.add-entity-form .select-section .input-box .mat-select .mat-select-value {
+  color: #1f2229;
+  vertical-align: middle;
+}
+
+.add-entity-form .select-section .input-box .mat-select .mat-select-value .mat-select-min-line {
+  font-size: 1.4em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.add-entity-form .select-section .input-box .mat-select .mat-select-arrow {
+  border-left-width: 0.4em;
+  border-right-width: 0.4em;
+  border-top-width: 0.4em;
+  color: #1d6ef0;
+  margin-right: 1.6em;
+}
+
+.add-entity-form .select-section .download-button-all {
+  border: solid 1px #dee0e5;
+  background-color: #fafbfc;
+  border-radius: 0.4em;
+  padding: 0.8em 0.9em;
+
+  cursor: pointer;
+}
+.add-entity-form .select-section .download-button-all .material-icons {
+  color: #6ba3ff;
+  width: 1em;
+  height: 1em;
+  font-size: 1.6em;
+}
+.add-entity-form .select-section .download-button-all .text {
+  color: #5a616f;
+  font-size: 1.2em;
+  margin-left: calc(0.8em / 1.2);
+}
+
+.add-entity-form .table-head-section {
+  padding: 0.8em 2.4em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+.add-entity-form .table-head-section .head-box .line-hr {
+  border: 2px solid black;
+  width: 10px;
+  height: 0;
+  margin: 0;
+}
+
+.add-entity-form .table-head-section .head-label {
+  color: #5a616f;
+  font-size: 1.2em;
+}
+
+.add-entity-form .table-head-section .head-box .head-label {
+  margin-left: calc(0.8em / 1.2);
+}
+
+.add-entity-form .table-body-section {
+  padding: 2em 2.4em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+.add-entity-form .table-body-section .body-label {
+  color: #5a616f;
+  font-size: 1.2em;
+}
+
+.add-entity-form .table-body-section .value {
+  color: #1f2229;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.add-entity-form .photo-list-section {
+  padding: 1.6em 2.4em;
+  border-bottom: solid 1px #dee0e5;
+}
+
+.add-entity-form .photo-list-section .left-section {
+  gap: 0.8em;
+  overflow-x: scroll;
+}
+
+.add-entity-form .photo-list-section .left-section .list-box {
+  padding: 0.8em;
+  border: solid 1px #dee0e5;
+  border-radius: 0.4em;
+  background-color: #fafbfc;
+  cursor: pointer;
+}
+
+.add-entity-form .photo-list-section .left-section .list-box .material-icons {
+  color: #b9bdc4;
+
+  width: 1em;
+  height: 1em;
+  font-size: 1.6em;
+}
+
+.add-entity-form .photo-list-section .left-section .list-box .list-text {
+  font-size: 1.2em;
+  color: #5a616f;
+  margin-left: calc(0.8em / 1.2);
+}
+
+.add-entity-form .photo-list-section .left-section .list-box.active {
+  border: 1px solid #94bdff;
+}
+
+.add-entity-form .photo-list-section .left-section .list-box.active .material-icons {
+  color: #6ba3ff;
+}
+
+.add-entity-form .photo-list-section .left-section .list-box.active .list-text {
+  color: #1d6ef0;
+}
+
+.add-entity-form .photo-list-section .right-section {
+  margin-left: 1.6em;
+}
+
+.add-entity-form .photo-list-section .right-section .list-button {
+  border-radius: 0.4em;
+  border: 1px solid #dee0e5;
+  width: 3.2em;
+  height: 3.2em;
+  background-color: #fafbfc;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.add-entity-form .photo-list-section .right-section .list-button .material-icons {
+  color: #999ea9;
+  width: 1em;
+  height: 1em;
+  font-size: 1.6em;
+}
+
+.add-entity-form .photo-title-section {
+  padding: 1.6em 2.4em;
+}
+
+.add-entity-form .photo-title-section .left-section .material-icons {
+  color: #b9bdc4;
+
+  width: 1em;
+  height: 1em;
+  font-size: 1.8em;
+}
+
+.add-entity-form .photo-title-section .left-section .photo-title {
+  color: #1f2229;
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-left: calc(0.8em / 1.4);
+}
+
+.add-entity-form .photo-title-section .right-section .list-button {
+  border-radius: 0.4em;
+  background-color: #fafbfc;
+  border: 1px solid #dee0e5;
+  width: 3.2em;
+  height: 3.2em;
+  margin-left: 0.8em;
+
+  cursor: pointer;
+}
+
+.add-entity-form .photo-title-section .right-section .list-button .material-icons {
+  color: #6ba3ff;
+  width: 1em;
+  height: 1em;
+  font-size: 1.6em;
+}
+
+.add-entity-form .photo-section {
+  padding-left: 2.4em;
+  padding-right: 2.4em;
+  padding-bottom: 2.4em;
+  width: 100%;
+}
+
+.add-entity-form .photo-section img {
+  width: 100%;
+  height: auto;
+}

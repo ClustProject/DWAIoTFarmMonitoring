@@ -1,0 +1,97 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <section class="widget-header-left-section" fxFlex fxLayoutAlign="start center">
+      <div class="widget-title">전체 현황</div>
+    </section>
+    <section class="widget-header-right-section" fxFlex fxLayoutAlign="end center">
+      <div class="material-icons">schedule</div>
+      <div class="date-label">2023년 3월 1일</div>
+    </section>
+  </header>
+  <main class="widget-content" fxFlex fxLayout="row" fxLayoutAlign="start center">
+    <section class="widget-content-left-section" fxFlex fxLayout="row">
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="card-label">딸기 열매 합계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{fruitSum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="growing-level-color" style="border-color: #9bc7d9" />
+          <div class="card-label">0단계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{level0Sum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="growing-level-color" style="border-color: #b9d3de" />
+          <div class="card-label">1단계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{level1Sum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="growing-level-color" style="border-color: #d8dee1" />
+          <div class="card-label">2단계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{level2Sum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+    </section>
+    <section class="widget-content-right-section" fxFlex fxLayout="row">
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="growing-level-color" style="border-color: #ebc6ca" />
+          <div class="card-label">3단계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{level3Sum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="growing-level-color" style="border-color: #f09ca0" />
+          <div class="card-label">4단계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{level4Sum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="growing-level-color" style="border-color: #e55e63" />
+          <div class="card-label">5단계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{level5Sum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="growing-level-color" style="border-color: #bd353a" />
+          <div class="card-label">6단계</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{level6Sum}}</div>
+          <div class="card-value-unit">개</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="gap"></div>
+</div>

@@ -1,0 +1,44 @@
+<div class="dialog-top-bar"></div>
+<form
+  #activateEntityForm="ngForm"
+  [formGroup]="activateEntityFormGroup"
+  (ngSubmit)="save()"
+  class="activate-entity-form"
+>
+  <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+      <i class="material-icons dialog-icon">error</i>
+      <div class="dialog-title">계정 활성화</div>
+    </div>
+    <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+  </div>
+
+  <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async"> </mat-progress-bar>
+  <div style="height: 0.4em" *ngIf="!(isLoading$ | async)"></div>
+  <div mat-dialog-content fxLayout="column">
+    <div class="row" fxLayout="row" fxLayoutAlign="center center">
+      <div class="label row-text" *ngIf="phase == 0">'{{entityName}}'을(를) {{action}}하시겠습니까?</div>
+      <div class="link-box" *ngIf="phase == 1" fxLayoutAlign="space-between center" fxLayoutGap="8px">
+        <span class="label row-text"> {{activationLink}} </span>
+        <div class="link-action-box" fxLayoutAlign="center center" fxLayoutGap="8px">
+          <i class="link-action material-icons" fxFlex (click)="copy($event)">content_copy</i>
+          <i class="link-action material-icons" fxFlex (click)="link()">open_in_new</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <button class="button activate-button" type="submit" [disabled]="(isLoading$ | async)" *ngIf="phase == 0">
+      {{action}}
+    </button>
+    <button
+      class="button close-button"
+      [disabled]="(isLoading$ | async)"
+      type="button"
+      (click)="cancel()"
+      cdkFocusInitial
+    >
+      닫기
+    </button>
+  </div>
+</form>

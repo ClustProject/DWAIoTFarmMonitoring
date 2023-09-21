@@ -1,0 +1,50 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <section class="widget-header-left-section" fxLayout="row" fxLayoutAlign="start center">
+      <div class="widget-title"></div>
+    </section>
+  </header>
+  <main class="widget-content" fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <span class="normal-text">시작일</span>
+      <div class="date-selector">
+        <mat-datetimepicker #startDatePicker type="date"></mat-datetimepicker>
+        <input
+          class="hidden"
+          matInput
+          readonly
+          [max]="end"
+          [(ngModel)]="startDate"
+          [matDatetimepicker]="startDatePicker"
+          (ngModelChange)="setStartDate($event)"
+        />
+        <input class="view" (click)="startDatePicker.open()" [(ngModel)]="viewStartDate" readonly />
+      </div>
+      <span class="normal-text">종료일</span>
+      <div class="date-selector">
+        <mat-datetimepicker #endDatePicker type="date"></mat-datetimepicker>
+        <input
+          class="hidden"
+          matInput
+          readonly
+          [min]="start"
+          [(ngModel)]="endDate"
+          [matDatetimepicker]="endDatePicker"
+          (ngModelChange)="setEndDate($event)"
+        />
+        <input class="view" (click)="endDatePicker.open()" [(ngModel)]="viewEndDate" readonly />
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div class="down-btn" (click)="download()">다운로드</div>
+      <div class="progress rotate">
+        <svg viewBox="0 0 100 100" class="circular-chart">
+          <circle class="back-circle" cx="50" cy="50" r="30" />
+        </svg>
+        <svg viewBox="0 0 100 100" class="circular-chart">
+          <circle class="circle" cx="50" cy="50" r="30" stroke-dasharray="24 190" transform="rotate(-90 50 50)" />
+        </svg>
+      </div>
+    </div>
+  </main>
+</div>

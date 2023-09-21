@@ -1,0 +1,40 @@
+{
+  "schema": {
+    "type": "object",
+    "title": "dataKeySettings",
+    "properties": {
+      "style": {
+        "title": "스타일 적용",
+        "type": "boolean",
+        "default": false
+      },
+      "styleFunction": {
+        "title": "스타일 f(value, rowData): Object {",
+        "type": "string",
+        "default": ""
+      },
+      "transform": {
+        "title": "데이터 가공",
+        "type": "boolean",
+        "default": false
+      },
+      "transformFunction": {
+        "title": "데이터 가공 f(value, rowData, ctx): Object {",
+        "type": "string",
+        "default": ""
+      }
+    }
+  },
+  "form": [
+    "style",
+    {
+      "key": "styleFunction",
+      "type": "javascript"
+    },
+    "transform",
+    {
+      "key": "transformFunction",
+      "type": "javascript"
+    }
+  ]
+}

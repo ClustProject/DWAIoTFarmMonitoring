@@ -1,0 +1,112 @@
+<form #addEntityForm="ngForm" [formGroup]="addEntityFormGroup" class="add-entity-form">
+  <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+      <div class="dialog-title">생육 이미지</div>
+    </div>
+    <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+  </div>
+  <div class="dialog-content" fxLayout="column">
+    <div class="select-section" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="input-box" fxLayout="row" fxLayoutAlign="start center">
+        <span class="label">Bed선택:</span>
+        <mat-select formControlName="selectedCustomer">
+          <mat-option *ngFor="let customer of customerList" [value]="customer.key"> {{customer.name }} </mat-option>
+        </mat-select>
+        <span class="label">Position선택:</span>
+        <mat-select formControlName="selectedDevice" (selectionChange)="changeDevice($event)">
+          <mat-option *ngFor="let device of deviceList" [value]="device.key"> {{device.name }} </mat-option>
+        </mat-select>
+      </div>
+      <div class="download-button-all" fxLayout="row" fxLayoutAlign="start center" (click)="downloadAll()">
+        <div class="material-icons">download</div>
+        <div class="text">사진 모두 저장</div>
+      </div>
+    </div>
+    <div class="table-head-section" fxLayout="row">
+      <div class="head-label" fxFlex>단위 (개수)</div>
+      <div class="head-label" fxFlex>합계</div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ff3838" />
+        <div class="head-label">0단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ff3838" />
+        <div class="head-label">1단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ff701f" />
+        <div class="head-label">2단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ffb21d" />
+        <div class="head-label">3단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #cfd231" />
+        <div class="head-label">4단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #48f90a" />
+        <div class="head-label">5단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #92cc17" />
+        <div class="head-label">6단계</div>
+      </div>
+    </div>
+    <div class="table-body-section" fxLayout="row">
+      <div class="body-label" fxFlex>딸기 열매 수</div>
+      <div class="value" fxFlex>{{fruitSum}}</div>
+      <div class="value" fxFlex>{{level0Sum}}</div>
+      <div class="value" fxFlex>{{level1Sum}}</div>
+      <div class="value" fxFlex>{{level2Sum}}</div>
+      <div class="value" fxFlex>{{level3Sum}}</div>
+      <div class="value" fxFlex>{{level4Sum}}</div>
+      <div class="value" fxFlex>{{level5Sum}}</div>
+      <div class="value" fxFlex>{{level6Sum}}</div>
+    </div>
+
+    <div class="photo-list-section" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="left-section" fxFlex fxLayout="row">
+        <div class="list-box {{active3}}" fxLayout="row" fxLayoutAlign="start center" (click)="photoSelect(3)">
+          <div class="material-icons">image</div>
+          <div class="list-text">{{photoName3}}</div>
+        </div>
+        <div class="list-box {{active2}}" fxLayout="row" fxLayoutAlign="start center" (click)="photoSelect(2)">
+          <div class="material-icons">image</div>
+          <div class="list-text">{{photoName2}}</div>
+        </div>
+        <div class="list-box {{active1}}" fxLayout="row" fxLayoutAlign="start center" (click)="photoSelect(1)">
+          <div class="material-icons">image</div>
+          <div class="list-text">{{photoName1}}</div>
+        </div>
+        <div class="list-box {{active0}}" fxLayout="row" fxLayoutAlign="start center" (click)="photoSelect(0)">
+          <div class="material-icons">image</div>
+          <div class="list-text">{{photoName0}}</div>
+        </div>
+      </div>
+      <div class="right-section" fxLayout="row">
+        <div class="list-button" fxLayout="row" fxLayoutAlign="center center" (click)="photoNext()">
+          <div class="material-icons">chevron_left</div>
+        </div>
+        <div class="list-button" fxLayout="row" fxLayoutAlign="center center" (click)="photoPrev()">
+          <div class="material-icons">chevron_right</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-title-section" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="left-section" fxLayout="row" fxLayoutAlign="start center">
+        <div class="material-icons">image</div>
+        <div class="photo-title">{{photoDate}} 촬영</div>
+      </div>
+      <div class="right-section">
+        <div class="list-button" fxLayout="row" fxLayoutAlign="center center" (click)="download()">
+          <div class="material-icons">download</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-section">
+      <img src="{{photoURL}}" />
+    </div>
+  </div>
+</form>

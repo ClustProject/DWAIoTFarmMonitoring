@@ -1,0 +1,30 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  height: 100%;
+  padding: 0em 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .widget-header-left-section .widget-title {
+  color: #1f2229;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+#widget .gap {
+  height: 0.8em;
+  background-color: #edeff3;
+}

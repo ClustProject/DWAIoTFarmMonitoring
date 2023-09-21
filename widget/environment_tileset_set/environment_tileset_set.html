@@ -1,0 +1,149 @@
+<div id="widget" fxLayout="column">
+  <main class="widget-content" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+    <div class="control-container" fxFlex="22" fxLayout="column">
+      <div class="title">제어기</div>
+      <div class="card-container" fxLayout="column">
+        <div class="card-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row">
+            <div class="icon-box">
+              <mat-icon class="material-icons">water</mat-icon>
+            </div>
+            <div class="text-box" fxLayout="column" fxLayoutAlign="center start">
+              <div class="card-label">배양</div>
+              <div class="card-status">{{irrigator}}</div>
+            </div>
+          </div>
+          <div class="switch-box" fxLayout="row" fxLayoutAlign="space-between center" (click)="toggleStatus(0)">
+            <div class="circle inactive"></div>
+            <div class="circle active"></div>
+          </div>
+        </div>
+        <div class="card-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row">
+            <div class="icon-box">
+              <mat-icon class="material-icons-outlined">thermostat_auto</mat-icon>
+            </div>
+            <div class="text-box" fxLayout="column" fxLayoutAlign="center start">
+              <div class="card-label">히터</div>
+              <div class="card-status">{{heater}}</div>
+            </div>
+          </div>
+          <div class="switch-box" fxLayout="row" fxLayoutAlign="space-between center" (click)="toggleStatus(1)">
+            <div class="circle inactive"></div>
+            <div class="circle active"></div>
+          </div>
+        </div>
+        <div class="card-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row">
+            <div class="icon-box">
+              <mat-icon class="material-icons-outlined">air</mat-icon>
+            </div>
+            <div class="text-box" fxLayout="column" fxLayoutAlign="center start">
+              <div class="card-label">환풍기</div>
+              <div class="card-status">{{ventilator}}</div>
+            </div>
+          </div>
+          <div class="switch-box" fxLayout="row" fxLayoutAlign="space-between center" (click)="toggleStatus(2)">
+            <div class="circle inactive"></div>
+            <div class="circle active"></div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column" fxFlex>
+        <div class="forcast-title-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <div class="text">환경 예측</div>
+          <div class="switch-box" fxLayout="row" fxLayoutAlign="space-between center" (click)="togglePrediction()">
+            <div class="circle inactive"></div>
+            <div class="circle active"></div>
+          </div>
+        </div>
+        <div class="forcast-container" fxFlex fxLayout="column" fxLayoutAlign="center start" *ngIf="predictStatus">
+          <div class="value-box" fxLayout="row">
+            <div class="value">{{predictedTemperature}}</div>
+            <div class="value-unit" fxLayout="row" fxLayoutAlign="start end">℃</div>
+          </div>
+          <div class="forcast-label">6시간 후 예상 온도</div>
+        </div>
+        <div class="forcast-container" fxFlex fxLayout="column" fxLayoutAlign="center start" *ngIf="!predictStatus">
+          <div class="value-box" fxLayout="row">
+            <div class="value off">OFF</div>
+          </div>
+          <div class="forcast-label">예상 온도</div>
+        </div>
+      </div>
+    </div>
+    <div class="map-box" fxFlex fxLayout="column" fxLayoutAlign="center">
+      <div class="bed-container" fxLayout="row">
+        <div class="label-text" fxLayout="row" fxLayoutAlign="start center">Bed 1</div>
+        <div class="bed-box" fxLayout="row" fxFlex fxLayoutAlign="space-between center">
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bed-container" fxLayout="row">
+        <div class="label-text" fxLayout="row" fxLayoutAlign="start center">Bed 2</div>
+        <div class="bed-box" fxLayout="row" fxFlex fxLayoutAlign="space-between center">
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bed-container" fxLayout="row">
+        <div class="label-text" fxLayout="row" fxLayoutAlign="start center">Bed 3</div>
+        <div class="bed-box" fxLayout="row" fxFlex fxLayoutAlign="space-between center">
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bed-container" fxLayout="row">
+        <div class="label-text" fxLayout="row" fxLayoutAlign="start center">Bed 4</div>
+        <div class="bed-box" fxLayout="row" fxFlex fxLayoutAlign="space-between center">
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+          <div class="icon-container">
+            <div class="icon-box" fxLayout="row" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">layers</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="progress-section">
+    <div class="progress rotate">
+      <svg viewBox="0 0 100 100" class="circular">
+        <circle class="back-circle" cx="50" cy="50" r="30" />
+      </svg>
+      <svg viewBox="0 0 100 100" class="circular">
+        <circle class="circle" cx="50" cy="50" r="30" stroke-dasharray="24 190" transform="rotate(-90 50 50)" />
+      </svg>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,103 @@
+<form #editEntityForm="ngForm" [formGroup]="editEntityFormGroup" (ngSubmit)="save()" class="edit-entity-form">
+  <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+      <i class="material-icons dialog-icon">edit</i>
+      <div class="dialog-title">고객사 정보 수정</div>
+    </div>
+    <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+  </div>
+  <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async"> </mat-progress-bar>
+  <div style="height: 0.4em" *ngIf="!(isLoading$ | async)"></div>
+  <div mat-dialog-content fxLayout="column">
+    <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="label">고객사</span>
+          <span class="notice">{{titleLength}}/100</span>
+        </div>
+        <div class="input-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+          <input maxlength="100" matInput formControlName="title" (ngModelChange)="titleChange($event)" required />
+          <i class="material-icons input-icon">edit</i>
+        </div>
+      </div>
+    </div>
+    <div class="row error-row" *ngIf="editEntityFormGroup.get('title').hasError('required')">
+      고객사명을 입력하세요.
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="label">담당자명</span>
+          <span class="notice">{{nameLength}}/100</span>
+        </div>
+        <div class="input-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+          <input maxlength="100" matInput formControlName="managerName" (ngModelChange)="nameChange($event)" required />
+          <i class="material-icons input-icon">edit</i>
+        </div>
+      </div>
+    </div>
+    <div class="row error-row" *ngIf="editEntityFormGroup.get('managerName').hasError('required')">
+      담당자명을 입력하세요.
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="label">대표 전화</span>
+          <span class="notice">{{phoneLength}}/100</span>
+        </div>
+        <div class="input-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+          <input
+            maxlength="100"
+            matInput
+            formControlName="managerPhone"
+            (ngModelChange)="phoneChange($event)"
+            required
+          />
+          <i class="material-icons input-icon">edit</i>
+        </div>
+      </div>
+    </div>
+    <div class="row error-row" *ngIf="editEntityFormGroup.get('managerPhone').hasError('required')">
+      대표 전화를 입력하세요.
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="label">대표 이메일</span>
+          <span class="notice">{{emailLength}}/100</span>
+        </div>
+        <div class="input-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+          <input
+            maxlength="100"
+            matInput
+            formControlName="managerEmail"
+            (ngModelChange)="emailChange($event)"
+            required
+          />
+          <i class="material-icons input-icon">edit</i>
+        </div>
+      </div>
+    </div>
+    <div class="row error-row" *ngIf="editEntityFormGroup.get('managerEmail').hasError('required')">
+      대표 이메일을 입력하세요.
+    </div>
+  </div>
+
+  <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <button
+      class="button close-button"
+      [disabled]="(isLoading$ | async)"
+      type="button"
+      (click)="cancel()"
+      cdkFocusInitial
+    >
+      취소
+    </button>
+    <button class="button save-button" type="submit" [disabled]="(isLoading$ | async) || editEntityForm.invalid">
+      수정
+    </button>
+  </div>
+</form>

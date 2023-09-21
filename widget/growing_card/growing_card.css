@@ -1,0 +1,159 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .widget-header-left-section .widget-title {
+  color: #1f2229;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+header.widget-header .widget-header-right-section .material-icons {
+  color: #6ba3ff;
+  font-size: 1.6em;
+  width: 1em;
+  height: 1em;
+}
+
+header.widget-header .widget-header-right-section .date-label {
+  font-size: 1.2em;
+  color: #999ea9;
+  margin-left: calc(0.4em / 1.2);
+}
+
+header.widget-header .widget-header-right-section .tab-label {
+  width: calc(11.6em / 1.4);
+  font-size: 1.4em;
+  padding: calc(0.8em / 1.4) 0;
+  border: 1px solid #dee0e5;
+
+  color: #999ea9;
+  background-color: #f4f6f8;
+
+  cursor: pointer;
+}
+
+header.widget-header .widget-header-right-section .tab-label:last-child {
+  border-left: none;
+}
+
+header.widget-header .widget-header-right-section .tab-label.active {
+  color: #1d6ef0;
+  background-color: white;
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+  border-bottom: 1px solid #dee0e5;
+}
+
+main.widget-content .card-box {
+  margin-left: 3.2em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  height: 6em;
+  border-right: 1px solid #edeff3;
+}
+
+main.widget-content .card-box .card-label-box {
+  margin-bottom: 0.8em;
+}
+
+main.widget-content .card-box .card-label-box .growing-level-color {
+  border: 2px solid black;
+  width: 10px;
+  height: 0;
+  margin: 0;
+  margin-right: 0.8em;
+}
+
+main.widget-content .card-box .card-label-box .card-label {
+  color: #5a616f;
+  font-size: 1.4em;
+}
+
+main.widget-content .card-box .card-value-box .card-value {
+  font-size: 2.4em;
+  color: #1f2229;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: calc(-0.1em / 2.4);
+}
+main.widget-content .card-box .card-value-box .card-value-unit {
+  font-size: 1.4em;
+  margin-left: calc(0.4em / 1.4);
+  color: #1f2229;
+  font-weight: bold;
+}
+
+/*
+  Widget Footer Area
+*/
+
+footer.widget-footer {
+  width: 100%;
+  border-bottom: 1px solid #dee0e5;
+}
+
+footer.widget-footer .line-container {
+  padding-left: 3.2em;
+  padding-right: 3.1em;
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+
+  border-right: 1px solid #dee0e5;
+}
+
+footer.widget-footer .line-container .line-label {
+  font-size: 1.2em;
+  color: #1f2229;
+  font-weight: 500;
+}
+
+footer.widget-footer .line-container .line-label-icon {
+  font-size: 1.6em;
+  width: 1em;
+  height: 1em;
+  color: #999ea9;
+  margin-left: calc(0.4em / 1.6);
+  margin-right: calc(1.6em / 1.6);
+}
+
+footer.widget-footer .line-container .line-box hr {
+  border: 2px solid black;
+  width: calc(100% / 7);
+  height: 0;
+  margin: 0;
+  margin-right: 1px;
+  cursor: pointer;
+}
+
+footer.widget-footer .line-container .line-box hr:hover {
+  border-width: 4px;
+}
+
+/* gap */
+
+#widget .gap {
+  height: 0.8em;
+  background-color: #edeff3;
+}

@@ -1,0 +1,193 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined'); */
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+
+  border-left: 1px solid #dee0e5;
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .text {
+  font-size: 1.6em;
+  color: #1f2229;
+  font-weight: 600;
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+main.widget-content .table-container {
+  width: 100%;
+  flex-grow: 1;
+  margin-top: 2.4em;
+  overflow-y: auto;
+}
+
+main.widget-content .table-container table {
+  width: 100%;
+  border-spacing: 0;
+  /* tr에 border styling 하기 위해 필요 */
+  border-collapse: separate;
+
+  table-layout: fixed;
+}
+
+main.widget-content .table-container table th {
+  text-align: start;
+}
+
+main.widget-content .table-container table thead tr {
+  position: sticky;
+  top: -1px;
+  cursor: pointer;
+  background-color: white;
+}
+
+main.widget-content .table-container table thead tr th:first-child {
+  padding-left: calc(3.2em / 1.2);
+}
+main.widget-content .table-container table thead tr th {
+  color: #5a616f;
+  padding: calc(1.3em / 1.2) 0;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  border-bottom: 1px solid #edeff3;
+
+  max-width: calc(10em / 1.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main.widget-content .table-container table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main.widget-content .table-container table tbody tr td:first-child {
+  padding-left: calc(3.2em / 1.4);
+}
+
+main.widget-content .table-container table tbody tr td {
+  color: #5a616f;
+  padding: calc(1.1em / 1.4) 0;
+  font-size: 1.4em;
+
+  border-bottom: 1px solid #edeff3;
+}
+
+main.widget-content .table-container table tbody tr td .status-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+main.widget-content .table-container table tbody tr td .status-box .status-label {
+  background-color: #edeff3;
+  color: #999ea9;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.4em 0.8em;
+  border-radius: 2px;
+
+  margin-right: 0.8em;
+}
+
+main.widget-content .table-container table tbody tr td .status-box .status-label.active {
+  background-color: #e7effd;
+  color: #1d6ef0;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(odd) {
+  background-color: #fafbfc;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(odd):hover {
+  background-color: #efefef;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(even):hover {
+  background-color: #efefef;
+}
+
+/* pagination */
+
+main.widget-content .pagination {
+  padding: 1.6em 3.2em;
+  /* 드래그 방지 */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main.widget-content .pagination .pageList {
+  cursor: pointer;
+}
+
+main.widget-content .pagination .pageList div {
+  font-size: 1.4em;
+  color: #5a616f;
+  font-weight: 500;
+
+  width: calc(3.2em / 1.4);
+  height: calc(3.2em / 1.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 0em;
+}
+
+main.widget-content .pagination .pageList div.selected {
+  color: #1d6ef0;
+}
+
+main.widget-content .pagination .arrow-btn {
+  cursor: pointer;
+}
+
+main.widget-content .pagination .arrow-btn .material-icons {
+  font-size: 2em;
+  width: calc(3.2em / 2);
+  height: calc(3.2em / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #5a616f;
+}
+
+/* 
+  gap
+*/
+#widget .gap {
+  height: 0.8em;
+  background-color: #edeff3;
+}

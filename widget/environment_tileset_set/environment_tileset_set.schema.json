@@ -1,0 +1,48 @@
+{
+  "schema": {
+    "title": "Settings",
+    "type": "object",
+    "properties": {
+      "title": {
+        "title": " ",
+        "type": "object",
+        "properties": {
+          "widgetSize": {
+            "title": "위젯 크기(px)",
+            "type": "string",
+            "default": "450"
+          }
+        }
+      },
+      "heatmap": {
+        "title": " ",
+        "type": "object",
+        "properties": {
+          "backgroundImage": {
+            "title": "배경 이미지",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "form": [
+    ["title.widgetSize"],
+    [
+      {
+        "key": "heatmap.backgroundImage",
+        "type": "image"
+      }
+    ]
+  ],
+  "groupInfoes": [
+    {
+      "formIndex": 0,
+      "GroupTitle": "제목"
+    },
+    {
+      "formIndex": 1,
+      "GroupTitle": "히트맵"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+
+  border-left: 1px solid #dee0e5;
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .widget-header-left-section .widget-title {
+  color: #1f2229;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+header.widget-header .widget-header-right-section .tab-label {
+  width: calc(11.6em / 1.4);
+  font-size: 1.4em;
+  padding: calc(0.8em / 1.4) 0;
+  border: 1px solid #dee0e5;
+
+  color: #999ea9;
+  background-color: #f4f6f8;
+
+  cursor: pointer;
+}
+
+header.widget-header .widget-header-right-section .download-box {
+  border: solid 1px #dee0e5;
+  background-color: #fafbfc;
+  border-radius: 0.4em;
+  padding: 0.8em 0.9em;
+
+  cursor: pointer;
+}
+
+header.widget-header .widget-header-right-section .download-box .material-icons {
+  color: #6ba3ff;
+  width: 1em;
+  height: 1em;
+  font-size: 1.6em;
+}
+header.widget-header .widget-header-right-section .download-box .download-text {
+  font-size: 1.2em;
+  color: #5a616f;
+  margin-left: calc(0.8em / 1.2);
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+
+  padding: 0 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+main.widget-content .label {
+  padding: calc(1.6em / 1.4) calc(0.4em / 1.4);
+  margin-right: calc(3.2em / 1.4);
+  font-size: 1.4em;
+  color: #5a616f;
+
+  cursor: pointer;
+}
+
+main.widget-content .label.active {
+  color: #1d6ef0;
+  border-bottom: 2px solid #1d6ef0;
+}
+
+/*
+  Widget Footer Area
+*/
+
+footer.widget-footer {
+  width: 100%;
+  border-bottom: 1px solid #dee0e5;
+  height: 50.3em;
+  background-color: #fafbfc;
+}
+
+footer.widget-footer .legend-container {
+  padding: 3.2em;
+}
+
+footer.widget-footer .legend-container .legend-box {
+  margin-right: 1.6em;
+}
+
+footer.widget-footer .legend-container .legend-box .line-hr {
+  border: 2px solid black;
+  width: 10px;
+  height: 0;
+  margin: 0;
+}
+
+footer.widget-footer .legend-container .legend-box .legend-label {
+  color: #5a616f;
+  font-size: 1.4em;
+  margin-left: calc(0.8em / 1.4);
+}
+
+footer.widget-footer .chart {
+  width: 100%;
+  height: 100%;
+}
+
+footer.widget-footer .chart .xAxis .tick .dotted {
+  stroke-dasharray: 2 2;
+}

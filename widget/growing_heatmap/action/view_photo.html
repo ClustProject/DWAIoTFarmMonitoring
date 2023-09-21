@@ -1,0 +1,127 @@
+<form #addEntityForm="ngForm" [formGroup]="addEntityFormGroup" class="add-entity-form">
+  <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+      <div class="dialog-title">장비</div>
+    </div>
+    <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+  </div>
+  <div class="dialog-content" fxLayout="column">
+    <div class="select-section" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="input-box" fxLayout="row" fxLayoutAlign="start center">
+        <span class="label">Bed선택:</span>
+        <mat-select formControlName="selectedCustomer" (selectionChange)="changeCustomer($event)">
+          <mat-option *ngFor="let customer of customerList" [value]="customer.id.id">
+            {{customer.name | translate}}
+          </mat-option>
+        </mat-select>
+        <span class="label">Position선택:</span>
+        <mat-select formControlName="selectedDevice" required>
+          <mat-option *ngFor="let device of deviceList" [value]="device.id.id">
+            {{device.label | translate}}
+          </mat-option>
+        </mat-select>
+      </div>
+      <div class="download-button-all" fxLayout="row" fxLayoutAlign="start center">
+        <div class="material-icons">download</div>
+        <div class="text">사진 모두 저장</div>
+      </div>
+    </div>
+    <div class="table-head-section" fxLayout="row">
+      <div class="head-label" fxFlex>단위 (개수)</div>
+      <div class="head-label" fxFlex>합계</div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ff3838" />
+        <div class="head-label">0단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ff3838" />
+        <div class="head-label">1단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ff701f" />
+        <div class="head-label">2단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #ffb21d" />
+        <div class="head-label">3단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #cfd231" />
+        <div class="head-label">4단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #48f90a" />
+        <div class="head-label">5단계</div>
+      </div>
+      <div class="head-box" fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #92cc17" />
+        <div class="head-label">6단계</div>
+      </div>
+    </div>
+    <div class="table-body-section" fxLayout="row">
+      <div class="body-label" fxFlex>단위 (개수)</div>
+      <div class="value" fxFlex>15</div>
+      <div class="value" fxFlex>15</div>
+      <div class="value" fxFlex>15</div>
+      <div class="value" fxFlex>15</div>
+      <div class="value" fxFlex>15</div>
+      <div class="value" fxFlex>15</div>
+      <div class="value" fxFlex>15</div>
+      <div class="value" fxFlex>15</div>
+    </div>
+    <div class="table-body-section" fxLayout="row">
+      <div class="body-label" fxFlex>단위 (개수)</div>
+      <div class="value" fxFlex>30</div>
+      <div class="value" fxFlex>30</div>
+      <div class="value" fxFlex>30</div>
+      <div class="value" fxFlex>30</div>
+      <div class="value" fxFlex>30</div>
+      <div class="value" fxFlex>30</div>
+      <div class="value" fxFlex>30</div>
+      <div class="value" fxFlex>30</div>
+    </div>
+
+    <div class="photo-list-section" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="left-section" fxFlex fxLayout="row">
+        <div class="list-box active" fxLayout="row" fxLayoutAlign="start center">
+          <div class="material-icons">image</div>
+          <div class="list-text">b1_p3_2023_04_20_12:00.jpg</div>
+        </div>
+        <div class="list-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="material-icons">image</div>
+          <div class="list-text">b1_p3_2023_04_20_12:00.jpg</div>
+        </div>
+        <div class="list-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="material-icons">image</div>
+          <div class="list-text">b1_p3_2023_04_20_12:00.jpg</div>
+        </div>
+        <div class="list-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="material-icons">image</div>
+          <div class="list-text">b1_p3_2023_04_20_12:00.jpg</div>
+        </div>
+      </div>
+      <div class="right-section" fxLayout="row">
+        <div class="list-button" fxLayout="row" fxLayoutAlign="center center">
+          <div class="material-icons">chevron_left</div>
+        </div>
+        <div class="list-button" fxLayout="row" fxLayoutAlign="center center">
+          <div class="material-icons">chevron_right</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-title-section" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="left-section" fxLayout="row">
+        <div class="material-icons">image</div>
+        <div class="photo-title">2023년 4월 30일 12:00:00 촬영</div>
+      </div>
+      <div class="right-section">
+        <div class="list-button" fxLayout="row" fxLayoutAlign="center center">
+          <div class="material-icons">download</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-section">
+      <img src="https://s3-eu-west-1.amazonaws.com/yara-links/mb9q.jpg" />
+    </div>
+  </div>
+</form>

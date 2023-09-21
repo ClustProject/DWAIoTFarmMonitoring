@@ -1,0 +1,40 @@
+{
+  "schema": {
+    "title": "Settings",
+    "type": "object",
+    "properties": {
+      "hidden": {
+        "title": "Hidden",
+        "type": "boolean",
+        "default": false
+      },
+      "useStyleFunction": {
+        "title": "Use Style Function",
+        "type": "boolean",
+        "default": false
+      },
+      "styleFunction": {
+        "title": "styleFunction(value, info) {",
+        "type": "string",
+        "default": ""
+      },
+      "useContentFunction": {
+        "title": "Use Content Function",
+        "type": "boolean",
+        "default": false
+      },
+      "contentFunction": {
+        "title": "contentFunction(value, info) {",
+        "type": "string",
+        "default": ""
+      }
+    }
+  },
+  "form": [
+    "hidden",
+    "useStyleFunction",
+    { "key": "styleFunction", "type": "javascript" },
+    "useContentFunction",
+    { "key": "contentFunction", "type": "javascript" }
+  ]
+}

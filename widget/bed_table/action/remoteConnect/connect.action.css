@@ -1,0 +1,113 @@
+.label {
+  color: white;
+  font-size: 1.2em;
+}
+
+.link-box {
+  padding: 1em;
+  color: white;
+  border: 1px solid #d7dbec;
+  border-radius: 0.5em;
+}
+
+.link-action {
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #131523;
+}
+
+/*
+    FHD 1920px 기준
+    1vw = 1920px * 0.01 * 19.2px
+    모바일 기준: 599px
+    태블릿 / 데스크탑 기준 max-width: 80vw
+
+    min-width = 600px * 0.8 = 480px
+    font-size = 10px / 19.2px = 0.521vw
+*/
+
+.connect-entity-form {
+  background-color: #ffffff;
+  box-shadow: 0 0.1em 0.4em 0 rgba(21, 34, 50, 0.08);
+  border-radius: 0.6em;
+  font-size: 0.521vw;
+  min-width: 480px !important;
+  max-width: 80vw;
+  width: 60em;
+}
+
+.connect-entity-form .dialog-header {
+  padding: 2em;
+}
+
+.connect-entity-form .dialog-icon {
+  color: #354052;
+  font-size: 2.2em;
+  margin-right: 0.1em;
+}
+
+.connect-entity-form .dialog-title {
+  color: #354052;
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 1.2em;
+}
+
+.connect-entity-form .cancel-icon {
+  color: #7e84a3;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.connect-entity-form .mat-dialog-content {
+  padding: 0em 2em !important;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.connect-entity-form .mat-dialog-content::-webkit-scrollbar {
+  display: none;
+}
+
+.connect-entity-form .row {
+  margin: 1em 0em;
+}
+
+.connect-entity-form .row-text {
+  font-size: 1.4em;
+  color: #131523;
+}
+
+.connect-entity-form .mat-dialog-actions {
+  padding: 2em !important;
+}
+
+.connect-entity-form .button {
+  all: unset;
+  margin-left: 0.5em;
+  padding: 0.75em 1em;
+  border-radius: 0.4em;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.connect-entity-form .save-button {
+  background-color: #354052;
+  color: #ffffff;
+}
+.connect-entity-form .close-button {
+  background-color: #ffffff;
+  color: #131523;
+}
+
+.connect-entity-form .connect-button {
+  background-color: #354052;
+  color: #ffffff;
+}
+.connect-entity-form .save-button:hover {
+  background-color: #354052;
+  color: #ffffff;
+}
+.connect-entity-form .close-button:hover {
+  background-color: #f5f6fa;
+  color: #131523;
+}

@@ -1,0 +1,168 @@
+<div id="widget" fxLayout="column">
+  <main class="widget-content" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+    <div class="rule-box {{active0}}" fxLayout="column">
+      <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+        <div class="switch-box" fxLayout="row" fxLayoutAlign="space-between center" (click)="toggleStatus(0)">
+          <div class="circle inactive"></div>
+          <div class="circle active"></div>
+        </div>
+        <div class="title">환경 기반 제어 모드</div>
+      </div>
+      <div class="content-box" fxLayout="row" style="border-bottom: 1px solid #edeff3">
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="4"
+          style="border-right: 1px solid #edeff3"
+        >
+          1
+        </div>
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="8"
+          style="border-right: 1px solid #edeff3"
+        >
+          기온 하강 시
+        </div>
+        <div class="condition-container" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <div class="condition-text">기준온도</div>
+          <mat-select [(ngModel)]="selectedMinTemperature" (selectionChange)="changeValue()" [disabled]="!envControl">
+            <mat-option *ngFor="let temperature of temperatureList" [value]="temperature.value">
+              {{ temperature.label }}
+            </mat-option>
+          </mat-select>
+          <div class="condition-text">이하일 때</div>
+          <div class="material-icons-outlined">east</div>
+          <div class="condition-text">히터</div>
+          <div class="status-text active">ON</div>
+        </div>
+      </div>
+      <div class="content-box" fxLayout="row">
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="4"
+          style="border-right: 1px solid #edeff3"
+        >
+          2
+        </div>
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="8"
+          style="border-right: 1px solid #edeff3"
+        >
+          기온 상승 시
+        </div>
+        <div class="condition-container" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <div class="condition-text">기준온도</div>
+          <mat-select [(ngModel)]="selectedMaxTemperature" (selectionChange)="changeValue()" [disabled]="!envControl">
+            <mat-option *ngFor="let temperature of temperatureList" [value]="temperature.value">
+              {{ temperature.label }}
+            </mat-option>
+          </mat-select>
+          <div class="condition-text">이상일 때</div>
+          <div class="material-icons-outlined">east</div>
+          <div class="condition-text">히터</div>
+          <div class="status-text">OFF</div>
+        </div>
+      </div>
+    </div>
+    <div class="rule-box {{active1}}" fxLayout="column">
+      <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+        <div class="switch-box" fxLayout="row" fxLayoutAlign="space-between center" (click)="toggleStatus(1)">
+          <div class="circle inactive"></div>
+          <div class="circle active"></div>
+        </div>
+        <div class="title">예측 기반 제어 모드</div>
+        <material-icons class="material-icons-outlined">info</material-icons>
+      </div>
+      <div class="content-box" fxLayout="row" style="border-bottom: 1px solid #edeff3">
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="4"
+          style="border-right: 1px solid #edeff3"
+        >
+          1
+        </div>
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="8"
+          style="border-right: 1px solid #edeff3"
+        >
+          예측 기온 하강 시
+        </div>
+        <div class="condition-container" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <div class="condition-text">예측온도</div>
+          <mat-select [(ngModel)]="selectedMinPredict" (selectionChange)="changeValue()" [disabled]="!predictControl">
+            <mat-option *ngFor="let predict of predictList" [value]="predict.value"> {{ predict.label }} </mat-option>
+          </mat-select>
+          <div class="condition-text">이하일 때</div>
+          <div class="material-icons-outlined">east</div>
+          <div class="condition-text">보정값</div>
+          <mat-select
+            [(ngModel)]="selectedMinCoordinate"
+            (selectionChange)="changeValue()"
+            [disabled]="!predictControl"
+          >
+            <mat-option *ngFor="let predict of coordinateList" [value]="predict.value">
+              {{ predict.label }}
+            </mat-option>
+          </mat-select>
+          <div class="condition-text">히터</div>
+          <div class="status-text active">ON</div>
+        </div>
+      </div>
+      <div class="content-box" fxLayout="row">
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="4"
+          style="border-right: 1px solid #edeff3"
+        >
+          2
+        </div>
+        <div
+          class="text"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxFlex="8"
+          style="border-right: 1px solid #edeff3"
+        >
+          예측 기온 상승 시
+        </div>
+        <div class="condition-container" fxLayout="row" fxLayoutAlign="start center" fxFlex>
+          <div class="condition-text">예측온도</div>
+          <mat-select [(ngModel)]="selectedMaxPredict" (selectionChange)="changeValue()" [disabled]="!predictControl">
+            <mat-option *ngFor="let predict of predictList" [value]="predict.value"> {{ predict.label }} </mat-option>
+          </mat-select>
+          <div class="condition-text">이상일 때</div>
+          <div class="material-icons-outlined">east</div>
+          <div class="condition-text">보정값</div>
+          <mat-select
+            [(ngModel)]="selectedMaxCoordinate"
+            (selectionChange)="changeValue()"
+            [disabled]="!predictControl"
+          >
+            <mat-option *ngFor="let predict of coordinateList" [value]="predict.value">
+              {{ predict.label }}
+            </mat-option>
+          </mat-select>
+          <div class="condition-text">히터</div>
+          <div class="status-text">OFF</div>
+        </div>
+      </div>
+    </div>
+    <div class="blank" fxFlex></div>
+  </main>
+</div>

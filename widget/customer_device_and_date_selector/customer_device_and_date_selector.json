@@ -1,0 +1,75 @@
+{
+  "schema": {
+    "title": "Settings",
+    "type": "object",
+    "properties": {
+      "widget": {
+        "type": "object",
+        "required": ["originWidth"],
+        "properties": {
+          "originWidth": {
+            "title": "위젯 원본 너비",
+            "type": "number",
+            "default": 300
+          },
+          "guideTextUse": {
+            "title": "안내 문구 추가",
+            "type": "boolean",
+            "default": false
+          },
+          "guideTextIcon": {
+            "title": "안내 문구 아이콘",
+            "type": "string",
+            "default": ""
+          },
+          "guideText": {
+            "title": "안내 문구",
+            "type": "string",
+            "default": ""
+          }
+        }
+      },
+      "selector": {
+        "type": "object",
+        "required": ["deviceDefault"],
+        "properties": {
+          "deviceDefault": {
+            "title": "디바이스 기본값",
+            "type": "string",
+            "default": "all"
+          }
+        }
+      }
+    }
+  },
+  "form": [
+    ["widget.originWidth", "widget.guideTextUse", "widget.guideTextIcon", "widget.guideText"],
+    [
+      {
+        "key": "selector.deviceDefault",
+        "type": "rc-select",
+        "multiple": false,
+        "items": [
+          {
+            "value": "all",
+            "label": "전체 설비"
+          },
+          {
+            "value": "one",
+            "label": "개별 설비"
+          }
+        ]
+      }
+    ]
+  ],
+  "groupInfoes": [
+    {
+      "formIndex": 0,
+      "GroupTitle": "위젯"
+    },
+    {
+      "formIndex": 1,
+      "GroupTitle": "셀렉터"
+    }
+  ]
+}

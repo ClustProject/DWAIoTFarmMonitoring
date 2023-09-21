@@ -1,0 +1,31 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <section class="widget-header-left-section" fxLayoutAlign="start center">
+      <div class="widget-title">온실 내부 환경</div>
+    </section>
+    <section class="widget-header-right-section" fxLayoutAlign="start center">
+      <div class="download-box" fxLayout="row">
+        <div class="material-icons">download</div>
+        <div class="download-text" (click)="download()">CSV 다운로드</div>
+      </div>
+    </section>
+  </header>
+  <main class="widget-content" fxLayout="row" fxLayoutAlign="start center">
+    <div class="label {{active0}}" (click)="changeTopic(0)">온도</div>
+    <div class="label {{active1}}" (click)="changeTopic(1)">습도</div>
+    <div class="label {{active2}}" (click)="changeTopic(2)">토양EC</div>
+    <div class="label {{active3}}" (click)="changeTopic(3)">조도</div>
+    <div class="label {{active4}}" (click)="changeTopic(4)">퀀텀</div>
+    <div class="label {{active5}}" (click)="changeTopic(5)">CO₂</div>
+    <div class="label {{active6}}" (click)="changeTopic(6)">기압</div>
+  </main>
+  <footer class="widget-footer" fxFlex fxLayout="column">
+    <div class="legend-container" fxLayout="row">
+      <div class="legend-box" fxLayout="row" fxLayoutAlign="start center">
+        <hr class="line-hr" style="border-color: #28b5b5" />
+        <div class="legend-label">{{label}}</div>
+      </div>
+    </div>
+    <div class="chart" fxFlex></div>
+  </footer>
+</div>

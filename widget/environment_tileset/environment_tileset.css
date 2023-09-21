@@ -1,0 +1,255 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+}
+
+/*
+  Header
+*/
+header.widget-header {
+  width: 100%;
+  padding: 2em;
+}
+
+/* 
+  Main
+*/
+main.widget-content {
+  width: 100%;
+  height: 100%;
+  padding: 0.8em;
+  background-color: #edeff3;
+}
+
+main.widget-content .control-container {
+  height: 100%;
+  background-color: white;
+  border: 1px solid #dee0e5;
+}
+
+main.widget-content .control-container .title {
+  font-size: 1.4em;
+  padding: calc(1.6em / 1.4) calc(2.4em / 1.4);
+  color: #5a616f;
+  border-bottom: 1px solid #dee0e5;
+}
+
+/* main.widget-content .control-container .card-container {
+} */
+
+main.widget-content .control-container .card-container .card-box {
+  border-bottom: 1px solid #dee0e5;
+  padding: 3em 2.4em;
+  background-color: #fafbfc;
+}
+
+main.widget-content .control-container .card-container .card-box .icon-box {
+  padding: 0.8em;
+  border-radius: 0.2em;
+  border: solid 1px #dee0e5;
+  background-color: #f4f6f8;
+}
+
+main.widget-content .control-container .card-container .card-box.active .icon-box {
+  border-color: #dbe9ff;
+  background-color: #f5f8ff;
+}
+
+main.widget-content .control-container .card-container .card-box .icon-box .material-icons {
+  font-size: 2.8em;
+  width: 1em;
+  height: 1em;
+  color: #999ea9;
+  font-weight: 100;
+}
+
+main.widget-content .control-container .card-container .card-box.active .icon-box .material-icons {
+  color: #3e88fa;
+}
+
+main.widget-content .control-container .card-container .card-box .text-box {
+  margin-left: 1.6em;
+}
+
+main.widget-content .control-container .card-container .card-box .card-label {
+  font-size: 1.4em;
+  color: #5a616f;
+}
+
+main.widget-content .control-container .card-container .card-box .card-status {
+  font-size: 1.2em;
+  color: #5a616f;
+  font-weight: 600;
+
+  margin-top: calc(0.8em / 1.2);
+}
+
+main.widget-content .control-container .card-container .card-box.active .card-status {
+  color: #1d6ef0;
+}
+
+main.widget-content .control-container .forcast-container {
+  padding: 0 2.4em;
+}
+
+main.widget-content .control-container .forcast-container .value-box {
+  margin-bottom: 0.4em;
+}
+
+main.widget-content .control-container .forcast-container .value-box .value {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1;
+  color: #1f2229;
+}
+
+main.widget-content .control-container .forcast-container .value-box .value-unit {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-left: calc(0.4em / 1.4);
+  color: #1f2229;
+}
+
+main.widget-content .control-container .forcast-container .forcast-label {
+  font-size: 1.2em;
+  color: #5a616f;
+}
+
+main.widget-content .map-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #f4f6f8;
+
+  border: 1px solid #dee0e5;
+  border-left: none;
+}
+
+main.widget-content .map-box .bed-container {
+  margin: 1.2em 2.4em;
+}
+
+main.widget-content .map-box .bed-container .label-text {
+  font-size: 1.4em;
+  color: #5a616f;
+  margin-right: calc(0.8em / 1.4);
+}
+
+main.widget-content .map-box .bed-container .bed-box {
+  border: 1px solid #edeff3;
+  background-color: #fafbfc;
+  box-shadow: 1px 1px 1px 0 rgba(15, 17, 21, 0.16);
+  border-radius: 0.4em;
+  padding: 0.8em;
+}
+
+main.widget-content .map-box .bed-container .bed-box .icon-container {
+  background-color: #edeff3;
+  border: 1px solid #dee0e5;
+  border-radius: 0.2em;
+  padding: 0.4em;
+}
+
+main.widget-content .map-box .bed-container .bed-box .icon-container .icon-box {
+  border-radius: 0.1em;
+  border: 1px solid #5a616f;
+  background-color: #6f7685;
+}
+
+main.widget-content .map-box .bed-container .bed-box .icon-container .icon-box .material-icons {
+  color: #fafbfc;
+  font-weight: 100;
+  font-size: 2.4em;
+  width: 1em;
+  height: 1em;
+}
+
+main.widget-content .map-box .point {
+  position: absolute;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.widget-content .map-box .point svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* .frame-section */
+.comment-section {
+  width: 100%;
+  height: 100%;
+}
+.comment-section .comment {
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+  color: #131523;
+}
+
+.comment-section .comment em {
+  font-weight: 600;
+  font-style: normal;
+  color: #3c6cea;
+}
+
+/*
+  Other
+*/
+/* .progress-section */
+.progress-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.progress-section .progress {
+  height: 7em;
+  width: 7em;
+}
+.progress-section .circular {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+.progress-section .circle {
+  stroke: #354052;
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition-duration: 1s;
+}
+.progress-section .back-circle {
+  stroke: #eeeeee;
+  fill: none;
+  stroke-width: 5;
+}
+.progress-section .rotate {
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

@@ -1,0 +1,113 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+}
+
+.cell-icon {
+  border: 1px solid #d7dbec;
+  border-radius: 0.5em;
+  padding: 0.2em;
+  margin-right: 1.5em;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  font-size: 1.8em;
+}
+
+main.widget-content .table {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+main.widget-content .table table {
+  width: 100%;
+  height: 100%;
+  border-spacing: 0;
+  /* tr에 border styling 하기 위해 필요 */
+  border-collapse: separate;
+
+  table-layout: fixed;
+}
+
+main.widget-content .table table thead {
+}
+main.widget-content .table table tbody {
+}
+
+main.widget-content .table table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main.widget-content .table table thead tr {
+  position: sticky;
+  top: -1px;
+  cursor: pointer;
+  background-color: white;
+}
+main.widget-content .table table th {
+  text-align: start;
+}
+
+main.widget-content .table table thead tr th {
+  color: #5a616f;
+  padding: calc(1.7em / 1.2) 0 calc(1.7em / 1.2) calc(3.2em / 1.2);
+  font-size: 1.2em;
+  font-weight: bold;
+
+  border-top: 1px solid #dee0e5;
+  border-bottom: 1px solid #edeff3;
+
+  max-width: calc(10em / 1.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main.widget-content .table table tbody tr:nth-child(odd) {
+  background-color: #fafbfc;
+}
+
+main.widget-content .table table tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+main.widget-content .table table tbody tr:nth-child(odd):hover {
+  background-color: #efefef;
+}
+
+main.widget-content .table table tbody tr:nth-child(even):hover {
+  background-color: #efefef;
+}
+
+main.widget-content .table table tbody tr td {
+  color: #5a616f;
+  padding: calc(1.2em / 1.4) 0 calc(1.2em / 1.4) calc(3.2em / 1.4);
+  font-size: 1.4em;
+
+  border-bottom: 1px solid #edeff3;
+}
+
+main.widget-content .table table .tail {
+  border-top: solid 1px #efefef;
+}
+
+.arrow-btn,
+.pageList div,
+.selector,
+.rowLimit2 div,
+.action-btn {
+  cursor: pointer;
+}

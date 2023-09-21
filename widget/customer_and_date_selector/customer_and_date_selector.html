@@ -1,0 +1,48 @@
+<div id="widget" fxLayout="column">
+  <main class="widget-content" fxFlex>
+    <span class="title">환경 트렌드</span>
+    <section class="select-box">
+      <div class="selector-label">Bed범위:</div>
+      <mat-select [(ngModel)]="selectedCustomer">
+        <mat-option *ngFor="let customer of customerList" [value]="customer.name"> {{ customer.label }} </mat-option>
+      </mat-select>
+
+      <div class="selector-label">기간 선택:</div>
+      <div class="date-selector" (click)="startDatePicker.open()" fxLayoutAlign="space-between center">
+        <mat-datetimepicker #startDatePicker type="date"></mat-datetimepicker>
+        <input
+          class="hidden"
+          matInput
+          readonly
+          [(ngModel)]="startDate"
+          [max]="nowDate"
+          [matDatetimepicker]="startDatePicker"
+          (ngModelChange)="setStartDate($event)"
+        />
+        <input class="basic-date" [(ngModel)]="viewStartDate" readonly />
+        <div class="select-arrow"></div>
+      </div>
+      <div class="selector-middle-label">~</div>
+      <div class="date-selector" (click)="endDatePicker.open()" fxLayoutAlign="space-between center">
+        <mat-datetimepicker #endDatePicker type="date"></mat-datetimepicker>
+        <input
+          class="hidden"
+          matInput
+          readonly
+          [(ngModel)]="endDate"
+          [max]="nowDate"
+          [matDatetimepicker]="endDatePicker"
+          (ngModelChange)="setEndDate($event)"
+        />
+        <input class="basic-date" [(ngModel)]="viewEndDate" readonly />
+        <div class="select-arrow"></div>
+      </div>
+
+      <div class="search-btn" fxLayoutAlign="center center" (click)="search()">적용</div>
+    </section>
+    <div class="open-btn-box" (click)="openSelector()">
+      <mat-icon class="material-icons" style="color: white">search</mat-icon>
+    </div>
+  </main>
+  <div class="gap"></div>
+</div>

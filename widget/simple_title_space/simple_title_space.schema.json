@@ -1,0 +1,31 @@
+{
+  "schema": {
+    "title": "Settings",
+    "type": "object",
+    "properties": {
+      "widget": {
+        "type": "object",
+        "required": ["originWidth"],
+        "properties": {
+          "originWidth": {
+            "title": "Origin Widget Width",
+            "type": "number",
+            "default": 1630
+          },
+          "selectLimit": {
+            "title": "Select Limit",
+            "type": "number",
+            "default": 0
+          }
+        }
+      }
+    }
+  },
+  "form": [["widget.originWidth", "widget.selectLimit"]],
+  "groupInfoes": [
+    {
+      "formIndex": 0,
+      "GroupTitle": "Widget"
+    }
+  ]
+}

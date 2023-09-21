@@ -1,0 +1,779 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <section class="widget-header-left-section" fxFlex fxLayoutAlign="start center">
+      <div class="widget-title">온도 · 습도 현황</div>
+    </section>
+  </header>
+  <main class="widget-content" fxLayout="row" fxLayoutAlign="start center">
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #9bc7d9" />
+      <div class="card-label">0단계</div>
+    </div>
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #b9d3de" />
+      <div class="card-label">1단계</div>
+    </div>
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #d8dee1" />
+      <div class="card-label">2단계</div>
+    </div>
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #ebc6ca" />
+      <div class="card-label">3단계</div>
+    </div>
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #f09ca0" />
+      <div class="card-label">4단계</div>
+    </div>
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #e55e63" />
+      <div class="card-label">5단계</div>
+    </div>
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #bd353a" />
+      <div class="card-label">6단계</div>
+    </div>
+    <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+      <hr class="line-hr" style="border-color: #5e83bf" />
+      <div class="card-label">없음</div>
+    </div>
+  </main>
+  <footer class="widget-footer" fxFlex fxLayout="column">
+    <div class="bed-container" fxLayout="column">
+      <section class="label-container" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="left-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="bed-label">Bed1</div>
+          <material-icons class="material-icons">chevron_right</material-icons>
+          <div fxLayout="row">
+            <div fxLayout="row">
+              <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+                포지션 합계:&nbsp;
+                <b>30</b>
+                개
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            0단계:
+            <b>{{level0B1}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            1단계:
+            <b>{{level1B1}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            2단계:
+            <b>{{level2B1}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            3단계:
+            <b>{{level3B1}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            4단계:
+            <b>{{level4B1}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            5단계:
+            <b>{{level5B1}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            6단계:
+            <b>{{level6B1}}</b>
+            개
+          </div>
+
+          <material-icons class="material-icons-outlined">info</material-icons>
+        </div>
+      </section>
+      <section class="heatmap-container" fxLayout="row" fxLayoutAlign="start center">
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P1')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-1</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P2')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-2</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P3')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-3</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P4')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-4</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P5')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-5</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P6')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-6</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P7')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-7</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P8')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-8</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P9')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-9</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P10')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-10</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P11')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-11</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P12')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-12</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P13')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-13</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P14')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-14</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P15')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-15</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P16')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-16</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P17')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-17</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P18')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-18</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P19')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-19</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P20')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-20</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P21')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-21</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P22')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-22</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P23')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-23</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P24')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-24</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P25')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-25</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P26')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-26</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P27')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-27</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P28')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-28</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P29')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-29</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B1','P30')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-30</div>
+        </div>
+      </section>
+    </div>
+    <div class="bed-container" fxLayout="column">
+      <section class="label-container" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="left-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="bed-label">Bed2</div>
+          <material-icons class="material-icons">chevron_right</material-icons>
+          <div fxLayout="row">
+            <div fxLayout="row">
+              <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+                포지션 합계:&nbsp;
+                <b>30</b>
+                개
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            0단계:
+            <b>{{level0B2}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            1단계:
+            <b>{{level1B2}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            2단계:
+            <b>{{level2B2}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            3단계:
+            <b>{{level3B2}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            4단계:
+            <b>{{level4B2}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            5단계:
+            <b>{{level5B2}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            6단계:
+            <b>{{level6B2}}</b>
+            개
+          </div>
+
+          <material-icons class="material-icons-outlined">info</material-icons>
+        </div>
+      </section>
+      <section class="heatmap-container" fxLayout="row" fxLayoutAlign="start center">
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P1')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-1</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P2')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-2</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P3')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-3</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P4')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-4</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P5')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-5</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P6')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-6</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P7')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-7</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P8')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-8</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P9')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-9</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P10')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-10</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P11')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-11</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P12')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-12</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P13')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-13</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P14')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-14</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P15')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-15</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P16')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-16</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P17')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-17</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P18')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-18</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P19')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-19</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P20')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-20</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P21')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-21</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P22')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-22</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P23')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-23</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P24')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-24</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P25')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-25</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P26')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-26</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P27')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-27</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P28')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-28</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P29')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-29</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B2','P30')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-30</div>
+        </div>
+      </section>
+    </div>
+    <div class="bed-container" fxLayout="column">
+      <section class="label-container" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="left-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="bed-label">Bed3</div>
+          <material-icons class="material-icons">chevron_right</material-icons>
+          <div fxLayout="row">
+            <div fxLayout="row">
+              <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+                포지션 합계:&nbsp;
+                <b>30</b>
+                개
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            0단계:
+            <b>{{level0B3}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            1단계:
+            <b>{{level1B3}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            2단계:
+            <b>{{level2B3}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            3단계:
+            <b>{{level3B3}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            4단계:
+            <b>{{level4B3}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            5단계:
+            <b>{{level5B3}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            6단계:
+            <b>{{level60B3}}</b>
+            개
+          </div>
+
+          <material-icons class="material-icons-outlined">info</material-icons>
+        </div>
+      </section>
+      <section class="heatmap-container" fxLayout="row" fxLayoutAlign="start center">
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P1')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-1</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P2')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-2</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P3')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-3</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P4')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-4</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P5')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-5</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P6')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-6</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P7')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-7</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P8')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-8</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P9')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-9</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P10')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-10</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P11')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-11</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P12')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-12</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P13')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-13</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P14')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-14</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P15')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-15</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P16')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-16</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P17')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-17</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P18')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-18</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P19')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-19</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P20')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-20</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P21')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-21</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P22')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-22</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P23')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-23</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P24')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-24</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P25')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-25</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P26')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-26</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P27')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-27</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P28')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-28</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P29')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-29</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B3','P30')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-30</div>
+        </div>
+      </section>
+    </div>
+    <div class="bed-container" fxLayout="column">
+      <section class="label-container" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="left-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="bed-label">Bed4</div>
+          <material-icons class="material-icons">chevron_right</material-icons>
+          <div fxLayout="row">
+            <div fxLayout="row">
+              <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+                포지션 합계:&nbsp;
+                <b>30</b>
+                개
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-section" fxLayout="row" fxLayoutAlign="start center">
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            0단계:
+            <b>{{level0B4}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            1단계:
+            <b>{{level1B4}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            2단계:
+            <b>{{level2B4}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            3단계:
+            <b>{{level3B4}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            4단계:
+            <b>{{level4B4}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            5단계:
+            <b>{{level5B4}}</b>
+            개
+          </div>
+
+          <div class="label-text" fxLayout="row" fxLayoutAlign="start center">
+            6단계:
+            <b>{{level6B4}}</b>
+            개
+          </div>
+
+          <material-icons class="material-icons-outlined">info</material-icons>
+        </div>
+      </section>
+      <section class="heatmap-container" fxLayout="row" fxLayoutAlign="start center">
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P1')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-1</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P2')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-2</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P3')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-3</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P4')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-4</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P5')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-5</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P6')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-6</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P7')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-7</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P8')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-8</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P9')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-9</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P10')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-10</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P11')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-11</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P12')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-12</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P13')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-13</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P14')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-14</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P15')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-15</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P16')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-16</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P17')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-17</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P18')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-18</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P19')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-19</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P20')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-20</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P21')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-21</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P22')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-22</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P23')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-23</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P24')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-24</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P25')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-25</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P26')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-26</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P27')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-27</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P28')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-28</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P29')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-29</div>
+        </div>
+        <div class="heatmap-box" fxFlex fxLayout="column" (click)="detailView('B4','P30')">
+          <div class="heatmap"></div>
+          <div class="pos-text" fxLayout="row" fxLayoutAlign="center center">P-30</div>
+        </div>
+      </section>
+    </div>
+  </footer>
+</div>

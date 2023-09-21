@@ -1,0 +1,227 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row">
+    <section class="widget-header-left-section" fxFlex fxLayoutAlign="start center">
+      <div class="widget-title"></div>
+    </section>
+  </header>
+  <main class="widget-content" fxFlex fxLayout="row">
+    <section class="card-container" fxFlex fxLayout="column">
+      <div class="card-row-box" fxLayout="row">
+        <div class="card-box-device" fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #0088ff" />
+            <div class="label">온습도/CO2센서 1</div>
+          </div>
+          <div class="type-label">EM500-CO2</div>
+        </div>
+      </div>
+      <div class="card-row-box" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">CO₂ 1</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{co2_1}}</div>
+            <div class="value-unit">ppm</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">기압 1</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{pressure1}}</div>
+            <div class="value-unit">hPa</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">온도 1</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{temperature1}}</div>
+            <div class="value-unit">℃</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">습도 1</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{humidity1}}</div>
+            <div class="value-unit">%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-row-box" fxLayout="row">
+        <div class="card-box-device" fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #0088ff" />
+            <div class="label">온습도/CO2센서 2</div>
+          </div>
+          <div class="type-label">EM500-CO2</div>
+        </div>
+      </div>
+      <div class="card-row-box" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">CO₂ 2</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{co2_2}}</div>
+            <div class="value-unit">ppm</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">기압 2</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{pressure2}}</div>
+            <div class="value-unit">hPa</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">온도 2</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{temperature2}}</div>
+            <div class="value-unit">℃</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">습도 2</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{humidity2}}</div>
+            <div class="value-unit">%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-row-box" fxLayout="row">
+        <div class="card-box-device" fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #0088ff" />
+            <div class="label">온습도/CO2센서 3</div>
+          </div>
+          <div class="type-label">EM500-CO2</div>
+        </div>
+      </div>
+      <div class="card-row-box" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">CO₂ 3</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{co2_3}}</div>
+            <div class="value-unit">ppm</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">기압 3</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{pressure3}}</div>
+            <div class="value-unit">hPa</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">온도 3</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{temperature3}}</div>
+            <div class="value-unit">℃</div>
+          </div>
+        </div>
+        <div class="card-box card-box-content" fxFlex fxLayout="column" fxLayoutAlign="center start">
+          <div class="key">습도 3</div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{humidity3}}</div>
+            <div class="value-unit">%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-row-box bottom-row-box" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #eb5721" />
+            <div class="bottom-key">일사량</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{ch1}}</div>
+            <div class="value-unit">W/㎡</div>
+          </div>
+        </div>
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #f29f22" />
+            <div class="bottom-key">조도 1</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{illumination1}}</div>
+            <div class="value-unit">lux</div>
+          </div>
+        </div>
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #f29f22" />
+            <div class="bottom-key">조도 2</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{illumination2}}</div>
+            <div class="value-unit">lux</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-row-box bottom-row-box" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #e03e76" />
+            <div class="bottom-key">적산적산량</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{stackedElectric}}</div>
+            <div class="value-unit">KWh</div>
+          </div>
+        </div>
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #986ded" />
+            <div class="bottom-key">퀀텀(PAR) 1</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{ch2_1}}</div>
+            <div class="value-unit">μmol/㎡</div>
+          </div>
+        </div>
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #986ded" />
+            <div class="bottom-key">퀀텀(PAR) 2</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{ch2_2}}</div>
+            <div class="value-unit">μmol/㎡</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-row-box bottom-row-box" fxLayout="row" fxFlex fxLayoutAlign="start center">
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #00a3a3" />
+            <div class="bottom-key">토양 온도 1</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{soil_temperature1}}</div>
+            <div class="value-unit">℃</div>
+          </div>
+        </div>
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #00a3a3" />
+            <div class="bottom-key">토양 온도 2</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{soil_temperature2}}</div>
+            <div class="value-unit">℃</div>
+          </div>
+        </div>
+        <div class="card-box" fxFlex fxLayout="column">
+          <div class="key-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #00a3a3" />
+            <div class="bottom-key">토양 온도 3</div>
+          </div>
+          <div class="value-box" fxLayout="row" fxLayoutAlign="start end">
+            <div class="value">{{soil_temperature3}}</div>
+            <div class="value-unit">℃</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

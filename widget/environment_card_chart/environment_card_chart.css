@@ -1,0 +1,126 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+
+  border-left: 1px solid #dee0e5;
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .widget-header-left-section .widget-title {
+  color: #1f2229;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+header.widget-header .widget-header-right-section .tab-label {
+  width: calc(11.6em / 1.4);
+  font-size: 1.4em;
+  padding: calc(0.8em / 1.4) 0;
+  border: 1px solid #dee0e5;
+
+  color: #999ea9;
+  background-color: #f4f6f8;
+
+  cursor: pointer;
+}
+
+header.widget-header .widget-header-right-section .tab-label:last-child {
+  border-left: none;
+}
+
+header.widget-header .widget-header-right-section .tab-label.active {
+  color: #1d6ef0;
+  background-color: white;
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+  border-bottom: 1px solid #dee0e5;
+}
+
+main.widget-content .card-box {
+  margin-left: 2.4em;
+}
+
+main.widget-content .card-box .card-label-box {
+  margin-bottom: 0.8em;
+}
+
+main.widget-content .card-box .card-label-box .line-hr {
+  border: 2px solid black;
+  width: 10px;
+  height: 0;
+  margin: 0;
+}
+
+main.widget-content .card-box .card-label-box .half-line-hr {
+  border: 2px solid black;
+  width: 4px;
+  height: 0;
+  margin: 0;
+  margin-right: 2px;
+}
+
+main.widget-content .card-box .card-label-box .half-line-hr:last-child {
+  margin-right: 0;
+}
+
+main.widget-content .card-box .card-label-box .card-label {
+  color: #5a616f;
+  font-size: 1.2em;
+  margin-left: calc(0.8em / 1.2);
+}
+
+main.widget-content .card-box .card-value-box .card-value {
+  font-size: 2em;
+  color: #1f2229;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: calc(-0.1em / 2);
+}
+main.widget-content .card-box .card-value-box .card-value-unit {
+  font-size: 1.4em;
+  margin-left: calc(0.4em / 1.4);
+  color: #1f2229;
+  font-weight: 500;
+}
+
+/*
+  Widget Footer Area
+*/
+
+footer.widget-footer {
+  width: 100%;
+  border-bottom: 1px solid #dee0e5;
+  height: 50.3em;
+}
+
+footer.widget-footer .chart {
+  width: 100%;
+  height: 100%;
+}
+
+footer.widget-footer .chart .dotted {
+  stroke-dasharray: 2 2;
+}
+
+footer.widget-footer .chart .yAxis .tick {
+  stroke-dasharray: 4 2;
+}

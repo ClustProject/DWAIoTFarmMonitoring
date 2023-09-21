@@ -1,0 +1,146 @@
+<form class="add-entity-form" #addEntityForm="ngForm" [formGroup]="addEntityFormGroup" (ngSubmit)="save()">
+  <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+      <i class="material-icons dialog-icon">note_add</i>
+      <div class="dialog-title">고객사 신규 등록</div>
+    </div>
+    <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+  </div>
+  <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async"> </mat-progress-bar>
+  <div style="height: 0.4em" *ngIf="!(isLoading$ | async)"></div>
+  <div mat-dialog-content fxLayout="column">
+    <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row">
+          <span class="label">고객사</span>
+        </div>
+        <div class="input-wrapper">
+          <mat-select
+            formControlName="customerName"
+            name="customer"
+            required
+            [(ngModel)]="selectedCustomer"
+            [ngModelOptions]="{standalone: true}"
+          >
+            <mat-option *ngFor="let customer of customerList" [value]="customer.id.id"> {{ customer.name}} </mat-option>
+          </mat-select>
+        </div>
+      </div>
+    </div>
+    <div class="row error-row" *ngIf="addEntityFormGroup.get('customerName').hasError('required')">
+      고객사명을 입력하세요.
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="label">로봇명</span>
+          <span class="notice">{{labelLength}}/100</span>
+        </div>
+        <div class="input-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+          <input maxlength="100" matInput formControlName="label" (ngModelChange)="labelChange($event)" required />
+          <i class="material-icons input-icon">edit</i>
+        </div>
+      </div>
+
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row">
+          <span class="label">로봇 종류</span>
+        </div>
+        <div class="input-wrapper">
+          <mat-select formControlName="robotType" name="robotType" required>
+            <mat-option *ngFor="let robotType of robotTypeList" [value]="robotType"> {{robotType}} </mat-option>
+          </mat-select>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row error-row"
+      *ngIf="addEntityFormGroup.get('label').hasError('required')  && !(addEntityFormGroup.get('robotType').hasError('required'))"
+    >
+      로봇명을 입력하세요.
+    </div>
+    <div
+      class="row error-row"
+      *ngIf="!(addEntityFormGroup.get('label').hasError('required')) && addEntityFormGroup.get('robotType').hasError('required')"
+    >
+      로봇 종류를 입력하세요.
+    </div>
+    <div
+      class="row error-row"
+      *ngIf="addEntityFormGroup.get('label').hasError('required') && addEntityFormGroup.get('robotType').hasError('required')"
+    >
+      로봇명, 로봇 종류를 입력하세요.
+    </div>
+
+    <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="label">시리얼 No.</span>
+          <span class="notice">{{nameLength}}/100</span>
+        </div>
+        <div class="input-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+          <input maxlength="100" matInput formControlName="name" (ngModelChange)="nameChange($event)" required />
+          <i class="material-icons input-icon">edit</i>
+        </div>
+      </div>
+
+      <div class="input-box" fxFlex fxLayout="column">
+        <div class="label-box" fxLayout="row">
+          <span class="label">제조 일자</span>
+        </div>
+        <div class="input-wrapper">
+          <input
+            class="view"
+            matInput
+            formControlName="manufactureDate"
+            (click)="setDatePicker.open()"
+            required
+            readonly
+          />
+          <!-- 숨겨진 캘린더 -->
+          <mat-datetimepicker #setDatePicker type="date"></mat-datetimepicker>
+          <input
+            class="hidden"
+            matInput
+            readonly
+            [matDatetimepicker]="setDatePicker"
+            (dateChange)="setStartDate($event)"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="row error-row"
+      *ngIf="addEntityFormGroup.get('name').hasError('required') && !(addEntityFormGroup.get('manufactureDate').hasError('required'))"
+    >
+      시리얼ID를 입력하세요
+    </div>
+    <div
+      class="row error-row"
+      *ngIf="!(addEntityFormGroup.get('name').hasError('required')) && addEntityFormGroup.get('manufactureDate').hasError('required')"
+    >
+      제조 일자를 입력하세요.
+    </div>
+    <div
+      class="row error-row"
+      *ngIf="addEntityFormGroup.get('name').hasError('required') && addEntityFormGroup.get('manufactureDate').hasError('required')"
+    >
+      시리얼ID, 제조 일자를 입력하세요.
+    </div>
+  </div>
+  <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <button
+      class="button close-button"
+      [disabled]="(isLoading$ | async)"
+      type="button"
+      (click)="cancel()"
+      cdkFocusInitial
+    >
+      취소
+    </button>
+    <button class="button save-button" type="submit" [disabled]="(isLoading$ | async) || addEntityForm.invalid">
+      등록
+    </button>
+  </div>
+</form>

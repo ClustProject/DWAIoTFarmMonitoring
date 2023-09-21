@@ -1,0 +1,34 @@
+<div class="dialog-top-bar"></div>
+<form #connectEntityForm="ngForm" [formGroup]="connectEntityFormGroup" (ngSubmit)="save()" class="connect-entity-form">
+  <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+      <i class="material-icons dialog-icon">error</i>
+      <div class="dialog-title">원격 접속</div>
+    </div>
+    <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+  </div>
+  <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async"> </mat-progress-bar>
+  <div style="height: 0.4em" *ngIf="!(isLoading$ | async)"></div>
+  <div mat-dialog-content fxLayout="column">
+    <div class="row" fxLayout="row" fxLayoutAlign="center center">
+      <span class="row-text">{{content1}}</span>
+    </div>
+    <div class="row" fxLayout="row" fxLayoutAlign="center center">
+      <span class="row-text">{{content2}}</span>
+    </div>
+  </div>
+  <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <button
+      class="button close-button"
+      [disabled]="(isLoading$ | async)"
+      type="button"
+      (click)="cancel()"
+      cdkFocusInitial
+    >
+      취소
+    </button>
+    <button class="button save-button" type="submit" [disabled]="(isLoading$ | async) || connectEntityForm.invalid">
+      {{buttonName}}
+    </button>
+  </div>
+</form>

@@ -1,0 +1,110 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+
+  border-left: 1px solid #dee0e5;
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em 2.4em;
+
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .widget-header-left-section .widget-title {
+  font-size: 1.8em;
+  color: #1f2229;
+  font-weight: 600;
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+}
+
+main.widget-content .card-row-box,
+main.widget-content .card-row-box .card-box-device {
+  width: 100%;
+}
+
+main.widget-content .card-row-box.bottom-row-box {
+  border-bottom: 1px solid #dee0e5;
+}
+
+main.widget-content .card-box {
+  padding: 0 3.2em;
+}
+
+main.widget-content .card-box.card-box-content {
+  border-top: 1px solid #dee0e5;
+  border-bottom: 1px solid #dee0e5;
+  border-right: 1px solid #edeff3;
+
+  height: 100%;
+}
+
+main.widget-content .card-box .key-box {
+  margin-bottom: 0.8em;
+}
+
+main.widget-content .card-box .line-hr,
+main.widget-content .card-box-device .line-hr {
+  border: 2px solid black;
+  width: 10px;
+  height: 0;
+  margin: 0;
+}
+
+main.widget-content .card-box .key {
+  font-size: 1.2em;
+  color: #999ea9;
+  margin-bottom: calc(0.8em / 1.2);
+}
+
+main.widget-content .card-box .bottom-key {
+  font-size: 1.4em;
+  color: #5a616f;
+  margin-left: calc(0.8em / 1.4);
+}
+
+main.widget-content .card-box .value {
+  font-size: 2em;
+  color: #1f2229;
+  font-weight: 600;
+  line-height: 1;
+}
+
+main.widget-content .card-box .value-unit {
+  font-size: 1.4em;
+  color: #1f2229;
+  font-weight: 500;
+  margin-left: calc(0.4em / 1.4);
+}
+
+main.widget-content .card-row-box .card-box-device {
+  padding: 1.6em 3.2em;
+  background-color: #fafbfc;
+}
+
+main.widget-content .card-row-box .card-box-device .label {
+  font-size: 1.4em;
+  color: #5a616f;
+  margin-left: calc(0.8em / 1.4);
+}
+
+main.widget-content .card-row-box .card-box-device .type-label {
+  font-size: 1.2em;
+  color: #999ea9;
+}

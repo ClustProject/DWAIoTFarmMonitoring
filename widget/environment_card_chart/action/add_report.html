@@ -1,0 +1,322 @@
+<div id="add-report-form">
+  <form
+    #addEntityForm="ngForm"
+    [formGroup]="addEntityFormGroup"
+    (ngSubmit)="save()"
+    style="font-size: {{calcFontSize()}}px;"
+  >
+    <div class="dialog-title-box" fxLayoutAlign="space-between center">
+      <span class="dialog-title" translate>thingplus.dialog.create-report-title</span>
+      <button class="dialog-close" (click)="cancel()" type="button">
+        <mat-icon class="material-icons">close</mat-icon>
+      </button>
+    </div>
+    <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async"> </mat-progress-bar>
+    <div style="height: 0.4em" *ngIf="!(isLoading$ | async)"></div>
+    <div class="step-controller" fxLayoutAlign="space-between center">
+      <div
+        class="step"
+        [ngClass]="{'prev': currentStep > 0, 'current': currentStep == 0, 'next': currentStep < 0}"
+        (click)="selectStep($event, 0)"
+        fxLayoutAlign="center center"
+        [attr.data-label]="t('thingplus.label.step-set-page')"
+      >
+        <i class="material-icons">check</i>
+      </div>
+      <div class="step-progress-line" [ngClass]="{'prev': currentStep > 0, 'next': currentStep < 0}"></div>
+      <div
+        class="step"
+        [ngClass]="{'prev': currentStep > 1, 'current': currentStep == 1, 'next': currentStep < 1}"
+        (click)="selectStep($event, 1)"
+        fxLayoutAlign="center center"
+        [attr.data-label]="t('thingplus.label.step-set-send')"
+      >
+        <i class="material-icons">check</i>
+      </div>
+      <div class="step-progress-line" [ngClass]="{'prev': currentStep > 1, 'next': currentStep < 1}"></div>
+      <div
+        class="step"
+        [ngClass]="{'prev': currentStep > 2, 'current': currentStep == 2, 'next': currentStep < 2}"
+        (click)="selectStep($event, 2)"
+        fxLayoutAlign="center center"
+        [attr.data-label]="t('thingplus.label.step-set-receive')"
+      >
+        <i class="material-icons">check</i>
+      </div>
+    </div>
+    <div mat-dialog-content fxFlex fxLayout="column" fxLayoutGap="2em">
+      <div class="step-content step-content-0" *ngIf="currentStep == 0" fxLayout="column" fxLayoutGap="2em">
+        <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+          <div
+            fxFlex="100"
+            fxLayout="column"
+            fxLayoutGap="0.6em"
+            class="input-box"
+            [ngClass]="{'disabled': ownerLevel != 0}"
+          >
+            <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+              <label translate>thingplus.label.customerL1</label>
+            </div>
+            <div class="value-box" fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.6em">
+              <mat-select
+                formControlName="customerL1"
+                (selectionChange)="setCustomerL1($event)"
+                *ngIf="ownerLevel == 0"
+              >
+                <mat-option *ngFor="let customerL1 of customerL1List" [value]="customerL1.value">
+                  {{customerL1.name}}
+                </mat-option>
+              </mat-select>
+              <input matInput formControlName="customerL1Name" *ngIf="ownerLevel != 0" readonly />
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+          <div
+            fxFlex="100"
+            fxLayout="column"
+            fxLayoutGap="0.6em"
+            class="input-box"
+            [ngClass]="{'disabled': ownerLevel > 1}"
+          >
+            <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+              <label translate>thingplus.label.customerL2</label>
+            </div>
+            <div class="value-box" fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.6em">
+              <mat-select formControlName="customerL2" *ngIf="ownerLevel <= 1">
+                <mat-option *ngFor="let customerL2 of customerL2List" [value]="customerL2.value">
+                  {{customerL2.name}}
+                </mat-option>
+              </mat-select>
+              <input matInput formControlName="customerL2Name" *ngIf="ownerLevel > 1" readonly />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step-content step-content-1" *ngIf="currentStep == 1" fxLayout="column" fxLayoutGap="2em">
+        <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+          <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box">
+            <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+              <label translate>thingplus.label.report-repeat</label>
+            </div>
+            <div
+              class="value-box no-border"
+              fxFlex
+              fxLayout="row"
+              fxLayoutAlign="space-evenly center"
+              fxLayoutGap="0.5em"
+            >
+              <button
+                class="radio-btn"
+                type="button"
+                fxFlex="25"
+                [ngClass]="{'active': addEntityFormGroup.get('reportType').value == 'DAILY'}"
+                (click)="setReportType($event, 'DAILY')"
+                translate
+              >
+                thingplus.time-format.day-by-day
+              </button>
+              <button
+                class="radio-btn"
+                type="button"
+                fxFlex="25"
+                [ngClass]="{'active': addEntityFormGroup.get('reportType').value == 'WEEKLY'}"
+                (click)="setReportType($event, 'WEEKLY')"
+                translate
+              >
+                thingplus.time-format.week-by-week
+              </button>
+              <button
+                class="radio-btn"
+                type="button"
+                fxFlex="25"
+                [ngClass]="{'active': addEntityFormGroup.get('reportType').value == 'MONTHLY'}"
+                (click)="setReportType($event, 'MONTHLY')"
+                translate
+              >
+                thingplus.time-format.month-by-month
+              </button>
+              <button
+                class="radio-btn"
+                type="button"
+                fxFlex="25"
+                [ngClass]="{'active': addEntityFormGroup.get('reportType').value == 'CUSTOM'}"
+                (click)="setReportType($event, 'CUSTOM')"
+                translate
+              >
+                thingplus.label.custom-input
+              </button>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+          <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box">
+            <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+              <label translate>thingplus.label.report-time</label>
+            </div>
+            <div class="value-box" fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.6em">
+              <mat-datetimepicker #reportTimePicker type="time" openOnFocus="true"></mat-datetimepicker>
+              <input class="row-input" matInput formControlName="reportTime" [matDatetimepicker]="reportTimePicker" />
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+          <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box">
+            <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+              <label translate>thingplus.label.report-date</label>
+            </div>
+            <div
+              class="group-box"
+              fxFlex="100"
+              fxLayout="column"
+              fxLayoutAlign="start stretch"
+              fxLayoutGap="1em"
+              *ngIf="addEntityFormGroup.get('reportType').value == 'DAILY'"
+            >
+              <div fxFlex="100" fxLayoutAlign="space-between center" formGroupName="dailyContent">
+                <mat-checkbox formControlName="0">
+                  {{'thingplus.time-format.weekday-short.mon' | translate}}
+                </mat-checkbox>
+                <mat-checkbox formControlName="1">
+                  {{'thingplus.time-format.weekday-short.tue' | translate}}
+                </mat-checkbox>
+                <mat-checkbox formControlName="2">
+                  {{'thingplus.time-format.weekday-short.wed' | translate}}
+                </mat-checkbox>
+                <mat-checkbox formControlName="3">
+                  {{'thingplus.time-format.weekday-short.thr' | translate}}
+                </mat-checkbox>
+                <mat-checkbox formControlName="4">
+                  {{'thingplus.time-format.weekday-short.fri' | translate}}
+                </mat-checkbox>
+                <mat-checkbox formControlName="5">
+                  {{'thingplus.time-format.weekday-short.sat' | translate}}
+                </mat-checkbox>
+                <mat-checkbox formControlName="6">
+                  {{'thingplus.time-format.weekday-short.sun' | translate}}
+                </mat-checkbox>
+              </div>
+            </div>
+            <div
+              class="value-box"
+              fxFlex
+              fxLayout="row"
+              fxLayoutAlign="start center"
+              fxLayoutGap="0.6em"
+              *ngIf="addEntityFormGroup.get('reportType').value == 'WEEKLY'"
+            >
+              <mat-select formControlName="weeklyContent">
+                <mat-option *ngFor="let day of dayList" [value]="day.value"> {{day.name}} </mat-option>
+              </mat-select>
+            </div>
+            <div
+              class="value-box"
+              fxFlex
+              fxLayout="row"
+              fxLayoutAlign="start center"
+              fxLayoutGap="0.6em"
+              *ngIf="addEntityFormGroup.get('reportType').value == 'MONTHLY'"
+            >
+              <mat-select formControlName="monthlyContent">
+                <mat-option *ngFor="let date of dateList" [value]="date.value"> {{date.name}} </mat-option>
+              </mat-select>
+            </div>
+            <div
+              class="value-box"
+              fxFlex
+              fxLayout="row"
+              fxLayoutAlign="start center"
+              fxLayoutGap="0.6em"
+              *ngIf="addEntityFormGroup.get('reportType').value == 'CUSTOM'"
+            >
+              <input matInput type="number" step="1" formControlName="customContent" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step-content step-content-2" *ngIf="currentStep == 2" fxLayout="column" fxLayoutGap="2em">
+        <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+          <div
+            fxFlex="100"
+            fxLayout="column"
+            fxLayoutGap="0.6em"
+            class="input-box"
+            [ngClass]="{error: addEntityFormGroup.get('newEmail').hasError('email')}"
+          >
+            <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+              <label translate>thingplus.label.email</label>
+            </div>
+            <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1em">
+              <div class="value-box" fxFlex fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="0.6em">
+                <input matInput type="email" email fxFlex formControlName="newEmail" />
+                <button class="email-add-button" type="button" (click)="addEmail($event)" translate>
+                  thingplus.action.add
+                </button>
+              </div>
+            </div>
+            <div class="error-box" *ngIf="addEntityFormGroup.get('newEmail').hasError('email')" translate>
+              thingplus.help.error-invalid-email
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+          <div class="grid-box" fxLayout="row wrap" fxLayoutAlign="start">
+            <div
+              class="chip email-chip"
+              *ngFor="let email of emailList"
+              fxLayoutAlign="space-between center"
+              fxLayoutGap="1em"
+            >
+              <label class="chip-label" fxFlex>{{email}}</label>
+              <button class="email-delete-button material-icons" type="button" (click)="deleteEmail($event, email)">
+                close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="1em">
+      <button
+        class="button prev-button"
+        [disabled]="(isLoading$ | async)"
+        type="button"
+        (click)="prevStep()"
+        *ngIf="currentStep > 0"
+        translate
+      >
+        thingplus.action.prev-step
+      </button>
+      <button
+        class="button close-button"
+        [disabled]="(isLoading$ | async)"
+        type="button"
+        (click)="cancel()"
+        cdkFocusInitial
+        *ngIf="currentStep == 0"
+        translate
+      >
+        thingplus.action.close
+      </button>
+      <button
+        class="button next-button"
+        type="button"
+        (click)="nextStep()"
+        [disabled]="(isLoading$ | async)"
+        *ngIf="currentStep < 2"
+        translate
+      >
+        thingplus.action.next-step
+      </button>
+      <button
+        class="button save-button"
+        type="submit"
+        [disabled]="(isLoading$ | async) || addEntityForm.invalid"
+        *ngIf="currentStep == 2"
+        translate
+      >
+        thingplus.action.save
+      </button>
+    </div>
+  </form>
+</div>

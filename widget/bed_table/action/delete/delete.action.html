@@ -1,0 +1,31 @@
+<div class="dialog-top-bar"></div>
+<form #deleteEntityForm="ngForm" [formGroup]="deleteEntityFormGroup" (ngSubmit)="save()" class="delete-entity-form">
+  <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+      <i class="material-icons dialog-icon">error</i>
+      <div class="dialog-title">{{entityType}} 삭제</div>
+    </div>
+    <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+  </div>
+  <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async"> </mat-progress-bar>
+  <div style="height: 0.4em" *ngIf="!(isLoading$ | async)"></div>
+  <div mat-dialog-content fxLayout="column">
+    <div class="row" fxLayout="row" fxLayoutAlign="center center">
+      <span class="row-text">'{{title}}'을(를) 삭제하시겠습니까?</span>
+    </div>
+  </div>
+  <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <button
+      class="button close-button"
+      [disabled]="(isLoading$ | async)"
+      type="button"
+      (click)="cancel()"
+      cdkFocusInitial
+    >
+      취소
+    </button>
+    <button class="button save-button" type="submit" [disabled]="(isLoading$ | async) || deleteEntityForm.invalid">
+      삭제
+    </button>
+  </div>
+</form>

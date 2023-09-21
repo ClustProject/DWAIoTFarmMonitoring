@@ -1,0 +1,198 @@
+<div id="detail-report-form">
+  <form
+    #detailEntityForm="ngForm"
+    [formGroup]="detailEntityFormGroup"
+    (ngSubmit)="save()"
+    style="font-size: {{calcFontSize()}}px;"
+  >
+    <div class="dialog-title-box" fxLayoutAlign="space-between center">
+      <span class="dialog-title" translate>thingplus.dialog.detail-report-title</span>
+      <button class="dialog-close" (click)="cancel()" type="button">
+        <mat-icon class="material-icons">close</mat-icon>
+      </button>
+    </div>
+    <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async"> </mat-progress-bar>
+    <div style="height: 0.4em" *ngIf="!(isLoading$ | async)"></div>
+    <div mat-dialog-content fxFlex fxLayout="column" fxLayoutGap="2em">
+      <label class="section-label" translate>thingplus.label.step-basic</label>
+      <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+        <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box disabled">
+          <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+            <label translate>thingplus.label.customerL1</label>
+          </div>
+          <div class="value-box" fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.6em">
+            <input matInput formControlName="customerL1Name" readonly />
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+        <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box disabled">
+          <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+            <label translate>thingplus.label.customerL2</label>
+          </div>
+          <div class="value-box" fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.6em">
+            <input matInput formControlName="customerL2Name" readonly />
+          </div>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+      <label class="section-label" translate>thingplus.label.step-set-send</label>
+      <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+        <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box disabled">
+          <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+            <label translate>thingplus.label.report-repeat</label>
+          </div>
+          <div
+            class="value-box no-border"
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="space-evenly center"
+            fxLayoutGap="0.5em"
+          >
+            <button
+              class="radio-btn"
+              type="button"
+              fxFlex="25"
+              [ngClass]="{'active': detailEntityFormGroup.get('reportType').value == 'DAILY'}"
+              translate
+            >
+              thingplus.time-format.day-by-day
+            </button>
+            <button
+              class="radio-btn"
+              type="button"
+              fxFlex="25"
+              [ngClass]="{'active': detailEntityFormGroup.get('reportType').value == 'WEEKLY'}"
+              translate
+            >
+              thingplus.time-format.week-by-week
+            </button>
+            <button
+              class="radio-btn"
+              type="button"
+              fxFlex="25"
+              [ngClass]="{'active': detailEntityFormGroup.get('reportType').value == 'MONTHLY'}"
+              translate
+            >
+              thingplus.time-format.month-by-month
+            </button>
+            <button
+              class="radio-btn"
+              type="button"
+              fxFlex="25"
+              [ngClass]="{'active': detailEntityFormGroup.get('reportType').value == 'CUSTOM'}"
+              translate
+            >
+              thingplus.label.custom-input
+            </button>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+        <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box disabled">
+          <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+            <label translate>thingplus.label.report-time</label>
+          </div>
+          <div class="value-box" fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.6em">
+            <input class="row-input" matInput formControlName="reportTime" readonly />
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+        <div fxFlex="100" fxLayout="column" fxLayoutGap="0.6em" class="input-box disabled">
+          <div class="label-box" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.4em">
+            <label translate>thingplus.label.report-date</label>
+          </div>
+          <div
+            class="group-box"
+            fxFlex="100"
+            fxLayout="column"
+            fxLayoutAlign="start stretch"
+            fxLayoutGap="1em"
+            *ngIf="detailEntityFormGroup.get('reportType').value == 'DAILY'"
+          >
+            <div fxFlex="100" fxLayoutAlign="space-between center" formGroupName="dailyContent">
+              <mat-checkbox formControlName="0" disabled>
+                {{'thingplus.time-format.weekday-short.mon' | translate}}
+              </mat-checkbox>
+              <mat-checkbox formControlName="1" disabled>
+                {{'thingplus.time-format.weekday-short.tue' | translate}}
+              </mat-checkbox>
+              <mat-checkbox formControlName="2" disabled>
+                {{'thingplus.time-format.weekday-short.wed' | translate}}
+              </mat-checkbox>
+              <mat-checkbox formControlName="3" disabled>
+                {{'thingplus.time-format.weekday-short.thr' | translate}}
+              </mat-checkbox>
+              <mat-checkbox formControlName="4" disabled>
+                {{'thingplus.time-format.weekday-short.fri' | translate}}
+              </mat-checkbox>
+              <mat-checkbox formControlName="5" disabled>
+                {{'thingplus.time-format.weekday-short.sat' | translate}}
+              </mat-checkbox>
+              <mat-checkbox formControlName="6" disabled>
+                {{'thingplus.time-format.weekday-short.sun' | translate}}
+              </mat-checkbox>
+            </div>
+          </div>
+          <div
+            class="value-box"
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="0.6em"
+            *ngIf="detailEntityFormGroup.get('reportType').value == 'WEEKLY'"
+          >
+            <input class="row-input" matInput formControlName="weeklyContent" readonly />
+          </div>
+          <div
+            class="value-box"
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="0.6em"
+            *ngIf="detailEntityFormGroup.get('reportType').value == 'MONTHLY'"
+          >
+            <input class="row-input" matInput formControlName="monthlyContent" readonly />
+          </div>
+          <div
+            class="value-box"
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="0.6em"
+            *ngIf="detailEntityFormGroup.get('reportType').value == 'CUSTOM'"
+          >
+            <input class="row-input" matInput formControlName="customContent" readonly />
+          </div>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+      <label class="section-label" translate>thingplus.label.step-set-receive</label>
+      <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="start center">
+        <div class="grid-box" fxLayout="row wrap" fxLayoutAlign="start">
+          <div
+            class="chip email-chip"
+            *ngFor="let email of emailList"
+            fxLayoutAlign="space-between center"
+            fxLayoutGap="1em"
+          >
+            <label class="chip-label" fxFlex>{{email}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="1em">
+      <button
+        class="button close-button"
+        [disabled]="(isLoading$ | async)"
+        type="button"
+        (click)="cancel()"
+        cdkFocusInitial
+        translate
+      >
+        thingplus.action.close
+      </button>
+    </div>
+  </form>
+</div>

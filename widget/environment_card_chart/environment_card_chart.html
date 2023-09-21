@@ -1,0 +1,80 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <section class="widget-header-left-section" fxFlex fxLayoutAlign="start center">
+      <div class="widget-title">온도 · 습도 현황</div>
+    </section>
+  </header>
+  <main class="widget-content" fxFlex fxLayout="row" fxLayoutAlign="start center">
+    <section class="widget-content-left-section" fxFlex fxLayout="row">
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="line-hr" style="border-color: #eb5721" />
+          <div class="card-label">온도 Avg</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{avgTemp}}</div>
+          <div class="card-value-unit">℃</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="half-line-hr" style="border-color: #eb5721" />
+          <hr class="half-line-hr" style="border-color: #eb5721" />
+          <div class="card-label">온도 Max</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{maxTemp}}</div>
+          <div class="card-value-unit">℃</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="half-line-hr" style="border-color: #eb5721" />
+          <hr class="half-line-hr" style="border-color: #eb5721" />
+          <div class="card-label">온도 Min</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{minTemp}}</div>
+          <div class="card-value-unit">℃</div>
+        </div>
+      </div>
+    </section>
+    <section class="widget-content-right-section" fxFlex fxLayout="row">
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="line-hr" style="border-color: #3e88fa" />
+          <div class="card-label">습도 Avg</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{avgHumid}}</div>
+          <div class="card-value-unit">%</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="half-line-hr" style="border-color: #3e88fa" />
+          <hr class="half-line-hr" style="border-color: #3e88fa" />
+          <div class="card-label">습도 Max</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{maxHumid}}</div>
+          <div class="card-value-unit">%</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column">
+        <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+          <hr class="half-line-hr" style="border-color: #3e88fa" />
+          <hr class="half-line-hr" style="border-color: #3e88fa" />
+          <div class="card-label">습도 Min</div>
+        </div>
+        <div class="card-value-box" fxLayout="row" fxLayoutAlign="start end">
+          <div class="card-value">{{minHumid}}</div>
+          <div class="card-value-unit">%</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="widget-footer" fxLayout="row">
+    <div class="chart"></div>
+  </footer>
+</div>

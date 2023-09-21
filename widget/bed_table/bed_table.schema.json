@@ -1,0 +1,62 @@
+{
+  "schema": {
+    "title": "Settings",
+    "type": "object",
+    "properties": {
+      "widget": {
+        "type": "object",
+        "properties": {
+          "widgetSize": {
+            "title": "위젯 크기(px)",
+            "type": "string",
+            "default": "300"
+          },
+          "actionIcon": {
+            "title": "액션 아이콘 사용",
+            "type": "boolean",
+            "default": true
+          }
+        }
+      },
+      "table": {
+        "type": "object",
+        "properties": {
+          "sortDec": {
+            "title": "내림차순 (체크 안하면 오름차순)",
+            "type": "boolean",
+            "default": false
+          },
+          "sortColumn": {
+            "title": "첫 정렬 칼럼",
+            "type": "string",
+            "default": "name"
+          },
+          "columnOrder": {
+            "title": "칼럼 순서 (기입하지 않은 칼럼은 히든 처리됌)",
+            "type": "string",
+            "default": "name,job,age,hobby"
+          },
+          "columnLabel": {
+            "title": "칼럼 라벨 이름 (칼럼 순서와 동일하게 해야함)",
+            "type": "string",
+            "default": "이름,직업,나이,취미"
+          }
+        }
+      }
+    }
+  },
+  "form": [
+    ["widget.widgetSize", "widget.actionIcon"],
+    ["table.sortDec", "table.sortColumn", "table.columnOrder", "table.columnLabel"]
+  ],
+  "groupInfoes": [
+    {
+      "formIndex": 0,
+      "GroupTitle": "위젯"
+    },
+    {
+      "formIndex": 1,
+      "GroupTitle": "테이블"
+    }
+  ]
+}

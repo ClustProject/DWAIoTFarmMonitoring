@@ -1,0 +1,314 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+
+  border-left: 1px solid #dee0e5;
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 0em 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .widget-header-left-section .label-box {
+  padding: 1.6em 0.4em;
+  margin-right: 2.4em;
+  cursor: pointer;
+}
+
+header.widget-header .widget-header-left-section .label-box.active {
+  border-bottom: 2px solid #1d6ef0;
+}
+
+header.widget-header .widget-header-left-section .label-box .material-icons {
+  font-size: 1.6em;
+  width: 1em;
+  height: 1em;
+  color: #b9bdc4;
+}
+
+header.widget-header .widget-header-left-section .label-box .label {
+  font-size: 1.4em;
+  margin-left: calc(0.8em / 1.4);
+  color: #5a616f;
+  font-weight: 500;
+}
+
+header.widget-header .widget-header-left-section .label-box.active .material-icons {
+  color: #3e88fa;
+}
+
+header.widget-header .widget-header-left-section .label-box.active .label {
+  color: #1d6ef0;
+}
+
+header.widget-header .widget-header-right-section .tab-label {
+  width: calc(11.6em / 1.4);
+  font-size: 1.4em;
+  padding: calc(0.8em / 1.4) 0;
+  border: 1px solid #dee0e5;
+
+  color: #999ea9;
+  background-color: #f4f6f8;
+
+  cursor: pointer;
+}
+
+header.widget-header .widget-header-right-section .download-box {
+  border: solid 1px #dee0e5;
+  background-color: #fafbfc;
+  border-radius: 0.4em;
+  padding: 0.8em 0.9em;
+
+  cursor: pointer;
+}
+
+header.widget-header .widget-header-right-section .download-box .material-icons {
+  color: #6ba3ff;
+  width: 1em;
+  height: 1em;
+  font-size: 1.6em;
+}
+header.widget-header .widget-header-right-section .download-box .download-text {
+  font-size: 1.2em;
+  color: #5a616f;
+  margin-left: calc(0.8em / 1.2);
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+main.widget-content .tab-container {
+  display: none;
+  height: 100%;
+}
+
+main.widget-content .tab-container.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+  Widget Content Top
+*/
+
+main.widget-content .top-section {
+  border-bottom: 1px solid #dee0e5;
+}
+
+main.widget-content .top-section .legend-container {
+  padding: 2.4em 3.2em;
+}
+
+main.widget-content .top-section .legend-container .card-box .line-hr {
+  border: 2px solid black;
+  width: 10px;
+  height: 0;
+  margin: 0;
+}
+
+main.widget-content .top-section .legend-container .card-box .card-label {
+  color: #5a616f;
+  font-size: 1.4em;
+  margin-left: calc(0.8em / 1.4);
+  margin-right: calc(1.6em / 1.4);
+}
+
+/*
+  Widget Content Bottom
+*/
+
+main.widget-content .bottom-section {
+}
+
+main.widget-content .bottom-section .legend-container {
+  padding: 2.4em 3.2em;
+}
+
+main.widget-content .bottom-section .legend-container .card-label-box {
+  margin-right: 1.6em;
+}
+
+main.widget-content .bottom-section .legend-container .card-label-box .line-hr {
+  border: 2px solid black;
+  width: 10px;
+  height: 0;
+  margin: 0;
+}
+
+main.widget-content .bottom-section .legend-container .card-label-box .half-line-hr {
+  border: 2px solid black;
+  width: 4px;
+  height: 0;
+  margin: 0;
+  margin-right: 2px;
+}
+
+main.widget-content .bottom-section .legend-container .card-label-box .half-line-hr:last-child {
+  margin-right: 0;
+}
+
+main.widget-content .bottom-section .legend-container .card-label-box .card-label {
+  color: #5a616f;
+  font-size: 1.4em;
+  margin-left: calc(0.8em / 1.4);
+}
+
+/* 
+  table
+*/
+
+main.widget-content .table-container {
+  width: 100%;
+  flex-grow: 1;
+  margin-top: 3.2em;
+  overflow-y: auto;
+}
+
+main.widget-content .table-container table {
+  width: 100%;
+  border-spacing: 0;
+  /* tr에 border styling 하기 위해 필요 */
+  border-collapse: separate;
+
+  table-layout: fixed;
+}
+
+main.widget-content .table-container table th {
+  text-align: start;
+}
+
+main.widget-content .table-container table thead tr {
+  position: sticky;
+  top: -1px;
+  cursor: pointer;
+  background-color: white;
+}
+
+main.widget-content .table-container table thead tr th:first-child {
+  padding-left: calc(3.2em / 1.2);
+}
+main.widget-content .table-container table thead tr th {
+  color: #5a616f;
+  padding: calc(1.3em / 1.2) 0;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  border-bottom: 1px solid #edeff3;
+
+  max-width: calc(10em / 1.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main.widget-content .table-container table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main.widget-content .table-container table tbody tr td:first-child {
+  padding-left: calc(3.2em / 1.4);
+}
+
+main.widget-content .table-container table tbody tr td {
+  color: #5a616f;
+  padding: calc(1.1em / 1.4) 0;
+  font-size: 1.4em;
+
+  border-bottom: 1px solid #edeff3;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(odd) {
+  background-color: #fafbfc;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(odd):hover {
+  background-color: #efefef;
+}
+
+main.widget-content .table-container table tbody tr:nth-child(even):hover {
+  background-color: #efefef;
+}
+
+/* pagination */
+
+main.widget-content .pagination {
+  padding: 1.6em 3.2em;
+  /* 드래그 방지 */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main.widget-content .pagination .pageList {
+  cursor: pointer;
+}
+
+main.widget-content .pagination .pageList div {
+  font-size: 1.4em;
+  color: #5a616f;
+  font-weight: 500;
+
+  width: calc(3.2em / 1.4);
+  height: calc(3.2em / 1.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 0em;
+}
+
+main.widget-content .pagination .pageList div.selected {
+  color: #1d6ef0;
+}
+
+main.widget-content .pagination .arrow-btn {
+  cursor: pointer;
+}
+
+main.widget-content .pagination .arrow-btn .material-icons {
+  font-size: 2em;
+  width: calc(3.2em / 2);
+  height: calc(3.2em / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #5a616f;
+}
+
+/* 
+  gap
+*/
+main.widget-content .gap {
+  height: 0.8em;
+  background-color: #edeff3;
+}
+
+main.widget-content .bottom-chart .dotted {
+  stroke-dasharray: 2 2;
+}

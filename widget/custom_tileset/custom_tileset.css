@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Noto Sans KR';
+
+  background-color: #f3f4f8;
+}
+
+/*
+  Header
+*/
+header.widget-header {
+  width: 100%;
+  padding: 2em;
+}
+
+/* 
+  Main
+*/
+main.widget-content {
+  width: 100%;
+  height: 100%;
+  padding: 0em;
+  padding-bottom: 2em;
+}
+
+main.widget-content .map-box {
+  width: 80%;
+  height: 100%;
+  position: relative;
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
+}
+
+main.widget-content .map-box .point {
+  position: absolute;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.widget-content .map-box .point svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* .frame-section */
+.comment-section {
+  width: 100%;
+  height: 100%;
+}
+.comment-section .comment {
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+  color: #131523;
+}
+
+.comment-section .comment em {
+  font-weight: 600;
+  font-style: normal;
+  color: #3c6cea;
+}
+
+/*
+  Other
+*/
+/* .progress-section */
+.progress-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.progress-section .progress {
+  height: 7em;
+  width: 7em;
+}
+.progress-section .circular {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+.progress-section .circle {
+  stroke: #354052;
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition-duration: 1s;
+}
+.progress-section .back-circle {
+  stroke: #eeeeee;
+  fill: none;
+  stroke-width: 5;
+}
+.progress-section .rotate {
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

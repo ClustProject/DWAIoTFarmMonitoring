@@ -1,0 +1,206 @@
+{
+  "schema": {
+    "title": "Settings",
+    "type": "object",
+    "properties": {
+      "widget": {
+        "type": "object",
+        "required": ["originWidth"],
+        "properties": {
+          "originWidth": {
+            "title": "위젯 원본 너비",
+            "type": "number",
+            "default": 800
+          }
+        }
+      },
+      "font": {
+        "type": "object",
+        "properties": {
+          "family": {
+            "title": "글꼴",
+            "type": "string",
+            "default": "Arial"
+          },
+          "style": {
+            "title": "스타일",
+            "type": "string",
+            "default": "normal"
+          },
+          "size": {
+            "title": "크기",
+            "type": "number",
+            "default": 10
+          },
+          "color": {
+            "title": "색상",
+            "type": "string",
+            "default": "#000"
+          }
+        }
+      },
+      "axis": {
+        "type": "object",
+        "properties": {
+          "guideColor": {
+            "title": "가이드 라인 색상",
+            "type": "string",
+            "default": "#dddddd"
+          },
+          "x": {
+            "title": "X 축",
+            "type": "object",
+            "properties": {
+              "view": {
+                "title": "X축 보기",
+                "type": "boolean",
+                "default": true
+              },
+              "nameView": {
+                "title": "X축 이름 보기",
+                "type": "boolean",
+                "default": true
+              },
+              "name": {
+                "title": "X축 이름",
+                "type": "string",
+                "default": "X"
+              }
+            }
+          },
+          "y": {
+            "title": "Y 축",
+            "type": "object",
+            "properties": {
+              "view": {
+                "title": "Y축 보기",
+                "type": "boolean",
+                "default": true
+              },
+              "nameView": {
+                "title": "Y축 이름 보기",
+                "type": "boolean",
+                "default": true
+              },
+              "name": {
+                "title": "Y축 이름",
+                "type": "string",
+                "default": "Y"
+              },
+              "guide": {
+                "title": "Y축 가이드 라인",
+                "type": "boolean",
+                "default": true
+              },
+              "suggestedMin": {
+                "title": "Y축 적정 최소값",
+                "type": "number",
+                "default": 0
+              },
+              "suggestedMax": {
+                "title": "Y축 적정 최대값",
+                "type": "number",
+                "default": 100
+              },
+              "min": {
+                "title": "Y축 최소 제한값",
+                "type": "number"
+              },
+              "max": {
+                "title": "Y축 최대 제한값",
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "legend": {
+        "type": "object",
+        "properties": {
+          "display": {
+            "title": "범례 표시",
+            "type": "boolean",
+            "default": true
+          },
+          "position": {
+            "title": "범례 위치",
+            "type": "string",
+            "default": "top"
+          },
+          "align": {
+            "title": "범례 정렬",
+            "type": "string",
+            "default": "center"
+          }
+        }
+      }
+    }
+  },
+  "form": [
+    ["widget.originWidth"],
+    [
+      "font.family",
+      "font.size",
+      {
+        "key": "font.style",
+        "type": "rc-select",
+        "multiple": false,
+        "items": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "italic",
+            "label": "Italic"
+          },
+          {
+            "value": "oblique",
+            "label": "Oblique"
+          }
+        ]
+      },
+      {
+        "key": "font.color",
+        "type": "color"
+      }
+    ],
+    [
+      {
+        "key": "axis.guideColor",
+        "type": "color"
+      },
+      {
+        "key": "axis.x",
+        "items": ["axis.x.view", "axis.x.nameView", "axis.x.name"]
+      },
+      {
+        "key": "axis.y",
+        "items": [
+          "axis.y.view",
+          "axis.y.nameView",
+          "axis.y.name",
+          "axis.y.guide",
+          "axis.y.suggestedMin",
+          "axis.y.suggestedMax",
+          "axis.y.min",
+          "axis.y.max"
+        ]
+      }
+    ]
+  ],
+  "groupInfoes": [
+    {
+      "formIndex": 0,
+      "GroupTitle": "위젯"
+    },
+    {
+      "formIndex": 1,
+      "GroupTitle": "폰트"
+    },
+    {
+      "formIndex": 2,
+      "GroupTitle": "축"
+    }
+  ]
+}

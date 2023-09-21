@@ -1,0 +1,127 @@
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Noto Sans KR';
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.widget-header-right-section .device-check-box {
+  width: 100%;
+  height: 100%;
+}
+
+.widget-header-right-section .device-check-box .check-on {
+  background-color: #02c111;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+
+  opacity: 0.1;
+}
+
+.widget-header-right-section .device-check-box .check-off {
+  background-color: #f4353b;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
+
+  opacity: 1;
+}
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+
+  padding: 2em;
+}
+
+main.widget-content .key-section {
+  width: 100%;
+  height: 100%;
+}
+
+main.widget-content .key-section .key-box {
+  display: flex;
+
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+main.widget-content .key-section .key-box .key {
+  flex: 1 1 20%;
+  text-align: center;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+main.widget-content .key-section .key-box .value {
+  flex: 1 1 20%;
+  text-align: center;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main.widget-content .key-section .key-box .ts {
+  flex: 1 1 30%;
+  text-align: center;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+main.widget-content .key-section .key-box .key-check-box {
+  flex: 1 1 30%;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  place-content: center space-evenly;
+  align-items: center;
+}
+
+main.widget-content .key-check-box .check-on {
+  background-color: #02c111;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+
+  opacity: 0.1;
+}
+
+main.widget-content .key-check-box .check-off {
+  background-color: #f4353b;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
+
+  opacity: 1;
+}

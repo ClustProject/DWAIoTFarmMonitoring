@@ -1,0 +1,76 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: Pretendard;
+}
+
+/*
+  Widget Header Area
+*/
+
+#widget header.widget-header {
+  width: 100%;
+  padding: 2em;
+}
+
+/* widget-header-right-section */
+#widget .widget-header-right-section .latest-time {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1em;
+}
+
+/*
+  Widget Content Area
+*/
+
+#widget main.widget-content {
+  width: 100%;
+  padding: 0em;
+}
+
+#widget main.widget-content .card-container {
+  padding: 0 2em;
+  border-top: 1px solid #e5e5e5;
+}
+
+#widget main.widget-content .card-container .left-card-box .date-text {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 1.4em;
+  padding-bottom: calc(1em / 1.4);
+}
+
+#widget main.widget-content .card-container .left-card-box .value-box .value {
+  font-size: 3.2em;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 300;
+}
+
+#widget main.widget-content .card-container .left-card-box .value-box .unit {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2em;
+
+  display: flex;
+  align-items: center;
+  padding-top: calc(1em / 2);
+  padding-left: calc(1em / 2);
+}
+
+#widget main.widget-content .card-container .right-card-box {
+  padding-top: 2em;
+}
+
+#widget main.widget-content .card-container .right-card-box .date-contrast-text {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  padding-bottom: calc(0.5em / 1);
+  display: flex;
+  justify-content: end;
+}
+#widget main.widget-content .card-container .right-card-box .date-contrast-rate {
+  font-size: 1.2em;
+  font-weight: 600;
+}

@@ -1,0 +1,4 @@
+#viewer {
+  display: flex;
+  overflow: auto;
+}

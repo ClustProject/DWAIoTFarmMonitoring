@@ -1,0 +1,83 @@
+<form
+  class="add-entity-form"
+  #addEntityForm="ngForm"
+  [formGroup]="addEntityFormGroup"
+  (ngSubmit)="save()"
+  fxLayout="column"
+  fxLayoutAlign="space-between center"
+>
+  <section class="top-section">
+    <div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="title-box" fxLayout="row" fxLayoutAlign="start center">
+        <div class="dialog-title" translate>thingplus.page.alarm-view.alarm-view</div>
+      </div>
+      <i class="material-icons cancel-icon" (click)="cancel()">close</i>
+    </div>
+    <div mat-dialog-content fxLayout="column">
+      <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+        <div class="input-box" fxFlex fxLayout="column">
+          <div class="label-box" fxLayout="row">
+            <span class="label" translate>thingplus.page.alarm-view.select-building</span>
+          </div>
+          <mat-select
+            formControlName="deviceLabel"
+            (selectionChange)="changeDevice($event)"
+            [(ngModel)]="selectedDevice"
+          >
+            <mat-option *ngFor="let device of deviceList" [value]="device.id.id"> {{ device.label }} </mat-option>
+          </mat-select>
+        </div>
+      </div>
+
+      <div class="row" fxLayout="row" fxLayoutGap="0.8em" fxLayout.xs="column" fxLayoutGap.xs="0">
+        <div class="input-box" fxFlex fxLayout="column">
+          <div class="label" translate>thingplus.page.alarm-view.select-date</div>
+          <div fxLayout="row">
+            <div class="date-selector" (click)="startDatePicker.open()" fxLayoutAlign="space-between center">
+              <mat-datetimepicker
+                (monthSelected)="monthSelect($event)"
+                (yearSelected)="yearSelect($evnet)"
+                #startDatePicker
+                type="date"
+              ></mat-datetimepicker>
+              <input
+                class="hidden"
+                matInput
+                readonly
+                [matDatetimepicker]="startDatePicker"
+                (dateChange)="setStartDate($event)"
+              />
+              <input class="basic-date" class="view" matInput formControlName="startDate" readonly />
+              <div class="select-arrow"></div>
+            </div>
+            <div class="selector-label">~</div>
+            <div class="date-selector" (click)="endDatePicker.open()" fxLayoutAlign="space-between center">
+              <mat-datetimepicker #endDatePicker type="date"></mat-datetimepicker>
+              <input
+                class="hidden"
+                matInput
+                readonly
+                [matDatetimepicker]="endDatePicker"
+                (dateChange)="setEndDate($event)"
+              />
+              <input class="basic-date" class="view" matInput formControlName="endDate" readonly />
+              <div class="select-arrow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bottom-section">
+    <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+      <button
+        class="button save-button"
+        type="submit"
+        [disabled]="(isLoading$ | async) || addEntityForm.invalid"
+        translate
+      >
+        thingplus.page.alarm-view.search
+      </button>
+    </div>
+  </section>
+</form>

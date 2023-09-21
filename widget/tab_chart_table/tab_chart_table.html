@@ -1,0 +1,117 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <section class="widget-header-left-section" fxLayout="row" fxLayoutAlign="start center">
+      <div class="label-box {{active0}}" fxLayout="row" fxLayoutAlign="start center" (click)="changeTab(0)">
+        <div class="material-icons">stacked_bar_chart</div>
+        <div class="label">농장 생육 현황</div>
+      </div>
+      <div class="label-box {{active1}}" fxLayout="row" fxLayoutAlign="start center" (click)="changeTab(1)">
+        <div class="material-icons">reorder</div>
+        <div class="label">데이터 테이블</div>
+      </div>
+    </section>
+    <section class="widget-header-right-section" fxLayoutAlign="start center">
+      <div class="download-box" fxLayout="row" (click)="download()">
+        <div class="material-icons">download</div>
+        <div class="download-text">CSV 다운로드</div>
+      </div>
+    </section>
+  </header>
+  <main class="widget-content" fxLayout="column">
+    <div class="tab-container {{active0}}">
+      <div class="top-section" fxLayout="column">
+        <div class="legend-container" fxLayout="row" fxLayoutAlign="start center">
+          <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #9bc7d9" />
+            <div class="card-label">0단계</div>
+          </div>
+          <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #b9d3de" />
+            <div class="card-label">1단계</div>
+          </div>
+          <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #d8dee1" />
+            <div class="card-label">2단계</div>
+          </div>
+          <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #ebc6ca" />
+            <div class="card-label">3단계</div>
+          </div>
+          <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #f09ca0" />
+            <div class="card-label">4단계</div>
+          </div>
+          <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #e55e63" />
+            <div class="card-label">5단계</div>
+          </div>
+          <div class="card-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #bd353a" />
+            <div class="card-label">6단계</div>
+          </div>
+        </div>
+        <div class="top-chart"></div>
+      </div>
+      <div class="gap"></div>
+      <div class="bottom-section" fxLayout="column">
+        <div class="legend-container" fxLayout="row">
+          <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #28b5b5" />
+            <div class="card-label">토양 EC</div>
+          </div>
+          <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #eb5721" />
+            <div class="card-label">온도 Avg</div>
+          </div>
+
+          <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="half-line-hr" style="border-color: #eb5721" />
+            <hr class="half-line-hr" style="border-color: #eb5721" />
+            <div class="card-label">온도 Max</div>
+          </div>
+
+          <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="half-line-hr" style="border-color: #eb5721" />
+            <hr class="half-line-hr" style="border-color: #eb5721" />
+            <div class="card-label">온도 Min</div>
+          </div>
+
+          <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="line-hr" style="border-color: #3e88fa" />
+            <div class="card-label">습도 Avg</div>
+          </div>
+
+          <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="half-line-hr" style="border-color: #3e88fa" />
+            <hr class="half-line-hr" style="border-color: #3e88fa" />
+            <div class="card-label">습도 Max</div>
+          </div>
+
+          <div class="card-label-box" fxLayout="row" fxLayoutAlign="start center">
+            <hr class="half-line-hr" style="border-color: #3e88fa" />
+            <hr class="half-line-hr" style="border-color: #3e88fa" />
+            <div class="card-label">습도 Min</div>
+          </div>
+        </div>
+        <div class="bottom-chart"></div>
+      </div>
+    </div>
+    <div class="tab-container {{active1}}">
+      <div class="table-container">
+        <table>
+          <thead class="thead"></thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+      <div class="pagination" fxLayout="row" fxLayoutAlign="end center">
+        <div class="arrow-btn normal-arrow" (click)="prev()" fxLayout="row" fxLayoutAlign="center center">
+          <span class="material-icons" style="transform: rotate(180deg)"> chevron_right </span>
+        </div>
+        <div class="pageList" fxLayout="row" fxLayoutAlign="center center"></div>
+        <div class="arrow-btn normal-arrow" (click)="next()" fxLayout="row" fxLayoutAlign="center center">
+          <span class="material-icons"> chevron_right </span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

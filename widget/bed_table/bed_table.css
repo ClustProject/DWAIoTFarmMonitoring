@@ -1,0 +1,129 @@
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Noto Sans KR';
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* widget-header-right-section */
+.widget-header-right-section .widget-header-action {
+  display: block;
+  font-size: 1.8em;
+  margin-left: 0.5em;
+  color: black;
+  cursor: pointer;
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+}
+
+.cell-icon {
+  border: 1px solid #d7dbec;
+  border-radius: 0.5em;
+  padding: 0.2em;
+  margin-right: 1.5em;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  font-size: 1.8em;
+}
+
+main.widget-content .table {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+main.widget-content .table table {
+  width: 100%;
+  height: 100%;
+  border-spacing: 0;
+  /* tr에 border styling 하기 위해 필요 */
+  border-collapse: separate;
+
+  table-layout: fixed;
+}
+
+main.widget-content .table table thead {
+  height: 20%;
+}
+main.widget-content .table table tbody {
+  height: 80%;
+}
+
+main.widget-content .table table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main.widget-content .table table thead tr {
+  position: sticky;
+  top: -1px;
+  cursor: pointer;
+  background-color: #fafafc;
+}
+main.widget-content .table table th {
+  text-align: start;
+}
+
+main.widget-content .table table thead tr th {
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0 calc(2em / 1.2);
+  font-size: 1.2em;
+
+  border-bottom: 1px solid #e6e9f4;
+
+  max-width: calc(10em / 1.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main.widget-content .table table tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+main.widget-content .table table tbody tr:nth-child(even) {
+  background-color: #fafafc;
+}
+
+main.widget-content .table table tbody tr:nth-child(odd):hover {
+  background-color: #efefef;
+}
+
+main.widget-content .table table tbody tr:nth-child(even):hover {
+  background-color: #efefef;
+}
+
+main.widget-content .table table tbody tr td {
+  color: rgba(0, 0, 0, 0.9);
+  padding: 0 calc(2em / 1.4);
+  font-size: 1.4em;
+}
+
+main.widget-content .table table .tail {
+  border-top: solid 1px #efefef;
+}
+
+.arrow-btn,
+.pageList div,
+.selector,
+.rowLimit2 div,
+.action-btn {
+  cursor: pointer;
+}

@@ -1,0 +1,64 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Pretendard';
+}
+
+/*
+  Widget Header Area
+*/
+
+header.widget-header {
+  width: 100%;
+  padding: 2em 3.2em;
+  border-bottom: 1px solid #dee0e5;
+}
+
+header.widget-header .widget-header-left-section .widget-title {
+  color: #1f2229;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+/*
+  Widget Content Area
+*/
+
+main.widget-content {
+  width: 100%;
+  border-bottom: 1px solid #dee0e5;
+}
+
+main.widget-content .card-box {
+  border-right: 1px solid #edeff3;
+  margin-left: 1.5em;
+}
+
+main.widget-content .card-box.first {
+  margin-left: 3.2em;
+}
+
+main.widget-content .card-box.last {
+  border-right: none;
+}
+
+main.widget-content .card-box .label {
+  font-size: 1.2em;
+  color: #5a616f;
+  margin-bottom: calc(0.8em / 1.2);
+}
+main.widget-content .card-box .value-box .value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1f2229;
+  line-height: 1;
+}
+main.widget-content .card-box .value-box .value-unit {
+  margin-left: calc(0.4em / 1.4);
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #1f2229;
+}

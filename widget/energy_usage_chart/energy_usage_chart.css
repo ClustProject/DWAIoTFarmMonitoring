@@ -1,0 +1,45 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: Pretendard;
+}
+
+#widget .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#widget .header .controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#widget .header .controller .time {
+  margin: 0px 10px;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  padding: calc(2em / 1.2) 0;
+  font-weight: 500;
+}
+#widget .header .controller .time:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+#widget .header .controller .time.active {
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+}
+
+#widget .widget-content {
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  padding-top: 1em;
+}

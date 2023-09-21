@@ -1,0 +1,177 @@
+#widget {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: Noto Sans KR;
+  white-space: nowrap;
+}
+
+header.widget-header {
+  width: 100%;
+  padding: 2em;
+}
+.title-icon {
+  width: 1em;
+  height: 1em;
+  font-size: 1.8em;
+}
+
+/* 
+  Main
+*/
+main.widget-content {
+  width: 100%;
+  padding: 0em 2em;
+  padding-bottom: 2em;
+}
+
+.normal-text {
+  font-size: 1.35em;
+  color: #796036;
+}
+
+.client-selector {
+  position: relative;
+
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5em 1em;
+  border: solid 1px #a5a093;
+  color: #7f5f14;
+  border-radius: 0.4em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.date-selector {
+  position: relative;
+  width: 15em;
+
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5em 1em;
+  border: solid 1px #a5a093;
+  color: #7f5f14;
+  border-radius: 0.4em;
+  overflow: hidden;
+  cursor: pointer;
+  height: 4em;
+}
+
+.date-selector input {
+  font-size: 1.35em;
+  height: 100%;
+  font-family: Noto Sans KR;
+}
+
+.view {
+  all: unset;
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.down-btn {
+  font-weight: bold;
+  text-align: center;
+  background-color: #d59701;
+  color: white;
+  border-radius: 0.4em;
+  padding: 0.85em 1.15em;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 1.35em;
+}
+
+.progress {
+  position: relative;
+  display: none;
+  height: 4em;
+  width: 4em;
+}
+
+.circular-chart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+
+.circle {
+  stroke: #0d94e8;
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition-duration: 1s;
+}
+.back-circle {
+  stroke: #eeeeee;
+  fill: none;
+  stroke-width: 5;
+}
+
+.chart-box {
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  margin: 1em 0em;
+  border-radius: 0.2em;
+  border: solid 1px #c8c8c9;
+}
+
+.rotate {
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.mat-form-field-underline {
+  position: static;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.mat-form-field-infix {
+  font-size: 1.35em;
+  border-top: 0;
+  width: auto;
+  padding: 0.85em 1.15em;
+}
+
+.mat-select {
+  min-width: 4em;
+}
+
+.mat-select-value {
+  color: #7f5f14;
+}
+
+/* remove input arrow */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

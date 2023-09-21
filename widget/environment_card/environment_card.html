@@ -1,0 +1,71 @@
+<div id="widget" fxLayout="column">
+  <header class="widget-header" fxLayout="row">
+    <section class="widget-header-left-section" fxFlex fxLayoutAlign="start center">
+      <div class="widget-title"></div>
+    </section>
+  </header>
+  <main class="widget-content" fxFlex fxLayout="row">
+    <div class="content-section" fxFlex="37.5" fxLayout="row">
+      <div class="card-box first" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">CO₂</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{co2}}</div>
+          <div class="value-unit">ppm</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">기압</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{pressure}}</div>
+          <div class="value-unit">hPa</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">현재 온도</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{temperature}}</div>
+          <div class="value-unit">℃</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-section" fxFlex="37.5" fxLayout="row">
+      <div class="card-box" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">현재 습도</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{humidity}}</div>
+          <div class="value-unit">%</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">조도</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{illumination}}</div>
+          <div class="value-unit">Lux</div>
+        </div>
+      </div>
+      <div class="card-box" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">토양 온도</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{soilTemperature}}</div>
+          <div class="value-unit">℃</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-section" fxFlex="25" fxLayout="row">
+      <div class="card-box" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">토양 수분</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{soilHumidity}}</div>
+          <div class="value-unit">%</div>
+        </div>
+      </div>
+      <div class="card-box last" fxFlex fxLayout="column" fxLayoutAlign="center start">
+        <div class="label">토양 EC</div>
+        <div class="value-box" fxLayout="row" fxLayoutAlign="start center">
+          <div class="value">{{soilEC}}</div>
+          <div class="value-unit">μs/cm</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
