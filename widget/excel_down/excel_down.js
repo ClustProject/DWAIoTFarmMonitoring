@@ -114,10 +114,10 @@ function applyEvent() {
     custom.startTs = moment($scope.start).startOf('day').valueOf();
     custom.endTs = moment($scope.end).endOf('day').valueOf();
 
-    if (custom.endTs - custom.startTs > INTERVALS[2].diff) {
-      window.alert('31일이내의 기간만 조회 가능합니다.');
-      return;
-    }
+    // if (custom.endTs - custom.startTs > INTERVALS[2].diff) {
+    //   window.alert('31일이내의 기간만 조회 가능합니다.');
+    //   return;
+    // }
     startLoading();
     await getData();
 
@@ -144,7 +144,7 @@ function getDevice() {
   // observables.push(self.ctx.http.get(`/api/customer/${entityId.id}/devices?type=EM500-SMT&pageSize=10000&page=0`));
   // observables.push(self.ctx.http.get(`/api/customer/${entityId.id}/devices?type=EM500-CO2&pageSize=10000&page=0`));
   self.ctx.custom.deviceList = [];
-  self.ctx.rxjs.forkJoin(observables).subscribe(response => {
+  self.ctx.rxjs.forkJoin(observables).subscribe((response) => {
     for (let i in response) {
       for (let j in response[i].data) {
         self.ctx.custom.deviceList.push({

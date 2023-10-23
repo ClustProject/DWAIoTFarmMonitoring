@@ -80,7 +80,7 @@ function insertHeaderAction() {
   for (let i in actionDescriptor) {
     let $headerAction = $(`<i class='material-icons widget-header-action'>${actionDescriptor[i].icon}</i>`);
 
-    $headerAction.on('click', e => {
+    $headerAction.on('click', (e) => {
       self.ctx.actionsApi.handleWidgetAction(
         e,
         actionDescriptor[i],
@@ -155,12 +155,12 @@ function getLineData() {
         )
       );
     } else {
-      return new Promise(resolve => resolve());
+      return new Promise((resolve) => resolve());
     }
   }
 
-  return new Promise(resolve => {
-    self.ctx.rxjs.forkJoin(observables).subscribe(datas => {
+  return new Promise((resolve) => {
+    self.ctx.rxjs.forkJoin(observables).subscribe((datas) => {
       custom.originData = datas;
 
       resolve();
@@ -343,16 +343,16 @@ function createChart() {
   let thickness = 0.2;
 
   // Compute values.
-  const X = d3.map(avgTempData, d => d.key);
-  const Y = d3.map(maxTempData, d => d.value);
-  const Y2 = d3.map(maxHumidData, d => d.value);
+  const X = d3.map(avgTempData, (d) => d.key);
+  const Y = d3.map(maxTempData, (d) => d.value);
+  const Y2 = d3.map(maxHumidData, (d) => d.value);
 
-  const T0 = d3.map(avgTempData, d => d.value);
-  const T1 = d3.map(minTempData, d => d.value);
-  const T2 = d3.map(maxTempData, d => d.value);
-  const T3 = d3.map(avgHumidData, d => d.value);
-  const T4 = d3.map(minHumidData, d => d.value);
-  const T5 = d3.map(maxHumidData, d => d.value);
+  const T0 = d3.map(avgTempData, (d) => d.value);
+  const T1 = d3.map(minTempData, (d) => d.value);
+  const T2 = d3.map(maxTempData, (d) => d.value);
+  const T3 = d3.map(avgHumidData, (d) => d.value);
+  const T4 = d3.map(minHumidData, (d) => d.value);
+  const T5 = d3.map(maxHumidData, (d) => d.value);
 
   const defined = (d, i) => !_.isNil(X[i]) && !isNaN(Y[i]);
 
@@ -369,7 +369,7 @@ function createChart() {
   xDomain = new d3.InternSet(xDomain);
 
   // Omit any barData not present in the x-domain.
-  const I = d3.range(X.length).filter(i => xDomain.has(X[i]));
+  const I = d3.range(X.length).filter((i) => xDomain.has(X[i]));
 
   const xRange = [marginLeft, width - marginRight]; // [left, right]
   const yRange = [height - marginBottom, marginTop]; // [bottom, top]
@@ -425,9 +425,9 @@ function createChart() {
 
     let left = false;
 
-    if ((avgTempData.length - 1) / 2 >= i) {
-      left = true;
-    }
+    // if ((avgTempData.length - 1) / 2 >= i) {
+    //   left = true;
+    // }
 
     let tempColor = '#eb5721';
     let humidColor = '#3e88fa';
@@ -542,39 +542,39 @@ function createAxis(svg, xAxis, yAxis, yAxis2, marginLeft, marginBottom, marginR
     .attr('class', 'xAxis')
     .attr('transform', `translate(0,${height - marginBottom + 1})`)
     .call(xAxis)
-    .call(g => g.select('.domain').style('color', '#b9bdc4'))
-    .call(g => g.selectAll('.tick line').attr('y2', 0))
-    .call(g => g.selectAll('text').attr('style', `color: #5a616f; font-size: 1.2em; font-weight: 300;`));
+    .call((g) => g.select('.domain').style('color', '#b9bdc4'))
+    .call((g) => g.selectAll('.tick line').attr('y2', 0))
+    .call((g) => g.selectAll('text').attr('style', `color: #5a616f; font-size: 1.2em; font-weight: 300;`));
 
   svg
     .append('g')
     .attr('class', 'yAxis')
     .attr('transform', `translate(${marginLeft},0)`)
     .call(yAxis)
-    .call(g => g.select('.domain').remove())
-    .call(g => g.selectAll('.tick line').attr('x2', 0))
-    .call(g => g.selectAll('text').attr('style', `color: #5a616f; font-size: 1.2em; font-weight: 300;`))
-    .call(g => g.selectAll('text').text(d => d + '℃'));
+    .call((g) => g.select('.domain').remove())
+    .call((g) => g.selectAll('.tick line').attr('x2', 0))
+    .call((g) => g.selectAll('text').attr('style', `color: #5a616f; font-size: 1.2em; font-weight: 300;`))
+    .call((g) => g.selectAll('text').text((d) => d + '℃'));
 
   svg
     .append('g')
     .attr('class', 'yAxis2')
     .attr('transform', `translate(${width - marginRight},0)`)
     .call(yAxis2)
-    .call(g => g.select('.domain').remove())
-    .call(g => g.selectAll('.tick line').remove())
-    .call(g => g.selectAll('text').attr('style', `color: #5a616f; font-size: 1.2em; font-weight: 300;`))
-    .call(g => g.selectAll('text').text(d => d + '%'));
+    .call((g) => g.select('.domain').remove())
+    .call((g) => g.selectAll('.tick line').remove())
+    .call((g) => g.selectAll('text').attr('style', `color: #5a616f; font-size: 1.2em; font-weight: 300;`))
+    .call((g) => g.selectAll('text').text((d) => d + '%'));
 }
 
 function createLineChart(svg, X, Y2, D, I, xScale, yScale, thickness, lineData, isLine, color) {
   // Construct a line generator.
   const line = d3
     .line()
-    .defined(i => D[i])
+    .defined((i) => D[i])
     .curve(d3.curveMonotoneX) // d3.curveLinear는 딱딱 끊어짐
-    .x(i => xScale(X[i]) + (xScale.step() * (1 - thickness)) / 2)
-    .y(i => yScale(Y2[i]));
+    .x((i) => xScale(X[i]) + (xScale.step() * (1 - thickness)) / 2)
+    .y((i) => yScale(Y2[i]));
 
   svg
     .append('path')
