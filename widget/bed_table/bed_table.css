@@ -83,12 +83,12 @@ main.widget-content .table table th {
 
 main.widget-content .table table thead tr th {
   color: rgba(0, 0, 0, 0.4);
-  padding: 0 calc(2em / 1.2);
-  font-size: 1.2em;
+  padding: 0 calc(1.6em / 0.8);
+  font-size: 0.8em;
 
   border-bottom: 1px solid #e6e9f4;
 
-  max-width: calc(10em / 1.2);
+  max-width: calc(10em / 0.8);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
