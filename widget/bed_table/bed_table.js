@@ -22,6 +22,9 @@ self.onResize = function () {
   let custom = self.ctx.custom;
   // 위젯 전체 크기 조절
   const originWidth = self.ctx.settings.widget.widgetSize;
+  if (self.ctx.isMobile) {
+    originWidth = 960;
+  }
   let widgetFontSize = _.round((self.ctx.width / originWidth) * 10, 2);
   custom.$widget.css('font-size', `${widgetFontSize}px`);
 
@@ -368,7 +371,7 @@ function getActionBtn($tr, i) {
     for (let j in actions) {
       let $newAction = $(`<mat-icon class="material-icons action-btn">${actions[j].icon}</mat-icon>`);
       $newAction.attr('data-before', actions[j].name);
-      $newAction.click(e => {
+      $newAction.click((e) => {
         self.ctx.actionsApi.handleWidgetAction(
           e,
           actions[j],
